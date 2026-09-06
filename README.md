@@ -4,7 +4,8 @@
   <p><b>A modern Flutter desktop application that converts Excel (.xlsx) files into VCF (Contacts) format in seconds.</b></p>
 
 <a href="https://github.com/mr-ruhid/rjnumber_fileconverter">View Source Code</a> •
-<a href="#%EF%B8%8F-how-to-build">Installation Guide</a>
+<a href="#%EF%B8%8F-how-to-build">Installation Guide</a> •
+<a href="https://github.com/mr-ruhid/rjnumber_fileconverter/releases">Download</a>
 
 <br><br>
 
@@ -13,6 +14,12 @@
     <a href="https://dart.dev"><img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart"></a>
     <a href="https://www.microsoft.com/windows"><img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows"></a>
   </p>
+
+  <br>
+
+  <a href="https://github.com/mr-ruhid/rjnumber_fileconverter/releases">
+    <img src="https://img.shields.io/badge/⬇%20Download-Latest%20Release-2ea44f?style=for-the-badge" alt="Download Latest Release">
+  </a>
 </div>
 
 <br>
@@ -98,6 +105,16 @@ The compiled application will be available at:
 ```
 build\windows\x64\runner\Release\
 ```
+
+---
+
+## 📥 Download
+
+You can download the latest Windows installer from the **[Releases](https://github.com/mr-ruhid/rjnumber_fileconverter/releases)** page.
+
+1. Go to the [Releases](https://github.com/mr-ruhid/rjnumber_fileconverter/releases) page.
+2. Download the latest `.exe` installer.
+3. Run the installer and follow the setup wizard.
 
 ---
 
