@@ -57,5 +57,9 @@
   "aboutClose": "Close",
 
   "settingsTitle": "Settings",
-  "settingsLanguage": "Language"
+  "settingsLanguage": "Language",
+  "settingsTheme": "Theme",
+  "settingsThemeDark": "Dark",
+  "settingsThemeLight": "Light",
+  "settingsThemeSystem": "System"
 }
