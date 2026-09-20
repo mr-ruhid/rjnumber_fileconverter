@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../l10n/app_localizations.dart';
 import '../ui/app_theme.dart';
 import '../ui/widgets/app_header.dart';
 import '../ui/widgets/glass_card.dart';
-import 'vcf_to_excel_page.dart';
 import 'excel_to_vcf_page.dart';
+import 'vcf_to_excel_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -24,7 +23,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Container(decoration: const BoxDecoration(gradient: AppTheme.backgroundGradient)),
+          Container(decoration: BoxDecoration(gradient: AppTheme.backgroundGradient(context))),
           const Positioned(
             top: 0,
             left: 0,
@@ -39,8 +38,8 @@ class HomePage extends StatelessWidget {
                   Text(
                     l10n.homeTitle,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Colors.white,
+                    style: TextStyle(
+                      color: AppTheme.textPrimary(context),
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
@@ -85,17 +84,17 @@ class HomePage extends StatelessWidget {
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(color: Colors.white.withOpacity(0.1)),
+                      color: AppTheme.glassBg(context),
+                      borderRadius: BorderRadius.circular(AppTheme.radiusMedium),
+                      border: Border.all(color: AppTheme.glassBorder(context)),
                     ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
                           l10n.homeFooter,
-                          style: const TextStyle(
-                            color: Colors.white,
+                          style: TextStyle(
+                            color: AppTheme.textPrimary(context),
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
                             letterSpacing: 0.5,
@@ -145,13 +144,13 @@ class HomePage extends StatelessWidget {
           width: double.infinity,
           padding: const EdgeInsets.all(AppTheme.spacingMd),
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.08),
+            color: AppTheme.inputFill(context),
             borderRadius: BorderRadius.circular(AppTheme.radiusMedium),
-            border: Border.all(color: Colors.white.withOpacity(0.2)),
+            border: Border.all(color: AppTheme.inputBorder(context)),
           ),
           child: Row(
             children: [
-              Icon(icon, color: Colors.white, size: 40),
+              Icon(icon, color: AppTheme.textPrimary(context), size: 40),
               const SizedBox(width: AppTheme.spacingMd),
               Expanded(
                 child: Column(
@@ -159,8 +158,8 @@ class HomePage extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: const TextStyle(
-                        color: Colors.white,
+                      style: TextStyle(
+                        color: AppTheme.textPrimary(context),
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
@@ -169,14 +168,18 @@ class HomePage extends StatelessWidget {
                     Text(
                       subtitle,
                       style: TextStyle(
-                        color: Colors.white.withOpacity(0.7),
+                        color: AppTheme.textSecondary(context),
                         fontSize: 13,
                       ),
                     ),
                   ],
                 ),
               ),
-              const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white54, size: 18),
+              Icon(
+                Icons.arrow_forward_ios_rounded,
+                color: AppTheme.textMuted(context),
+                size: 18,
+              ),
             ],
           ),
         ),
