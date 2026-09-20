@@ -5,6 +5,7 @@ import '../l10n/app_localizations.dart';
 import '../services/converter_service.dart';
 import '../services/shared/file_utils.dart';
 import '../ui/app_theme.dart';
+import '../ui/widgets/app_header.dart';
 import '../ui/widgets/glass_card.dart';
 import '../ui/widgets/loading_overlay.dart';
 
@@ -100,6 +101,12 @@ class _VcfToExcelPageState extends State<VcfToExcelPage> {
       body: Stack(
         children: [
           Container(decoration: const BoxDecoration(gradient: AppTheme.backgroundGradient)),
+          const Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: AppHeader(showBackButton: true),
+          ),
           Center(
             child: GlassCard(
               child: Column(
