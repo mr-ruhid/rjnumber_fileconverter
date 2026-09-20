@@ -14,7 +14,6 @@
 
   "vcfToExcelTitle": "Convert VCF to Excel",
   "vcfToExcelStatusInitial": "Select a VCF (.vcf) file to start",
-  "vcfToExcelStatusReading": "Reading and converting file...",
   "vcfToExcelStatusSuccess": "Done! File saved successfully.",
   "vcfToExcelStatusCancelled": "File selection cancelled.",
   "vcfToExcelStatusSaveCancelled": "Saving was cancelled.",
@@ -23,11 +22,9 @@
   "vcfToExcelButton": "Select VCF File",
   "vcfToExcelPleaseWait": "Please wait...",
   "vcfToExcelSaveDialogTitle": "Save Excel file",
-  "vcfToExcelIncludeEmpty": "Include contacts without phone number",
 
   "excelToVcfTitle": "Convert Excel to VCF",
   "excelToVcfStatusInitial": "Select an Excel (.xlsx) file to start",
-  "excelToVcfStatusReading": "Reading and converting file...",
   "excelToVcfStatusSuccess": "Done! File saved successfully.",
   "excelToVcfStatusCancelled": "File selection cancelled.",
   "excelToVcfStatusSaveCancelled": "Saving was cancelled.",
@@ -39,9 +36,6 @@
 
   "processingTitle": "Converting file...",
   "processingSubtitle": "Please wait, the process is running.",
-
-  "licenseBadgeActive": "License Active",
-  "licenseBadgeTrial": "Trial Version",
 
   "licenseDialogTitle": "Trial Limit Reached",
   "licenseDialogContent": "You have already used your one-time free trial. To continue, please enter your license code.",
