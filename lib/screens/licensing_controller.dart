@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:lottie/lottie.dart';
@@ -10,7 +11,7 @@ import 'converter_page.dart';
 /// Lisenziya yoxlanması, keşləmə və sınaq (trial) məntiqini idarə edir.
 class LicensingController {
   static const String _prefsKey = 'license_active';
-  static const String _trialKey = 'has_used_trial'; // Sınaq limiti üçün açar
+  static const String _trialKey = 'has_used_trial';
   static const String _licenseAssetPath = 'assets/licence/licence.json';
 
   /// Keşdə saxlanan lisenziya statusunu oxuyur.
@@ -254,11 +255,15 @@ class _LicenseScreenState extends State<LicenseScreen> {
               ? const SizedBox(
             width: 22,
             height: 22,
-            child: CircularProgressIndicator(color: Color(0xFF1E3C72), strokeWidth: 2.5),
+            child: CircularProgressIndicator(
+                color: Color(0xFF1E3C72), strokeWidth: 2.5),
           )
               : const Text(
             'Yoxla',
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF1E3C72)),
+            style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF1E3C72)),
           ),
         ),
       ),
@@ -290,7 +295,8 @@ class _LicenseScreenState extends State<LicenseScreen> {
         child: OutlinedButton.icon(
           onPressed: _goToApp,
           icon: const Icon(Icons.arrow_back_rounded, color: Colors.white),
-          label: const Text('Geri qayıt', style: TextStyle(color: Colors.white, fontSize: 16)),
+          label: const Text('Geri qayıt',
+              style: TextStyle(color: Colors.white, fontSize: 16)),
           style: OutlinedButton.styleFrom(
             side: BorderSide(color: Colors.white.withOpacity(0.4)),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
