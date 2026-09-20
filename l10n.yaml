@@ -1,0 +1,9 @@
+# l10n.yaml
+# Flutter-ın rəsmi localization (çoxdillilik) konfiqurasiyası
+# Bu fayl "flutter gen-l10n" əmrinin necə işləyəcəyini təyin edir
+
+arb-dir: lib/l10n
+template-arb-file: app_en.arb
+output-localization-file: app_localizations.dart
+output-class: AppLocalizations
+nullable-getter: false
