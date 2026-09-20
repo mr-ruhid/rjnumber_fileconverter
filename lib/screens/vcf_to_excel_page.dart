@@ -3,6 +3,7 @@ import 'package:file_picker/file_picker.dart';
 
 import '../l10n/app_localizations.dart';
 import '../services/converter_service.dart';
+import '../services/settings_service.dart';
 import '../services/shared/file_utils.dart';
 import '../ui/app_theme.dart';
 import '../ui/widgets/app_header.dart';
@@ -65,9 +66,12 @@ class _VcfToExcelPageState extends State<VcfToExcelPage> {
 
       final excelBytes = ConverterService.contactsToExcelBytes(contacts);
 
+      final baseName = await SettingsService.getDefaultFileName();
+      final fileName = '$baseName.xlsx';
+
       final outputUri = await FileUtils.saveExcelFile(
         excelBytes,
-        'Kontaktlar.xlsx',
+        fileName,
         l10n.vcfToExcelSaveDialogTitle,
       );
 
@@ -131,7 +135,9 @@ class _VcfToExcelPageState extends State<VcfToExcelPage> {
                   ),
                   const SizedBox(height: AppTheme.spacingSm),
                   Text(
-                    _statusKey != null ? _getStatusText(l10n, _statusKey!) : l10n.vcfToExcelStatusInitial,
+                    _statusKey != null
+                        ? _getStatusText(l10n, _statusKey!)
+                        : l10n.vcfToExcelStatusInitial,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: AppTheme.textSecondary(context),
@@ -148,7 +154,8 @@ class _VcfToExcelPageState extends State<VcfToExcelPage> {
                         backgroundColor: buttonBg,
                         foregroundColor: buttonFg,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
+                          borderRadius:
+                          BorderRadius.circular(AppTheme.radiusSmall),
                         ),
                       ),
                       icon: _isLoading
@@ -162,7 +169,9 @@ class _VcfToExcelPageState extends State<VcfToExcelPage> {
                       )
                           : Icon(Icons.upload_file_rounded, color: buttonFg),
                       label: Text(
-                        _isLoading ? l10n.vcfToExcelPleaseWait : l10n.vcfToExcelButton,
+                        _isLoading
+                            ? l10n.vcfToExcelPleaseWait
+                            : l10n.vcfToExcelButton,
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
