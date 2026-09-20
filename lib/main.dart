@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:window_manager/window_manager.dart';
 
-import 'converter_page.dart';
-import 'licensing_controller.dart';
+import 'screens/converter_page.dart';
+import 'screens/licensing_controller.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
