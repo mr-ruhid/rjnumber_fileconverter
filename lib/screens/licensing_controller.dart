@@ -157,6 +157,9 @@ class _LicenseScreenState extends State<LicenseScreen> {
 
   List<Widget> _buildInputContent() {
     final l10n = AppLocalizations.of(context)!;
+    final buttonBg = AppTheme.buttonBackground(context);
+    final buttonFg = AppTheme.buttonForeground(context);
+
     return [
       SizedBox(
         width: 130,
@@ -226,7 +229,8 @@ class _LicenseScreenState extends State<LicenseScreen> {
         child: ElevatedButton(
           onPressed: _isChecking ? null : _verifyLicense,
           style: ElevatedButton.styleFrom(
-            backgroundColor: AppTheme.textPrimary(context),
+            backgroundColor: buttonBg,
+            foregroundColor: buttonFg,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
             ),
@@ -237,7 +241,7 @@ class _LicenseScreenState extends State<LicenseScreen> {
             width: 22,
             height: 22,
             child: CircularProgressIndicator(
-              color: AppTheme.gradientTopLeft(context),
+              color: buttonFg,
               strokeWidth: 2.5,
             ),
           )
@@ -246,7 +250,7 @@ class _LicenseScreenState extends State<LicenseScreen> {
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              color: AppTheme.gradientTopLeft(context),
+              color: buttonFg,
             ),
           ),
         ),
