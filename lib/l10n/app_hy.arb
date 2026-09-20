@@ -1,0 +1,71 @@
+{
+  "@@locale": "hy",
+
+  "appTitle": "RJ Number - Ֆայլի փոխարկիչ",
+  "splashLoading": "Բեռնվում է...",
+
+  "homeTitle": "Ընտրեք գործողություն",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Excel ֆայլը փոխարկել կոնտակտների",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "Կոնտակտները փոխարկել Excel ֆայլի",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Lite տարբերակ",
+
+  "vcfToExcelTitle": "VCF-ը փոխարկել Excel-ի",
+  "vcfToExcelStatusInitial": "Սկսելու համար ընտրեք VCF (.vcf) ֆայլ",
+  "vcfToExcelStatusSuccess": "Պատրաստ է։ Ֆայլը հաջողությամբ պահպանվել է։",
+  "vcfToExcelStatusCancelled": "Ֆայլի ընտրությունը չեղարկվել է։",
+  "vcfToExcelStatusSaveCancelled": "Պահպանումը չեղարկվել է։",
+  "vcfToExcelStatusEmpty": "Սխալ. Ֆայլում համապատասխան կոնտակտներ չեն գտնվել։",
+  "vcfToExcelStatusError": "Փոխարկման ժամանակ սխալ է տեղի ունեցել։",
+  "vcfToExcelButton": "Ընտրել VCF ֆայլ",
+  "vcfToExcelPleaseWait": "Խնդրում ենք սպասել...",
+  "vcfToExcelSaveDialogTitle": "Պահպանել Excel ֆայլը",
+
+  "excelToVcfTitle": "Excel-ը փոխարկել VCF-ի",
+  "excelToVcfStatusInitial": "Սկսելու համար ընտրեք Excel (.xlsx) ֆայլ",
+  "excelToVcfStatusSuccess": "Պատրաստ է։ Ֆայլը հաջողությամբ պահպանվել է։",
+  "excelToVcfStatusCancelled": "Ֆայլի ընտրությունը չեղարկվել է։",
+  "excelToVcfStatusSaveCancelled": "Պահպանումը չեղարկվել է։",
+  "excelToVcfStatusEmpty": "Սխալ. Ֆայլում համապատասխան կոնտակտներ չեն գտնվել։",
+  "excelToVcfStatusError": "Փոխարկման ժամանակ սխալ է տեղի ունեցել։",
+  "excelToVcfButton": "Ընտրել Excel ֆայլ",
+  "excelToVcfPleaseWait": "Խնդրում ենք սպասել...",
+  "excelToVcfSaveDialogTitle": "Պահպանել VCF ֆայլը",
+
+  "processingTitle": "Ֆայլը փոխարկվում է...",
+  "processingSubtitle": "Խնդրում ենք սպասել, գործընթացը ընթացքի մեջ է։",
+
+  "licenseBadgeActive": "Լիցենզիան ակտիվ է",
+  "licenseBadgeTrial": "Փորձնական տարբերակ",
+
+  "licenseDialogTitle": "Փորձնական սահմանաչափը սպառվել է",
+  "licenseDialogContent": "Դուք արդեն օգտագործել եք ձեր մեկանգամյա անվճար փորձնականը։ Շարունակելու համար մուտքագրեք լիցենզիայի կոդը։",
+  "licenseDialogClose": "Փակել",
+  "licenseDialogEnter": "Մուտքագրել լիցենզիա",
+
+  "licenseScreenTitle": "Շարունակելու համար մուտքագրեք լիցենզիայի կոդը",
+  "licenseFieldHint": "Լիցենզիայի կոդ",
+  "licenseButtonVerify": "Ստուգել",
+  "licenseErrorEmpty": "Խնդրում ենք մուտքագրել լիցենզիայի կոդը։",
+  "licenseErrorInvalid": "Սխալ լիցենզիայի կոդ։ Խնդրում ենք կրկին ստուգել։",
+  "licenseSuccessTitle": "Լիցենզիան հաստատված է։",
+  "licenseButtonBack": "Վերադառնալ",
+
+  "aboutDescription": "Պարզ գործիք Excel ֆայլերը VCF կոնտակտների փոխարկելու և հակառակը։",
+  "aboutClose": "Փակել",
+
+  "settingsTitle": "Կարգավորումներ",
+  "settingsTheme": "Թեմա",
+  "settingsThemeDark": "Մուգ",
+  "settingsThemeLight": "Բաց",
+  "settingsThemeSystem": "Համակարգային",
+
+  "settingsDefaultFileName": "Լռելյայն ֆայլի անուն",
+  "settingsDefaultFileNameHint": "Kontaktlar",
+
+  "settingsVcfVersion": "VCF տարբերակ",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
