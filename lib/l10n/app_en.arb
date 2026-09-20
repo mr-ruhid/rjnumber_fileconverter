@@ -2,186 +2,53 @@
   "@@locale": "en",
 
   "appTitle": "RJ Number - File Converter",
-  "@appTitle": {
-    "description": "The application title shown in the window bar"
-  },
-
   "splashLoading": "Loading...",
-  "@splashLoading": {
-    "description": "Text shown on splash screen while loading"
-  },
 
-  "converterTitle": "Convert your Excel file to Contacts (VCF)",
-  "@converterTitle": {
-    "description": "Main heading on the converter page"
-  },
+  "homeTitle": "Choose an action",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Convert Excel file to contacts",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "Convert contacts to Excel file",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Lite version",
 
-  "converterInitialStatus": "Select an Excel (.xlsx) file to start",
-  "@converterInitialStatus": {
-    "description": "Initial status message on the converter page"
-  },
+  "vcfToExcelTitle": "Convert VCF to Excel",
+  "vcfToExcelStatusInitial": "Select a VCF (.vcf) file to start",
+  "vcfToExcelStatusReading": "Reading and converting file...",
+  "vcfToExcelStatusSuccess": "Done! File saved successfully.",
+  "vcfToExcelStatusCancelled": "File selection cancelled.",
+  "vcfToExcelStatusSaveCancelled": "Saving was cancelled.",
+  "vcfToExcelStatusEmpty": "Error: No valid contacts found in the file.",
+  "vcfToExcelButton": "Select VCF File",
+  "vcfToExcelPleaseWait": "Please wait...",
+  "vcfToExcelIncludeEmpty": "Include contacts without phone number",
 
-  "converterReadingStatus": "Reading and converting file...",
-  "@converterReadingStatus": {
-    "description": "Status shown while the file is being processed"
-  },
+  "excelToVcfTitle": "Convert Excel to VCF",
+  "excelToVcfStatusInitial": "Select an Excel (.xlsx) file to start",
+  "excelToVcfStatusReading": "Reading and converting file...",
+  "excelToVcfStatusSuccess": "Done! File saved successfully.",
+  "excelToVcfStatusCancelled": "File selection cancelled.",
+  "excelToVcfStatusSaveCancelled": "Saving was cancelled.",
+  "excelToVcfStatusEmpty": "Error: No valid contacts found in the file.",
+  "excelToVcfButton": "Select Excel File",
+  "excelToVcfPleaseWait": "Please wait...",
 
-  "converterSelectButton": "Select Excel File",
-  "@converterSelectButton": {
-    "description": "Button text to pick an Excel file"
-  },
-
-  "converterPleaseWait": "Please wait...",
-  "@converterPleaseWait": {
-    "description": "Button text while processing"
-  },
-
-  "converterFileCancelled": "File selection cancelled.",
-  "@converterFileCancelled": {
-    "description": "Status when user cancels file selection"
-  },
-
-  "converterFilePickerError": "Error opening file picker: {error}",
-  "@converterFilePickerError": {
-    "description": "Error shown when file picker fails to open",
-    "placeholders": {
-      "error": {
-        "type": "String",
-        "example": "Permission denied"
-      }
-    }
-  },
-
-  "converterEmptyExcelError": "Error: No sheet found in the Excel file.",
-  "@converterEmptyExcelError": {
-    "description": "Error when Excel file has no sheets"
-  },
-
-  "converterNoContactsError": "Error: No valid phone number found or format is incorrect.",
-  "@converterNoContactsError": {
-    "description": "Error when no valid contacts were found in the file"
-  },
-
-  "converterSaveSuccess": "Done! File saved successfully.\n\nFile path: {path}",
-  "@converterSaveSuccess": {
-    "description": "Success message after saving the VCF file",
-    "placeholders": {
-      "path": {
-        "type": "String",
-        "example": "C:/Users/User/Desktop/contacts.vcf"
-      }
-    }
-  },
-
-  "converterSaveCancelled": "Saving was cancelled.",
-  "@converterSaveCancelled": {
-    "description": "Status when user cancels the save dialog"
-  },
-
-  "converterSaveError": "Error in save dialog: {error}",
-  "@converterSaveError": {
-    "description": "Error shown when save file dialog fails",
-    "placeholders": {
-      "error": {
-        "type": "String",
-        "example": "Disk full"
-      }
-    }
-  },
-
-  "converterGenericError": "An error occurred: {error}",
-  "@converterGenericError": {
-    "description": "Generic error message",
-    "placeholders": {
-      "error": {
-        "type": "String",
-        "example": "Unknown error"
-      }
-    }
-  },
-
-  "converterProcessingTitle": "Converting file...",
-  "@converterProcessingTitle": {
-    "description": "Title on the loading overlay"
-  },
-
-  "converterProcessingSubtitle": "Please wait, the process is running.",
-  "@converterProcessingSubtitle": {
-    "description": "Subtitle on the loading overlay"
-  },
+  "processingTitle": "Converting file...",
+  "processingSubtitle": "Please wait, the process is running.",
 
   "licenseBadgeActive": "License Active",
-  "@licenseBadgeActive": {
-    "description": "Badge shown when license is active"
-  },
-
   "licenseBadgeTrial": "Trial Version",
-  "@licenseBadgeTrial": {
-    "description": "Badge shown when using trial version"
-  },
 
   "licenseDialogTitle": "Trial Limit Reached",
-  "@licenseDialogTitle": {
-    "description": "Title of the trial limit dialog"
-  },
-
   "licenseDialogContent": "You have already used your one-time free trial. To continue, please enter your license code.",
-  "@licenseDialogContent": {
-    "description": "Content of the trial limit dialog"
-  },
-
   "licenseDialogClose": "Close",
-  "@licenseDialogClose": {
-    "description": "Close button on the trial limit dialog"
-  },
-
   "licenseDialogEnter": "Enter License",
-  "@licenseDialogEnter": {
-    "description": "Button to go to license entry screen"
-  },
 
   "licenseScreenTitle": "Enter your license code to continue",
-  "@licenseScreenTitle": {
-    "description": "Title on license entry screen"
-  },
-
   "licenseFieldHint": "License code",
-  "@licenseFieldHint": {
-    "description": "Hint text in license code field"
-  },
-
   "licenseButtonVerify": "Verify",
-  "@licenseButtonVerify": {
-    "description": "Verify button on license screen"
-  },
-
   "licenseErrorEmpty": "Please enter your license code.",
-  "@licenseErrorEmpty": {
-    "description": "Error when license field is empty"
-  },
-
   "licenseErrorInvalid": "Invalid license code. Please check again.",
-  "@licenseErrorInvalid": {
-    "description": "Error when license code is invalid"
-  },
-
   "licenseSuccessTitle": "License verified!",
-  "@licenseSuccessTitle": {
-    "description": "Success message after license verification"
-  },
-
-  "licenseButtonBack": "Go back",
-  "@licenseButtonBack": {
-    "description": "Back button on license success screen"
-  },
-
-  "footerAuthor": "Ruhid Javadov - Mr-Ruhid",
-  "@footerAuthor": {
-    "description": "Author name in the footer"
-  },
-
-  "footerVersion": "Lite version",
-  "@footerVersion": {
-    "description": "Version badge in the footer"
-  }
+  "licenseButtonBack": "Go back"
 }
