@@ -19,8 +19,10 @@
   "vcfToExcelStatusCancelled": "File selection cancelled.",
   "vcfToExcelStatusSaveCancelled": "Saving was cancelled.",
   "vcfToExcelStatusEmpty": "Error: No valid contacts found in the file.",
+  "vcfToExcelStatusError": "An error occurred during conversion.",
   "vcfToExcelButton": "Select VCF File",
   "vcfToExcelPleaseWait": "Please wait...",
+  "vcfToExcelSaveDialogTitle": "Save Excel file",
   "vcfToExcelIncludeEmpty": "Include contacts without phone number",
 
   "excelToVcfTitle": "Convert Excel to VCF",
@@ -30,8 +32,10 @@
   "excelToVcfStatusCancelled": "File selection cancelled.",
   "excelToVcfStatusSaveCancelled": "Saving was cancelled.",
   "excelToVcfStatusEmpty": "Error: No valid contacts found in the file.",
+  "excelToVcfStatusError": "An error occurred during conversion.",
   "excelToVcfButton": "Select Excel File",
   "excelToVcfPleaseWait": "Please wait...",
+  "excelToVcfSaveDialogTitle": "Save VCF file",
 
   "processingTitle": "Converting file...",
   "processingSubtitle": "Please wait, the process is running.",
