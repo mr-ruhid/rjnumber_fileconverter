@@ -52,5 +52,7 @@
   "licenseBadgeActive": "License Active",
   "licenseBadgeTrial": "Trial Version",
   "aboutDescription": "A simple tool to convert Excel files to VCF contacts and back.",
-  "aboutClose": "Close"
+  "aboutClose": "Close",
+  "settingsTitle": "Settings",
+  "settingsLanguage": "Language"
 }
