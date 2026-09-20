@@ -13,7 +13,7 @@ class AboutDialogContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final isDark = AppTheme.isDark(context);
     final buttonBg = AppTheme.buttonBackground(context);
     final buttonFg = AppTheme.buttonForeground(context);
@@ -28,8 +28,8 @@ class AboutDialogContent extends StatelessWidget {
           borderRadius: BorderRadius.circular(AppTheme.radiusLarge),
           border: Border.all(
             color: isDark
-                ? Colors.white.withOpacity(0.15)
-                : Colors.black.withOpacity(0.1),
+                ? Colors.white.withValues(alpha: 0.15)
+                : Colors.black.withValues(alpha: 0.1),
             width: 1.5,
           ),
         ),

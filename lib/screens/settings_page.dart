@@ -12,7 +12,7 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final themeProvider = Provider.of<ThemeProvider>(context);
 
     return Scaffold(
@@ -77,7 +77,7 @@ class SettingsPage extends StatelessWidget {
   }
 
   Widget _buildThemeSelector(BuildContext context, ThemeProvider provider) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16),

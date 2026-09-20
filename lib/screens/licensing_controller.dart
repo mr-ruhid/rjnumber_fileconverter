@@ -156,7 +156,7 @@ class _LicenseScreenState extends State<LicenseScreen> {
   }
 
   List<Widget> _buildInputContent() {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final buttonBg = AppTheme.buttonBackground(context);
     final buttonFg = AppTheme.buttonForeground(context);
 
@@ -259,7 +259,7 @@ class _LicenseScreenState extends State<LicenseScreen> {
   }
 
   List<Widget> _buildValidContent() {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     return [
       SizedBox(
         width: 150,

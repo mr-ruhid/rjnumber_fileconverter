@@ -21,7 +21,7 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
   bool _isLoading = false;
 
   Future<void> _pickAndConvert() async {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
 
     setState(() {
       _isLoading = true;
@@ -94,7 +94,7 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final buttonBg = AppTheme.buttonBackground(context);
     final buttonFg = AppTheme.buttonForeground(context);
 

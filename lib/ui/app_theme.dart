@@ -72,28 +72,28 @@ class AppTheme {
       isDark(context) ? Colors.white : const Color(0xFF1A1A1A);
 
   static Color textSecondary(BuildContext context) => isDark(context)
-      ? Colors.white.withOpacity(0.7)
-      : const Color(0xFF1A1A1A).withOpacity(0.7);
+      ? Colors.white.withValues(alpha: 0.7)
+      : const Color(0xFF1A1A1A).withValues(alpha: 0.7);
 
   static Color textMuted(BuildContext context) => isDark(context)
-      ? Colors.white.withOpacity(0.5)
-      : const Color(0xFF1A1A1A).withOpacity(0.5);
+      ? Colors.white.withValues(alpha: 0.5)
+      : const Color(0xFF1A1A1A).withValues(alpha: 0.5);
 
   static Color glassBg(BuildContext context) => isDark(context)
-      ? Colors.white.withOpacity(opacityMedium)
-      : Colors.white.withOpacity(0.7);
+      ? Colors.white.withValues(alpha: opacityMedium)
+      : Colors.white.withValues(alpha: 0.7);
 
   static Color glassBorder(BuildContext context) => isDark(context)
-      ? Colors.white.withOpacity(opacityStrong)
-      : Colors.black.withOpacity(0.1);
+      ? Colors.white.withValues(alpha: opacityStrong)
+      : Colors.black.withValues(alpha: 0.1);
 
   static Color inputFill(BuildContext context) => isDark(context)
-      ? Colors.white.withOpacity(0.08)
-      : Colors.black.withOpacity(0.05);
+      ? Colors.white.withValues(alpha: 0.08)
+      : Colors.black.withValues(alpha: 0.05);
 
   static Color inputBorder(BuildContext context) => isDark(context)
-      ? Colors.white.withOpacity(0.25)
-      : Colors.black.withOpacity(0.2);
+      ? Colors.white.withValues(alpha: 0.25)
+      : Colors.black.withValues(alpha: 0.2);
 
   static Color buttonBackground(BuildContext context) =>
       isDark(context) ? _primaryLight : _primaryDark;
