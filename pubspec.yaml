@@ -22,6 +22,7 @@ dependencies:
   window_manager: ^0.4.3
   shared_preferences: ^2.3.2
   flutter_launcher_icons: ^0.13.1
+  provider: ^6.1.2
 
 dev_dependencies:
   flutter_test:
