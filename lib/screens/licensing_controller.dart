@@ -1,52 +1,49 @@
 import 'dart:convert';
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:lottie/lottie.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'converter_page.dart';
+import '../l10n/app_localizations.dart';
+import '../ui/app_theme.dart';
+import '../ui/widgets/glass_card.dart';
+import 'home_page.dart';
 
-/// Lisenziya yoxlanması, keşləmə və sınaq (trial) məntiqini idarə edir.
 class LicensingController {
   static const String _prefsKey = 'license_active';
   static const String _trialKey = 'has_used_trial';
   static const String _licenseAssetPath = 'assets/licence/licence.json';
 
-  /// Keşdə saxlanan lisenziya statusunu oxuyur.
   static Future<bool> isLicensed() async {
     try {
       final prefs = await SharedPreferences.getInstance();
       return prefs.getBool(_prefsKey) ?? false;
     } catch (e) {
-      debugPrint('Lisenziya keşi oxunarkən xəta: $e');
+      debugPrint('License cache read error: $e');
       return false;
     }
   }
 
-  /// İstifadəçinin 1 dəfəlik sınaq hüququndan istifadə edib-etmədiyini yoxlayır.
   static Future<bool> hasUsedTrial() async {
     try {
       final prefs = await SharedPreferences.getInstance();
       return prefs.getBool(_trialKey) ?? false;
     } catch (e) {
-      debugPrint('Sınaq limiti oxunarkən xəta: $e');
+      debugPrint('Trial limit read error: $e');
       return false;
     }
   }
 
-  /// İstifadəçinin sınaq hüququnu istifadə etdiyini qeyd edir.
   static Future<void> markTrialUsed() async {
     try {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setBool(_trialKey, true);
     } catch (e) {
-      debugPrint('Sınaq limiti yazılarkən xəta: $e');
+      debugPrint('Trial limit write error: $e');
     }
   }
 
-  /// Daxil edilən kodu assets/licence/licence.json-dakı siyahı ilə tutuşdurur.
   static Future<bool> validateLicense(String inputCode) async {
     try {
       final jsonStr = await rootBundle.loadString(_licenseAssetPath);
@@ -55,34 +52,31 @@ class LicensingController {
       final normalizedInput = inputCode.trim();
       return validCodes.any((code) => code.toString() == normalizedInput);
     } catch (e) {
-      debugPrint('Lisenziya faylı oxunarkən xəta: $e');
+      debugPrint('License file read error: $e');
       return false;
     }
   }
 
-  /// Lisenziyanın aktiv olduğunu keşə yazır.
   static Future<void> cacheLicenseActive() async {
     try {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setBool(_prefsKey, true);
     } catch (e) {
-      debugPrint('Lisenziya keşə yazılarkən xəta: $e');
+      debugPrint('License cache write error: $e');
     }
   }
 
-  /// Lazım olarsa keşi təmizləmək üçün (test məqsədilə).
   static Future<void> clearCache() async {
     try {
       final prefs = await SharedPreferences.getInstance();
       await prefs.remove(_prefsKey);
       await prefs.remove(_trialKey);
     } catch (e) {
-      debugPrint('Lisenziya keşi silinərkən xəta: $e');
+      debugPrint('License cache clear error: $e');
     }
   }
 }
 
-/// Popup kimi görünən, müasir şüşə (glassmorphism) effektli lisenziya yoxlama ekranı.
 class LicenseScreen extends StatefulWidget {
   const LicenseScreen({super.key});
 
@@ -94,18 +88,18 @@ class _LicenseScreenState extends State<LicenseScreen> {
   final TextEditingController _codeController = TextEditingController();
   bool _isChecking = false;
   bool _isValid = false;
-  String? _errorText;
+  String? _errorKey;
 
   Future<void> _verifyLicense() async {
     final code = _codeController.text.trim();
     if (code.isEmpty) {
-      setState(() => _errorText = "Zəhmət olmasa lisenziya kodunu daxil edin.");
+      setState(() => _errorKey = 'licenseErrorEmpty');
       return;
     }
 
     setState(() {
       _isChecking = true;
-      _errorText = null;
+      _errorKey = null;
     });
 
     final valid = await LicensingController.validateLicense(code);
@@ -123,14 +117,14 @@ class _LicenseScreenState extends State<LicenseScreen> {
       setState(() {
         _isValid = false;
         _isChecking = false;
-        _errorText = "Yanlış lisenziya kodu. Yenidən yoxlayın.";
+        _errorKey = 'licenseErrorInvalid';
       });
     }
   }
 
   void _goToApp() {
     Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (_) => const ConverterPage()),
+      MaterialPageRoute(builder: (_) => const HomePage()),
     );
   }
 
@@ -146,40 +140,15 @@ class _LicenseScreenState extends State<LicenseScreen> {
       body: Stack(
         children: [
           Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Color(0xFF1E3C72), Color(0xFF2A5298), Color(0xFF0D0B2B)],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-            ),
+            decoration: const BoxDecoration(gradient: AppTheme.backgroundGradient),
           ),
           Center(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(24),
-              child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 18, sigmaY: 18),
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 300),
-                  width: 420,
-                  padding: const EdgeInsets.symmetric(horizontal: 36, vertical: 44),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(24),
-                    border: Border.all(color: Colors.white.withOpacity(0.2), width: 1.5),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.25),
-                        blurRadius: 30,
-                        spreadRadius: -5,
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: _isValid ? _buildValidContent() : _buildInputContent(),
-                  ),
-                ),
+            child: GlassCard(
+              width: AppTheme.cardWidthSmall,
+              padding: const EdgeInsets.symmetric(horizontal: 36, vertical: 44),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: _isValid ? _buildValidContent() : _buildInputContent(),
               ),
             ),
           ),
@@ -189,6 +158,7 @@ class _LicenseScreenState extends State<LicenseScreen> {
   }
 
   List<Widget> _buildInputContent() {
+    final l10n = AppLocalizations.of(context)!;
     return [
       SizedBox(
         width: 130,
@@ -201,10 +171,10 @@ class _LicenseScreenState extends State<LicenseScreen> {
         ),
       ),
       const SizedBox(height: 24),
-      const Text(
-        "Davam etmək üçün lisenziya kodunu daxil edin",
+      Text(
+        l10n.licenseScreenTitle,
         textAlign: TextAlign.center,
-        style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+        style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 24),
       TextField(
@@ -212,32 +182,32 @@ class _LicenseScreenState extends State<LicenseScreen> {
         textAlign: TextAlign.center,
         style: const TextStyle(color: Colors.white, fontSize: 16, letterSpacing: 1.2),
         decoration: InputDecoration(
-          hintText: 'Lisenziya kodu',
+          hintText: l10n.licenseFieldHint,
           hintStyle: TextStyle(color: Colors.white.withOpacity(0.5)),
           filled: true,
           fillColor: Colors.white.withOpacity(0.08),
           contentPadding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
             borderSide: BorderSide(color: Colors.white.withOpacity(0.25)),
           ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
             borderSide: BorderSide(color: Colors.white.withOpacity(0.25)),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
             borderSide: const BorderSide(color: Colors.white, width: 1.5),
           ),
         ),
         onSubmitted: (_) => _verifyLicense(),
       ),
-      if (_errorText != null) ...[
+      if (_errorKey != null) ...[
         const SizedBox(height: 12),
         Text(
-          _errorText!,
+          _errorKey == 'licenseErrorEmpty' ? l10n.licenseErrorEmpty : l10n.licenseErrorInvalid,
           textAlign: TextAlign.center,
-          style: const TextStyle(color: Colors.redAccent, fontSize: 13),
+          style: const TextStyle(color: AppTheme.accentRed, fontSize: 13),
         ),
       ],
       const SizedBox(height: 24),
@@ -248,7 +218,9 @@ class _LicenseScreenState extends State<LicenseScreen> {
           onPressed: _isChecking ? null : _verifyLicense,
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.white,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
+            ),
             elevation: 8,
           ),
           child: _isChecking
@@ -256,14 +228,17 @@ class _LicenseScreenState extends State<LicenseScreen> {
             width: 22,
             height: 22,
             child: CircularProgressIndicator(
-                color: Color(0xFF1E3C72), strokeWidth: 2.5),
+              color: AppTheme.gradientTopLeft,
+              strokeWidth: 2.5,
+            ),
           )
-              : const Text(
-            'Yoxla',
-            style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF1E3C72)),
+              : Text(
+            l10n.licenseButtonVerify,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: AppTheme.gradientTopLeft,
+            ),
           ),
         ),
       ),
@@ -271,6 +246,7 @@ class _LicenseScreenState extends State<LicenseScreen> {
   }
 
   List<Widget> _buildValidContent() {
+    final l10n = AppLocalizations.of(context)!;
     return [
       SizedBox(
         width: 150,
@@ -279,14 +255,14 @@ class _LicenseScreenState extends State<LicenseScreen> {
           'assets/animation/yeslicence.json',
           repeat: true,
           errorBuilder: (context, error, stackTrace) =>
-          const Icon(Icons.check_circle_rounded, color: Colors.greenAccent, size: 90),
+          const Icon(Icons.check_circle_rounded, color: AppTheme.accentGreen, size: 90),
         ),
       ),
       const SizedBox(height: 20),
-      const Text(
-        "Lisenziya təsdiqləndi!",
+      Text(
+        l10n.licenseSuccessTitle,
         textAlign: TextAlign.center,
-        style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+        style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 28),
       SizedBox(
@@ -295,11 +271,15 @@ class _LicenseScreenState extends State<LicenseScreen> {
         child: OutlinedButton.icon(
           onPressed: _goToApp,
           icon: const Icon(Icons.arrow_back_rounded, color: Colors.white),
-          label: const Text('Geri qayıt',
-              style: TextStyle(color: Colors.white, fontSize: 16)),
+          label: Text(
+            l10n.licenseButtonBack,
+            style: const TextStyle(color: Colors.white, fontSize: 16),
+          ),
           style: OutlinedButton.styleFrom(
             side: BorderSide(color: Colors.white.withOpacity(0.4)),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
+            ),
           ),
         ),
       ),
