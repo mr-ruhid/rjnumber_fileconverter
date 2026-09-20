@@ -376,12 +376,6 @@ abstract class AppLocalizations {
   /// **'Settings'**
   String get settingsTitle;
 
-  /// No description provided for @settingsLanguage.
-  ///
-  /// In en, this message translates to:
-  /// **'Language'**
-  String get settingsLanguage;
-
   /// No description provided for @settingsTheme.
   ///
   /// In en, this message translates to:

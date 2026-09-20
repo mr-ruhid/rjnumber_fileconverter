@@ -60,5 +60,12 @@
   "settingsTheme": "Theme",
   "settingsThemeDark": "Dark",
   "settingsThemeLight": "Light",
-  "settingsThemeSystem": "System"
+  "settingsThemeSystem": "System",
+
+  "settingsDefaultFileName": "Default file name",
+  "settingsDefaultFileNameHint": "Kontaktlar",
+
+  "settingsVcfVersion": "VCF version",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
 }
