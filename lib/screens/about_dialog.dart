@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -15,6 +14,7 @@ class AboutDialogContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final isDark = AppTheme.isDark(context);
 
     return Dialog(
       backgroundColor: Colors.transparent,
@@ -22,20 +22,29 @@ class AboutDialogContent extends StatelessWidget {
         width: 420,
         padding: const EdgeInsets.all(28),
         decoration: BoxDecoration(
-          color: AppTheme.loadingOverlayBg,
+          color: AppTheme.loadingOverlayBg(context),
           borderRadius: BorderRadius.circular(AppTheme.radiusLarge),
-          border: Border.all(color: Colors.white.withOpacity(0.15), width: 1.5),
+          border: Border.all(
+            color: isDark
+                ? Colors.white.withOpacity(0.15)
+                : Colors.black.withOpacity(0.1),
+            width: 1.5,
+          ),
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Icon(Icons.info_outline_rounded, color: Colors.white, size: 60),
+            Icon(
+              Icons.info_outline_rounded,
+              color: AppTheme.textPrimary(context),
+              size: 60,
+            ),
             const SizedBox(height: 20),
             Text(
               l10n.appTitle,
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Colors.white,
+              style: TextStyle(
+                color: AppTheme.textPrimary(context),
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
@@ -45,7 +54,7 @@ class AboutDialogContent extends StatelessWidget {
               l10n.aboutDescription,
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white.withOpacity(0.75),
+                color: AppTheme.textSecondary(context),
                 fontSize: 14,
                 height: 1.5,
               ),
@@ -58,14 +67,14 @@ class AboutDialogContent extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.08),
+                    color: AppTheme.inputFill(context),
                     borderRadius: BorderRadius.circular(AppTheme.radiusMedium),
-                    border: Border.all(color: Colors.white.withOpacity(0.15)),
+                    border: Border.all(color: AppTheme.inputBorder(context)),
                   ),
                   child: Text(
                     l10n.homeFooter,
-                    style: const TextStyle(
-                      color: Colors.white,
+                    style: TextStyle(
+                      color: AppTheme.textPrimary(context),
                       fontSize: 13,
                       fontWeight: FontWeight.w500,
                     ),
@@ -80,17 +89,17 @@ class AboutDialogContent extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () => Navigator.of(context).pop(),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
+                  backgroundColor: AppTheme.textPrimary(context),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
                   ),
                 ),
                 child: Text(
                   l10n.aboutClose,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
-                    color: AppTheme.gradientTopLeft,
+                    color: AppTheme.gradientTopLeft(context),
                   ),
                 ),
               ),
