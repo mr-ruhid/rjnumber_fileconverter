@@ -1,0 +1,71 @@
+{
+  "@@locale": "tr",
+
+  "appTitle": "RJ Number - Dosya Dönüştürücü",
+  "splashLoading": "Yükleniyor...",
+
+  "homeTitle": "Bir işlem seçin",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Excel dosyasını kişilere dönüştür",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "Kişileri Excel dosyasına dönüştür",
+  "homeFooter": "Ruhid Cavadov - Mr-Ruhid",
+  "homeVersion": "Lite sürüm",
+
+  "vcfToExcelTitle": "VCF'yi Excel'e dönüştür",
+  "vcfToExcelStatusInitial": "Başlamak için bir VCF (.vcf) dosyası seçin",
+  "vcfToExcelStatusSuccess": "Tamam! Dosya başarıyla kaydedildi.",
+  "vcfToExcelStatusCancelled": "Dosya seçimi iptal edildi.",
+  "vcfToExcelStatusSaveCancelled": "Kaydetme iptal edildi.",
+  "vcfToExcelStatusEmpty": "Hata: Dosyada geçerli kişi bulunamadı.",
+  "vcfToExcelStatusError": "Dönüştürme sırasında bir hata oluştu.",
+  "vcfToExcelButton": "VCF Dosyası Seç",
+  "vcfToExcelPleaseWait": "Lütfen bekleyin...",
+  "vcfToExcelSaveDialogTitle": "Excel dosyasını kaydet",
+
+  "excelToVcfTitle": "Excel'i VCF'ye dönüştür",
+  "excelToVcfStatusInitial": "Başlamak için bir Excel (.xlsx) dosyası seçin",
+  "excelToVcfStatusSuccess": "Tamam! Dosya başarıyla kaydedildi.",
+  "excelToVcfStatusCancelled": "Dosya seçimi iptal edildi.",
+  "excelToVcfStatusSaveCancelled": "Kaydetme iptal edildi.",
+  "excelToVcfStatusEmpty": "Hata: Dosyada geçerli kişi bulunamadı.",
+  "excelToVcfStatusError": "Dönüştürme sırasında bir hata oluştu.",
+  "excelToVcfButton": "Excel Dosyası Seç",
+  "excelToVcfPleaseWait": "Lütfen bekleyin...",
+  "excelToVcfSaveDialogTitle": "VCF dosyasını kaydet",
+
+  "processingTitle": "Dosya dönüştürülüyor...",
+  "processingSubtitle": "Lütfen bekleyin, işlem devam ediyor.",
+
+  "licenseBadgeActive": "Lisans Aktif",
+  "licenseBadgeTrial": "Deneme Sürümü",
+
+  "licenseDialogTitle": "Deneme Sınırına Ulaşıldı",
+  "licenseDialogContent": "Bir kerelik ücretsiz deneme hakkınızı zaten kullandınız. Devam etmek için lütfen lisans kodunuzu girin.",
+  "licenseDialogClose": "Kapat",
+  "licenseDialogEnter": "Lisans Gir",
+
+  "licenseScreenTitle": "Devam etmek için lisans kodunuzu girin",
+  "licenseFieldHint": "Lisans kodu",
+  "licenseButtonVerify": "Doğrula",
+  "licenseErrorEmpty": "Lütfen lisans kodunuzu girin.",
+  "licenseErrorInvalid": "Geçersiz lisans kodu. Lütfen tekrar kontrol edin.",
+  "licenseSuccessTitle": "Lisans doğrulandı!",
+  "licenseButtonBack": "Geri dön",
+
+  "aboutDescription": "Excel dosyalarını VCF kişilerine ve geri dönüştürmek için basit bir araç.",
+  "aboutClose": "Kapat",
+
+  "settingsTitle": "Ayarlar",
+  "settingsTheme": "Tema",
+  "settingsThemeDark": "Koyu",
+  "settingsThemeLight": "Açık",
+  "settingsThemeSystem": "Sistem",
+
+  "settingsDefaultFileName": "Varsayılan dosya adı",
+  "settingsDefaultFileNameHint": "Kontaktlar",
+
+  "settingsVcfVersion": "VCF sürümü",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
