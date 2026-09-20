@@ -18,6 +18,9 @@ class AppTheme {
   static const Color accentRed = Colors.redAccent;
   static const Color accentOrange = Colors.orangeAccent;
 
+  static const Color _primaryDark = Color(0xFF1E3C72);
+  static const Color _primaryLight = Colors.white;
+
   static const double cardWidthLarge = 500;
   static const double cardWidthSmall = 420;
   static const double dialogWidth = 350;
@@ -91,4 +94,10 @@ class AppTheme {
   static Color inputBorder(BuildContext context) => isDark(context)
       ? Colors.white.withOpacity(0.25)
       : Colors.black.withOpacity(0.2);
+
+  static Color buttonBackground(BuildContext context) =>
+      isDark(context) ? _primaryLight : _primaryDark;
+
+  static Color buttonForeground(BuildContext context) =>
+      isDark(context) ? _primaryDark : _primaryLight;
 }
