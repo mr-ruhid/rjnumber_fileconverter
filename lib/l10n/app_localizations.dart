@@ -280,6 +280,18 @@ abstract class AppLocalizations {
   /// **'Please wait, the process is running.'**
   String get processingSubtitle;
 
+  /// No description provided for @licenseBadgeActive.
+  ///
+  /// In en, this message translates to:
+  /// **'License Active'**
+  String get licenseBadgeActive;
+
+  /// No description provided for @licenseBadgeTrial.
+  ///
+  /// In en, this message translates to:
+  /// **'Trial Version'**
+  String get licenseBadgeTrial;
+
   /// No description provided for @licenseDialogTitle.
   ///
   /// In en, this message translates to:
@@ -346,18 +358,6 @@ abstract class AppLocalizations {
   /// **'Go back'**
   String get licenseButtonBack;
 
-  /// No description provided for @licenseBadgeActive.
-  ///
-  /// In en, this message translates to:
-  /// **'License Active'**
-  String get licenseBadgeActive;
-
-  /// No description provided for @licenseBadgeTrial.
-  ///
-  /// In en, this message translates to:
-  /// **'Trial Version'**
-  String get licenseBadgeTrial;
-
   /// No description provided for @aboutDescription.
   ///
   /// In en, this message translates to:
@@ -369,6 +369,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Close'**
   String get aboutClose;
+
+  /// No description provided for @settingsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settingsTitle;
+
+  /// No description provided for @settingsLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get settingsLanguage;
 }
 
 class _AppLocalizationsDelegate

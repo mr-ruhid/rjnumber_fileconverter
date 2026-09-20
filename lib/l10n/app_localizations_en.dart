@@ -105,6 +105,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get processingSubtitle => 'Please wait, the process is running.';
 
   @override
+  String get licenseBadgeActive => 'License Active';
+
+  @override
+  String get licenseBadgeTrial => 'Trial Version';
+
+  @override
   String get licenseDialogTitle => 'Trial Limit Reached';
 
   @override
@@ -139,15 +145,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get licenseButtonBack => 'Go back';
 
   @override
-  String get licenseBadgeActive => 'License Active';
-
-  @override
-  String get licenseBadgeTrial => 'Trial Version';
-
-  @override
   String get aboutDescription =>
       'A simple tool to convert Excel files to VCF contacts and back.';
 
   @override
   String get aboutClose => 'Close';
+
+  @override
+  String get settingsTitle => 'Settings';
+
+  @override
+  String get settingsLanguage => 'Language';
 }

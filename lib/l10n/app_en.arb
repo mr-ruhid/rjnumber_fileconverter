@@ -37,6 +37,9 @@
   "processingTitle": "Converting file...",
   "processingSubtitle": "Please wait, the process is running.",
 
+  "licenseBadgeActive": "License Active",
+  "licenseBadgeTrial": "Trial Version",
+
   "licenseDialogTitle": "Trial Limit Reached",
   "licenseDialogContent": "You have already used your one-time free trial. To continue, please enter your license code.",
   "licenseDialogClose": "Close",
@@ -49,10 +52,10 @@
   "licenseErrorInvalid": "Invalid license code. Please check again.",
   "licenseSuccessTitle": "License verified!",
   "licenseButtonBack": "Go back",
-  "licenseBadgeActive": "License Active",
-  "licenseBadgeTrial": "Trial Version",
+
   "aboutDescription": "A simple tool to convert Excel files to VCF contacts and back.",
   "aboutClose": "Close",
+
   "settingsTitle": "Settings",
   "settingsLanguage": "Language"
 }
