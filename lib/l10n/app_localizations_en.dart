@@ -143,4 +143,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get licenseBadgeTrial => 'Trial Version';
+
+  @override
+  String get aboutDescription =>
+      'A simple tool to convert Excel files to VCF contacts and back.';
+
+  @override
+  String get aboutClose => 'Close';
 }

@@ -357,6 +357,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Trial Version'**
   String get licenseBadgeTrial;
+
+  /// No description provided for @aboutDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A simple tool to convert Excel files to VCF contacts and back.'**
+  String get aboutDescription;
+
+  /// No description provided for @aboutClose.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get aboutClose;
 }
 
 class _AppLocalizationsDelegate

@@ -50,5 +50,7 @@
   "licenseSuccessTitle": "License verified!",
   "licenseButtonBack": "Go back",
   "licenseBadgeActive": "License Active",
-  "licenseBadgeTrial": "Trial Version"
+  "licenseBadgeTrial": "Trial Version",
+  "aboutDescription": "A simple tool to convert Excel files to VCF contacts and back.",
+  "aboutClose": "Close"
 }
