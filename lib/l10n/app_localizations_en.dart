@@ -165,4 +165,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsThemeSystem => 'System';
+
+  @override
+  String get settingsDefaultFileName => 'Default file name';
+
+  @override
+  String get settingsDefaultFileNameHint => 'Kontaktlar';
+
+  @override
+  String get settingsVcfVersion => 'VCF version';
+
+  @override
+  String get settingsVcfVersion3 => '3.0';
+
+  @override
+  String get settingsVcfVersion4 => '4.0';
 }

@@ -399,6 +399,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'System'**
   String get settingsThemeSystem;
+
+  /// No description provided for @settingsDefaultFileName.
+  ///
+  /// In en, this message translates to:
+  /// **'Default file name'**
+  String get settingsDefaultFileName;
+
+  /// No description provided for @settingsDefaultFileNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Kontaktlar'**
+  String get settingsDefaultFileNameHint;
+
+  /// No description provided for @settingsVcfVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'VCF version'**
+  String get settingsVcfVersion;
+
+  /// No description provided for @settingsVcfVersion3.
+  ///
+  /// In en, this message translates to:
+  /// **'3.0'**
+  String get settingsVcfVersion3;
+
+  /// No description provided for @settingsVcfVersion4.
+  ///
+  /// In en, this message translates to:
+  /// **'4.0'**
+  String get settingsVcfVersion4;
 }
 
 class _AppLocalizationsDelegate

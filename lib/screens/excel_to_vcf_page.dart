@@ -3,6 +3,7 @@ import 'package:file_picker/file_picker.dart';
 
 import '../l10n/app_localizations.dart';
 import '../services/converter_service.dart';
+import '../services/settings_service.dart';
 import '../services/shared/file_utils.dart';
 import '../ui/app_theme.dart';
 import '../ui/widgets/app_header.dart';
@@ -62,11 +63,18 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
         return;
       }
 
-      final vcfBytes = ConverterService.contactsToVcfBytes(contacts);
+      final vcfVersion = await SettingsService.getVcfVersion();
+      final vcfBytes = ConverterService.contactsToVcfBytes(
+        contacts,
+        version: vcfVersion,
+      );
+
+      final baseName = await SettingsService.getDefaultFileName();
+      final fileName = '$baseName.vcf';
 
       final outputUri = await FileUtils.saveVcfFile(
         vcfBytes,
-        'Kontaktlar.vcf',
+        fileName,
         l10n.excelToVcfSaveDialogTitle,
       );
 
@@ -130,7 +138,9 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
                   ),
                   const SizedBox(height: AppTheme.spacingSm),
                   Text(
-                    _statusKey != null ? _getStatusText(l10n, _statusKey!) : l10n.excelToVcfStatusInitial,
+                    _statusKey != null
+                        ? _getStatusText(l10n, _statusKey!)
+                        : l10n.excelToVcfStatusInitial,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: AppTheme.textSecondary(context),
@@ -147,7 +157,8 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
                         backgroundColor: buttonBg,
                         foregroundColor: buttonFg,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
+                          borderRadius:
+                          BorderRadius.circular(AppTheme.radiusSmall),
                         ),
                       ),
                       icon: _isLoading
@@ -161,7 +172,9 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
                       )
                           : Icon(Icons.upload_file_rounded, color: buttonFg),
                       label: Text(
-                        _isLoading ? l10n.excelToVcfPleaseWait : l10n.excelToVcfButton,
+                        _isLoading
+                            ? l10n.excelToVcfPleaseWait
+                            : l10n.excelToVcfButton,
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
