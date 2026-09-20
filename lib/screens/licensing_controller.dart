@@ -139,9 +139,7 @@ class _LicenseScreenState extends State<LicenseScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            decoration: const BoxDecoration(gradient: AppTheme.backgroundGradient),
-          ),
+          Container(decoration: BoxDecoration(gradient: AppTheme.backgroundGradient(context))),
           Center(
             child: GlassCard(
               width: AppTheme.cardWidthSmall,
@@ -166,38 +164,49 @@ class _LicenseScreenState extends State<LicenseScreen> {
         child: Lottie.asset(
           'assets/animation/nolicence.json',
           repeat: true,
-          errorBuilder: (context, error, stackTrace) =>
-          const Icon(Icons.lock_outline_rounded, color: Colors.white, size: 80),
+          errorBuilder: (context, error, stackTrace) => Icon(
+            Icons.lock_outline_rounded,
+            color: AppTheme.textPrimary(context),
+            size: 80,
+          ),
         ),
       ),
       const SizedBox(height: 24),
       Text(
         l10n.licenseScreenTitle,
         textAlign: TextAlign.center,
-        style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+        style: TextStyle(
+          color: AppTheme.textPrimary(context),
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
       ),
       const SizedBox(height: 24),
       TextField(
         controller: _codeController,
         textAlign: TextAlign.center,
-        style: const TextStyle(color: Colors.white, fontSize: 16, letterSpacing: 1.2),
+        style: TextStyle(
+          color: AppTheme.textPrimary(context),
+          fontSize: 16,
+          letterSpacing: 1.2,
+        ),
         decoration: InputDecoration(
           hintText: l10n.licenseFieldHint,
-          hintStyle: TextStyle(color: Colors.white.withOpacity(0.5)),
+          hintStyle: TextStyle(color: AppTheme.textMuted(context)),
           filled: true,
-          fillColor: Colors.white.withOpacity(0.08),
+          fillColor: AppTheme.inputFill(context),
           contentPadding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
-            borderSide: BorderSide(color: Colors.white.withOpacity(0.25)),
+            borderSide: BorderSide(color: AppTheme.inputBorder(context)),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
-            borderSide: BorderSide(color: Colors.white.withOpacity(0.25)),
+            borderSide: BorderSide(color: AppTheme.inputBorder(context)),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
-            borderSide: const BorderSide(color: Colors.white, width: 1.5),
+            borderSide: BorderSide(color: AppTheme.textPrimary(context), width: 1.5),
           ),
         ),
         onSubmitted: (_) => _verifyLicense(),
@@ -217,27 +226,27 @@ class _LicenseScreenState extends State<LicenseScreen> {
         child: ElevatedButton(
           onPressed: _isChecking ? null : _verifyLicense,
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.white,
+            backgroundColor: AppTheme.textPrimary(context),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
             ),
             elevation: 8,
           ),
           child: _isChecking
-              ? const SizedBox(
+              ? SizedBox(
             width: 22,
             height: 22,
             child: CircularProgressIndicator(
-              color: AppTheme.gradientTopLeft,
+              color: AppTheme.gradientTopLeft(context),
               strokeWidth: 2.5,
             ),
           )
               : Text(
             l10n.licenseButtonVerify,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              color: AppTheme.gradientTopLeft,
+              color: AppTheme.gradientTopLeft(context),
             ),
           ),
         ),
@@ -254,15 +263,22 @@ class _LicenseScreenState extends State<LicenseScreen> {
         child: Lottie.asset(
           'assets/animation/yeslicence.json',
           repeat: true,
-          errorBuilder: (context, error, stackTrace) =>
-          const Icon(Icons.check_circle_rounded, color: AppTheme.accentGreen, size: 90),
+          errorBuilder: (context, error, stackTrace) => const Icon(
+            Icons.check_circle_rounded,
+            color: AppTheme.accentGreen,
+            size: 90,
+          ),
         ),
       ),
       const SizedBox(height: 20),
       Text(
         l10n.licenseSuccessTitle,
         textAlign: TextAlign.center,
-        style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+        style: TextStyle(
+          color: AppTheme.textPrimary(context),
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
       ),
       const SizedBox(height: 28),
       SizedBox(
@@ -270,13 +286,13 @@ class _LicenseScreenState extends State<LicenseScreen> {
         height: 52,
         child: OutlinedButton.icon(
           onPressed: _goToApp,
-          icon: const Icon(Icons.arrow_back_rounded, color: Colors.white),
+          icon: Icon(Icons.arrow_back_rounded, color: AppTheme.textPrimary(context)),
           label: Text(
             l10n.licenseButtonBack,
-            style: const TextStyle(color: Colors.white, fontSize: 16),
+            style: TextStyle(color: AppTheme.textPrimary(context), fontSize: 16),
           ),
           style: OutlinedButton.styleFrom(
-            side: BorderSide(color: Colors.white.withOpacity(0.4)),
+            side: BorderSide(color: AppTheme.inputBorder(context)),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
             ),
