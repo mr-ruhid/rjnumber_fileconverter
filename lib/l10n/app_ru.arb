@@ -1,0 +1,72 @@
+
+{
+  "@@locale": "ru",
+
+  "appTitle": "RJ Number - Конвертер файлов",
+  "splashLoading": "Загрузка...",
+
+  "homeTitle": "Выберите действие",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Преобразовать Excel в контакты",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "Преобразовать контакты в Excel",
+  "homeFooter": "Рухид Джавадов - Mr-Ruhid",
+  "homeVersion": "Lite версия",
+
+  "vcfToExcelTitle": "Преобразовать VCF в Excel",
+  "vcfToExcelStatusInitial": "Выберите файл VCF (.vcf) для начала",
+  "vcfToExcelStatusSuccess": "Готово! Файл успешно сохранён.",
+  "vcfToExcelStatusCancelled": "Выбор файла отменён.",
+  "vcfToExcelStatusSaveCancelled": "Сохранение отменено.",
+  "vcfToExcelStatusEmpty": "Ошибка: В файле не найдено действительных контактов.",
+  "vcfToExcelStatusError": "Произошла ошибка при преобразовании.",
+  "vcfToExcelButton": "Выбрать файл VCF",
+  "vcfToExcelPleaseWait": "Подождите...",
+  "vcfToExcelSaveDialogTitle": "Сохранить файл Excel",
+
+  "excelToVcfTitle": "Преобразовать Excel в VCF",
+  "excelToVcfStatusInitial": "Выберите файл Excel (.xlsx) для начала",
+  "excelToVcfStatusSuccess": "Готово! Файл успешно сохранён.",
+  "excelToVcfStatusCancelled": "Выбор файла отменён.",
+  "excelToVcfStatusSaveCancelled": "Сохранение отменено.",
+  "excelToVcfStatusEmpty": "Ошибка: В файле не найдено действительных контактов.",
+  "excelToVcfStatusError": "Произошла ошибка при преобразовании.",
+  "excelToVcfButton": "Выбрать файл Excel",
+  "excelToVcfPleaseWait": "Подождите...",
+  "excelToVcfSaveDialogTitle": "Сохранить файл VCF",
+
+  "processingTitle": "Преобразование файла...",
+  "processingSubtitle": "Подождите, процесс выполняется.",
+
+  "licenseBadgeActive": "Лицензия активна",
+  "licenseBadgeTrial": "Пробная версия",
+
+  "licenseDialogTitle": "Лимит пробной версии исчерпан",
+  "licenseDialogContent": "Вы уже использовали свою однократную бесплатную пробную версию. Чтобы продолжить, введите код лицензии.",
+  "licenseDialogClose": "Закрыть",
+  "licenseDialogEnter": "Ввести лицензию",
+
+  "licenseScreenTitle": "Введите код лицензии для продолжения",
+  "licenseFieldHint": "Код лицензии",
+  "licenseButtonVerify": "Проверить",
+  "licenseErrorEmpty": "Пожалуйста, введите код лицензии.",
+  "licenseErrorInvalid": "Неверный код лицензии. Проверьте ещё раз.",
+  "licenseSuccessTitle": "Лицензия подтверждена!",
+  "licenseButtonBack": "Вернуться",
+
+  "aboutDescription": "Простой инструмент для преобразования файлов Excel в контакты VCF и обратно.",
+  "aboutClose": "Закрыть",
+
+  "settingsTitle": "Настройки",
+  "settingsTheme": "Тема",
+  "settingsThemeDark": "Тёмная",
+  "settingsThemeLight": "Светлая",
+  "settingsThemeSystem": "Системная",
+
+  "settingsDefaultFileName": "Имя файла по умолчанию",
+  "settingsDefaultFileNameHint": "Kontaktlar",
+
+  "settingsVcfVersion": "Версия VCF",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
