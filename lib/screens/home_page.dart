@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../l10n/app_localizations.dart';
 import '../ui/app_theme.dart';
+import '../ui/widgets/app_header.dart';
 import '../ui/widgets/glass_card.dart';
 import 'vcf_to_excel_page.dart';
 import 'excel_to_vcf_page.dart';
@@ -24,15 +25,11 @@ class HomePage extends StatelessWidget {
       body: Stack(
         children: [
           Container(decoration: const BoxDecoration(gradient: AppTheme.backgroundGradient)),
-          Positioned(
-            top: 20,
-            left: 20,
-            child: SvgPicture.asset(
-              'assets/logo/logo.svg',
-              height: 60,
-              placeholderBuilder: (context) =>
-              const Icon(Icons.api_rounded, color: Colors.white, size: 60),
-            ),
+          const Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: AppHeader(),
           ),
           Center(
             child: GlassCard(
