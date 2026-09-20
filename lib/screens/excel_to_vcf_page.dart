@@ -95,6 +95,8 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final buttonBg = AppTheme.buttonBackground(context);
+    final buttonFg = AppTheme.buttonForeground(context);
 
     return Scaffold(
       body: Stack(
@@ -141,25 +143,29 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
                     height: 55,
                     child: ElevatedButton.icon(
                       onPressed: _isLoading ? null : _pickAndConvert,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: buttonBg,
+                        foregroundColor: buttonFg,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
+                        ),
+                      ),
                       icon: _isLoading
                           ? SizedBox(
                         width: 24,
                         height: 24,
                         child: CircularProgressIndicator(
-                          color: AppTheme.gradientTopLeft(context),
+                          color: buttonFg,
                           strokeWidth: 2.5,
                         ),
                       )
-                          : Icon(
-                        Icons.upload_file_rounded,
-                        color: AppTheme.gradientTopLeft(context),
-                      ),
+                          : Icon(Icons.upload_file_rounded, color: buttonFg),
                       label: Text(
                         _isLoading ? l10n.excelToVcfPleaseWait : l10n.excelToVcfButton,
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: AppTheme.gradientTopLeft(context),
+                          color: buttonFg,
                         ),
                       ),
                     ),
