@@ -7,7 +7,6 @@ import 'screens/licensing_controller.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Masaüstü pəncərə idarəçisini işə salırıq (tam ekran keçidi üçün lazımdır).
   await windowManager.ensureInitialized();
   runApp(const MyApp());
 }
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Excel to VCF Converter',
+      title: 'RJ Number - File Converter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
@@ -65,13 +64,14 @@ class _SplashScreenState extends State<SplashScreen> {
 
     if (!mounted) return;
 
-    // Əgər lisenziya varSA və ya lisenziya yoxdur amma hələ trial istifadə EDİLMƏYİBSƏ, Əsas səhifəyə get.
-    // Əks halda (lisenziya yoxdur və trial artıq istifadə edilib), Lisenziya səhifəsinə get.
-    bool shouldGoToConverter = licensed || !trialUsed;
+    // Lisenziya varsa və ya trial istifadə edilməyibsə → ConverterPage
+    // Əks halda → LicenseScreen
+    final bool shouldGoToConverter = licensed || !trialUsed;
 
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (_) => shouldGoToConverter ? const ConverterPage() : const LicenseScreen(),
+        builder: (_) =>
+        shouldGoToConverter ? const ConverterPage() : const LicenseScreen(),
       ),
     );
   }

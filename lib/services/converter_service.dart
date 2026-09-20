@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:lottie/lottie.dart';
 
-import 'licensing_controller.dart';
+import '../screens/licensing_controller.dart';
 import '../services/converter_service.dart';
 
 class ConverterPage extends StatefulWidget {
