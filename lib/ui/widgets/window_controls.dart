@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:window_manager/window_manager.dart';
 
+import '../app_theme.dart';
+
 class WindowControls extends StatelessWidget {
   const WindowControls({super.key});
 
@@ -53,9 +55,19 @@ class _ControlButtonState extends State<_ControlButton> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = AppTheme.isDark(context);
+    final iconColor = AppTheme.textPrimary(context);
+
     final bgColor = _hovering
-        ? (widget.isClose ? Colors.red : Colors.white.withOpacity(0.15))
+        ? (widget.isClose
+        ? Colors.red
+        : (isDark
+        ? Colors.white.withOpacity(0.15)
+        : Colors.black.withOpacity(0.08)))
         : Colors.transparent;
+
+    final effectiveIconColor =
+    _hovering && widget.isClose ? Colors.white : iconColor;
 
     return MouseRegion(
       cursor: SystemMouseCursors.click,
@@ -70,7 +82,7 @@ class _ControlButtonState extends State<_ControlButton> {
           color: bgColor,
           child: Icon(
             widget.icon,
-            color: Colors.white,
+            color: effectiveIconColor,
             size: 16,
           ),
         ),
