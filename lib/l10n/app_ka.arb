@@ -1,0 +1,71 @@
+{
+  "@@locale": "ka",
+
+  "appTitle": "RJ Number - ფაილის გადამყვანი",
+  "splashLoading": "იტვირთება...",
+
+  "homeTitle": "აირჩიეთ მოქმედება",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Excel ფაილის კონტაქტებად გადაყვანა",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "კონტაქტების Excel ფაილად გადაყვანა",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Lite ვერსია",
+
+  "vcfToExcelTitle": "VCF-ის Excel-ად გადაყვანა",
+  "vcfToExcelStatusInitial": "დასაწყებად აირჩიეთ VCF (.vcf) ფაილი",
+  "vcfToExcelStatusSuccess": "მზადაა! ფაილი წარმატებით შენახულია.",
+  "vcfToExcelStatusCancelled": "ფაილის არჩევა გაუქმდა.",
+  "vcfToExcelStatusSaveCancelled": "შენახვა გაუქმდა.",
+  "vcfToExcelStatusEmpty": "შეცდომა: ფაილში ვერ მოიძებნა შესაბამისი კონტაქტები.",
+  "vcfToExcelStatusError": "გადაყვანის დროს მოხდა შეცდომა.",
+  "vcfToExcelButton": "აირჩიეთ VCF ფაილი",
+  "vcfToExcelPleaseWait": "გთხოვთ დაელოდოთ...",
+  "vcfToExcelSaveDialogTitle": "Excel ფაილის შენახვა",
+
+  "excelToVcfTitle": "Excel-ის VCF-ად გადაყვანა",
+  "excelToVcfStatusInitial": "დასაწყებად აირჩიეთ Excel (.xlsx) ფაილი",
+  "excelToVcfStatusSuccess": "მზადაა! ფაილი წარმატებით შენახულია.",
+  "excelToVcfStatusCancelled": "ფაილის არჩევა გაუქმდა.",
+  "excelToVcfStatusSaveCancelled": "შენახვა გაუქმდა.",
+  "excelToVcfStatusEmpty": "შეცდომა: ფაილში ვერ მოიძებნა შესაბამისი კონტაქტები.",
+  "excelToVcfStatusError": "გადაყვანის დროს მოხდა შეცდომა.",
+  "excelToVcfButton": "აირჩიეთ Excel ფაილი",
+  "excelToVcfPleaseWait": "გთხოვთ დაელოდოთ...",
+  "excelToVcfSaveDialogTitle": "VCF ფაილის შენახვა",
+
+  "processingTitle": "ფაილი მუშავდება...",
+  "processingSubtitle": "გთხოვთ დაელოდოთ, პროცესი მიმდინარეობს.",
+
+  "licenseBadgeActive": "ლიცენზია აქტიურია",
+  "licenseBadgeTrial": "საცდელი ვერსია",
+
+  "licenseDialogTitle": "საცდელი ლიმიტი ამოიწურა",
+  "licenseDialogContent": "თქვენ უკვე გამოიყენეთ თქვენი ერთჯერადი უფასო საცდელი. გასაგრძელებლად შეიყვანეთ ლიცენზიის კოდი.",
+  "licenseDialogClose": "დახურვა",
+  "licenseDialogEnter": "ლიცენზიის შეყვანა",
+
+  "licenseScreenTitle": "გასაგრძელებლად შეიყვანეთ ლიცენზიის კოდი",
+  "licenseFieldHint": "ლიცენზიის კოდი",
+  "licenseButtonVerify": "შემოწმება",
+  "licenseErrorEmpty": "გთხოვთ შეიყვანოთ ლიცენზიის კოდი.",
+  "licenseErrorInvalid": "არასწორი ლიცენზიის კოდი. გთხოვთ შეამოწმოთ ხელახლა.",
+  "licenseSuccessTitle": "ლიცენზია დადასტურებულია!",
+  "licenseButtonBack": "დაბრუნება",
+
+  "aboutDescription": "მარტივი ინსტრუმენტი Excel ფაილების VCF კონტაქტებად და უკან გადასაყვანად.",
+  "aboutClose": "დახურვა",
+
+  "settingsTitle": "პარამეტრები",
+  "settingsTheme": "თემა",
+  "settingsThemeDark": "მუქი",
+  "settingsThemeLight": "ნათელი",
+  "settingsThemeSystem": "სისტემური",
+
+  "settingsDefaultFileName": "ნაგულისხმევი ფაილის სახელი",
+  "settingsDefaultFileNameHint": "Kontaktlar",
+
+  "settingsVcfVersion": "VCF ვერსია",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
