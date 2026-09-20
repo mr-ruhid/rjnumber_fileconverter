@@ -16,66 +16,93 @@ class AppLocalizationsEn extends AppLocalizations {
   String get splashLoading => 'Loading...';
 
   @override
-  String get converterTitle => 'Convert your Excel file to Contacts (VCF)';
+  String get homeTitle => 'Choose an action';
 
   @override
-  String get converterInitialStatus => 'Select an Excel (.xlsx) file to start';
+  String get homeExcelToVcf => 'Excel → VCF';
 
   @override
-  String get converterReadingStatus => 'Reading and converting file...';
+  String get homeExcelToVcfDesc => 'Convert Excel file to contacts';
 
   @override
-  String get converterSelectButton => 'Select Excel File';
+  String get homeVcfToExcel => 'VCF → Excel';
 
   @override
-  String get converterPleaseWait => 'Please wait...';
+  String get homeVcfToExcelDesc => 'Convert contacts to Excel file';
 
   @override
-  String get converterFileCancelled => 'File selection cancelled.';
+  String get homeFooter => 'Ruhid Javadov - Mr-Ruhid';
 
   @override
-  String converterFilePickerError(String error) {
-    return 'Error opening file picker: $error';
-  }
+  String get homeVersion => 'Lite version';
 
   @override
-  String get converterEmptyExcelError =>
-      'Error: No sheet found in the Excel file.';
+  String get vcfToExcelTitle => 'Convert VCF to Excel';
 
   @override
-  String get converterNoContactsError =>
-      'Error: No valid phone number found or format is incorrect.';
+  String get vcfToExcelStatusInitial => 'Select a VCF (.vcf) file to start';
 
   @override
-  String converterSaveSuccess(String path) {
-    return 'Done! File saved successfully.\n\nFile path: $path';
-  }
+  String get vcfToExcelStatusSuccess => 'Done! File saved successfully.';
 
   @override
-  String get converterSaveCancelled => 'Saving was cancelled.';
+  String get vcfToExcelStatusCancelled => 'File selection cancelled.';
 
   @override
-  String converterSaveError(String error) {
-    return 'Error in save dialog: $error';
-  }
+  String get vcfToExcelStatusSaveCancelled => 'Saving was cancelled.';
 
   @override
-  String converterGenericError(String error) {
-    return 'An error occurred: $error';
-  }
+  String get vcfToExcelStatusEmpty =>
+      'Error: No valid contacts found in the file.';
 
   @override
-  String get converterProcessingTitle => 'Converting file...';
+  String get vcfToExcelStatusError => 'An error occurred during conversion.';
 
   @override
-  String get converterProcessingSubtitle =>
-      'Please wait, the process is running.';
+  String get vcfToExcelButton => 'Select VCF File';
 
   @override
-  String get licenseBadgeActive => 'License Active';
+  String get vcfToExcelPleaseWait => 'Please wait...';
 
   @override
-  String get licenseBadgeTrial => 'Trial Version';
+  String get vcfToExcelSaveDialogTitle => 'Save Excel file';
+
+  @override
+  String get excelToVcfTitle => 'Convert Excel to VCF';
+
+  @override
+  String get excelToVcfStatusInitial => 'Select an Excel (.xlsx) file to start';
+
+  @override
+  String get excelToVcfStatusSuccess => 'Done! File saved successfully.';
+
+  @override
+  String get excelToVcfStatusCancelled => 'File selection cancelled.';
+
+  @override
+  String get excelToVcfStatusSaveCancelled => 'Saving was cancelled.';
+
+  @override
+  String get excelToVcfStatusEmpty =>
+      'Error: No valid contacts found in the file.';
+
+  @override
+  String get excelToVcfStatusError => 'An error occurred during conversion.';
+
+  @override
+  String get excelToVcfButton => 'Select Excel File';
+
+  @override
+  String get excelToVcfPleaseWait => 'Please wait...';
+
+  @override
+  String get excelToVcfSaveDialogTitle => 'Save VCF file';
+
+  @override
+  String get processingTitle => 'Converting file...';
+
+  @override
+  String get processingSubtitle => 'Please wait, the process is running.';
 
   @override
   String get licenseDialogTitle => 'Trial Limit Reached';
@@ -110,10 +137,4 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get licenseButtonBack => 'Go back';
-
-  @override
-  String get footerAuthor => 'Ruhid Javadov - Mr-Ruhid';
-
-  @override
-  String get footerVersion => 'Lite version';
 }

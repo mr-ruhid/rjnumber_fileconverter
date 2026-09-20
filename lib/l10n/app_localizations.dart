@@ -94,197 +94,257 @@ abstract class AppLocalizations {
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[Locale('en')];
 
-  /// The application title shown in the window bar
+  /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
   /// **'RJ Number - File Converter'**
   String get appTitle;
 
-  /// Text shown on splash screen while loading
+  /// No description provided for @splashLoading.
   ///
   /// In en, this message translates to:
   /// **'Loading...'**
   String get splashLoading;
 
-  /// Main heading on the converter page
+  /// No description provided for @homeTitle.
   ///
   /// In en, this message translates to:
-  /// **'Convert your Excel file to Contacts (VCF)'**
-  String get converterTitle;
+  /// **'Choose an action'**
+  String get homeTitle;
 
-  /// Initial status message on the converter page
+  /// No description provided for @homeExcelToVcf.
   ///
   /// In en, this message translates to:
-  /// **'Select an Excel (.xlsx) file to start'**
-  String get converterInitialStatus;
+  /// **'Excel → VCF'**
+  String get homeExcelToVcf;
 
-  /// Status shown while the file is being processed
+  /// No description provided for @homeExcelToVcfDesc.
   ///
   /// In en, this message translates to:
-  /// **'Reading and converting file...'**
-  String get converterReadingStatus;
+  /// **'Convert Excel file to contacts'**
+  String get homeExcelToVcfDesc;
 
-  /// Button text to pick an Excel file
+  /// No description provided for @homeVcfToExcel.
   ///
   /// In en, this message translates to:
-  /// **'Select Excel File'**
-  String get converterSelectButton;
+  /// **'VCF → Excel'**
+  String get homeVcfToExcel;
 
-  /// Button text while processing
+  /// No description provided for @homeVcfToExcelDesc.
   ///
   /// In en, this message translates to:
-  /// **'Please wait...'**
-  String get converterPleaseWait;
+  /// **'Convert contacts to Excel file'**
+  String get homeVcfToExcelDesc;
 
-  /// Status when user cancels file selection
+  /// No description provided for @homeFooter.
+  ///
+  /// In en, this message translates to:
+  /// **'Ruhid Javadov - Mr-Ruhid'**
+  String get homeFooter;
+
+  /// No description provided for @homeVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'Lite version'**
+  String get homeVersion;
+
+  /// No description provided for @vcfToExcelTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Convert VCF to Excel'**
+  String get vcfToExcelTitle;
+
+  /// No description provided for @vcfToExcelStatusInitial.
+  ///
+  /// In en, this message translates to:
+  /// **'Select a VCF (.vcf) file to start'**
+  String get vcfToExcelStatusInitial;
+
+  /// No description provided for @vcfToExcelStatusSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Done! File saved successfully.'**
+  String get vcfToExcelStatusSuccess;
+
+  /// No description provided for @vcfToExcelStatusCancelled.
   ///
   /// In en, this message translates to:
   /// **'File selection cancelled.'**
-  String get converterFileCancelled;
+  String get vcfToExcelStatusCancelled;
 
-  /// Error shown when file picker fails to open
-  ///
-  /// In en, this message translates to:
-  /// **'Error opening file picker: {error}'**
-  String converterFilePickerError(String error);
-
-  /// Error when Excel file has no sheets
-  ///
-  /// In en, this message translates to:
-  /// **'Error: No sheet found in the Excel file.'**
-  String get converterEmptyExcelError;
-
-  /// Error when no valid contacts were found in the file
-  ///
-  /// In en, this message translates to:
-  /// **'Error: No valid phone number found or format is incorrect.'**
-  String get converterNoContactsError;
-
-  /// Success message after saving the VCF file
-  ///
-  /// In en, this message translates to:
-  /// **'Done! File saved successfully.\n\nFile path: {path}'**
-  String converterSaveSuccess(String path);
-
-  /// Status when user cancels the save dialog
+  /// No description provided for @vcfToExcelStatusSaveCancelled.
   ///
   /// In en, this message translates to:
   /// **'Saving was cancelled.'**
-  String get converterSaveCancelled;
+  String get vcfToExcelStatusSaveCancelled;
 
-  /// Error shown when save file dialog fails
+  /// No description provided for @vcfToExcelStatusEmpty.
   ///
   /// In en, this message translates to:
-  /// **'Error in save dialog: {error}'**
-  String converterSaveError(String error);
+  /// **'Error: No valid contacts found in the file.'**
+  String get vcfToExcelStatusEmpty;
 
-  /// Generic error message
+  /// No description provided for @vcfToExcelStatusError.
   ///
   /// In en, this message translates to:
-  /// **'An error occurred: {error}'**
-  String converterGenericError(String error);
+  /// **'An error occurred during conversion.'**
+  String get vcfToExcelStatusError;
 
-  /// Title on the loading overlay
+  /// No description provided for @vcfToExcelButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Select VCF File'**
+  String get vcfToExcelButton;
+
+  /// No description provided for @vcfToExcelPleaseWait.
+  ///
+  /// In en, this message translates to:
+  /// **'Please wait...'**
+  String get vcfToExcelPleaseWait;
+
+  /// No description provided for @vcfToExcelSaveDialogTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Save Excel file'**
+  String get vcfToExcelSaveDialogTitle;
+
+  /// No description provided for @excelToVcfTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Convert Excel to VCF'**
+  String get excelToVcfTitle;
+
+  /// No description provided for @excelToVcfStatusInitial.
+  ///
+  /// In en, this message translates to:
+  /// **'Select an Excel (.xlsx) file to start'**
+  String get excelToVcfStatusInitial;
+
+  /// No description provided for @excelToVcfStatusSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Done! File saved successfully.'**
+  String get excelToVcfStatusSuccess;
+
+  /// No description provided for @excelToVcfStatusCancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'File selection cancelled.'**
+  String get excelToVcfStatusCancelled;
+
+  /// No description provided for @excelToVcfStatusSaveCancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Saving was cancelled.'**
+  String get excelToVcfStatusSaveCancelled;
+
+  /// No description provided for @excelToVcfStatusEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Error: No valid contacts found in the file.'**
+  String get excelToVcfStatusEmpty;
+
+  /// No description provided for @excelToVcfStatusError.
+  ///
+  /// In en, this message translates to:
+  /// **'An error occurred during conversion.'**
+  String get excelToVcfStatusError;
+
+  /// No description provided for @excelToVcfButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Excel File'**
+  String get excelToVcfButton;
+
+  /// No description provided for @excelToVcfPleaseWait.
+  ///
+  /// In en, this message translates to:
+  /// **'Please wait...'**
+  String get excelToVcfPleaseWait;
+
+  /// No description provided for @excelToVcfSaveDialogTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Save VCF file'**
+  String get excelToVcfSaveDialogTitle;
+
+  /// No description provided for @processingTitle.
   ///
   /// In en, this message translates to:
   /// **'Converting file...'**
-  String get converterProcessingTitle;
+  String get processingTitle;
 
-  /// Subtitle on the loading overlay
+  /// No description provided for @processingSubtitle.
   ///
   /// In en, this message translates to:
   /// **'Please wait, the process is running.'**
-  String get converterProcessingSubtitle;
+  String get processingSubtitle;
 
-  /// Badge shown when license is active
-  ///
-  /// In en, this message translates to:
-  /// **'License Active'**
-  String get licenseBadgeActive;
-
-  /// Badge shown when using trial version
-  ///
-  /// In en, this message translates to:
-  /// **'Trial Version'**
-  String get licenseBadgeTrial;
-
-  /// Title of the trial limit dialog
+  /// No description provided for @licenseDialogTitle.
   ///
   /// In en, this message translates to:
   /// **'Trial Limit Reached'**
   String get licenseDialogTitle;
 
-  /// Content of the trial limit dialog
+  /// No description provided for @licenseDialogContent.
   ///
   /// In en, this message translates to:
   /// **'You have already used your one-time free trial. To continue, please enter your license code.'**
   String get licenseDialogContent;
 
-  /// Close button on the trial limit dialog
+  /// No description provided for @licenseDialogClose.
   ///
   /// In en, this message translates to:
   /// **'Close'**
   String get licenseDialogClose;
 
-  /// Button to go to license entry screen
+  /// No description provided for @licenseDialogEnter.
   ///
   /// In en, this message translates to:
   /// **'Enter License'**
   String get licenseDialogEnter;
 
-  /// Title on license entry screen
+  /// No description provided for @licenseScreenTitle.
   ///
   /// In en, this message translates to:
   /// **'Enter your license code to continue'**
   String get licenseScreenTitle;
 
-  /// Hint text in license code field
+  /// No description provided for @licenseFieldHint.
   ///
   /// In en, this message translates to:
   /// **'License code'**
   String get licenseFieldHint;
 
-  /// Verify button on license screen
+  /// No description provided for @licenseButtonVerify.
   ///
   /// In en, this message translates to:
   /// **'Verify'**
   String get licenseButtonVerify;
 
-  /// Error when license field is empty
+  /// No description provided for @licenseErrorEmpty.
   ///
   /// In en, this message translates to:
   /// **'Please enter your license code.'**
   String get licenseErrorEmpty;
 
-  /// Error when license code is invalid
+  /// No description provided for @licenseErrorInvalid.
   ///
   /// In en, this message translates to:
   /// **'Invalid license code. Please check again.'**
   String get licenseErrorInvalid;
 
-  /// Success message after license verification
+  /// No description provided for @licenseSuccessTitle.
   ///
   /// In en, this message translates to:
   /// **'License verified!'**
   String get licenseSuccessTitle;
 
-  /// Back button on license success screen
+  /// No description provided for @licenseButtonBack.
   ///
   /// In en, this message translates to:
   /// **'Go back'**
   String get licenseButtonBack;
-
-  /// Author name in the footer
-  ///
-  /// In en, this message translates to:
-  /// **'Ruhid Javadov - Mr-Ruhid'**
-  String get footerAuthor;
-
-  /// Version badge in the footer
-  ///
-  /// In en, this message translates to:
-  /// **'Lite version'**
-  String get footerVersion;
 }
 
 class _AppLocalizationsDelegate

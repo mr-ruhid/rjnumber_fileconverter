@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 
 import '../l10n/app_localizations.dart';
-import '../services/excel_to_vcf_service.dart';
+import '../services/converter_service.dart';
 import '../services/shared/file_utils.dart';
 import '../ui/app_theme.dart';
 import '../ui/widgets/glass_card.dart';
@@ -50,7 +50,7 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
 
     try {
       final bytes = await pickedFile.readAsBytes();
-      final contacts = ExcelToVcfService.readContactsFromExcel(bytes);
+      final contacts = ConverterService.readContactsFromExcel(bytes);
 
       if (contacts.isEmpty) {
         if (!mounted) return;
@@ -61,10 +61,10 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
         return;
       }
 
-      final vcfContent = ExcelToVcfService.contactsToVcf(contacts);
+      final vcfBytes = ConverterService.contactsToVcfBytes(contacts);
 
       final outputUri = await FileUtils.saveVcfFile(
-        vcfContent,
+        vcfBytes,
         'Kontaktlar.vcf',
         l10n.excelToVcfSaveDialogTitle,
       );
