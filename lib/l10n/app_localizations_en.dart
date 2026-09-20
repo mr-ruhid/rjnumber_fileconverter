@@ -137,4 +137,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get licenseButtonBack => 'Go back';
+
+  @override
+  String get licenseBadgeActive => 'License Active';
+
+  @override
+  String get licenseBadgeTrial => 'Trial Version';
 }

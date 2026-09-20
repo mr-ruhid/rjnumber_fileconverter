@@ -48,5 +48,7 @@
   "licenseErrorEmpty": "Please enter your license code.",
   "licenseErrorInvalid": "Invalid license code. Please check again.",
   "licenseSuccessTitle": "License verified!",
-  "licenseButtonBack": "Go back"
+  "licenseButtonBack": "Go back",
+  "licenseBadgeActive": "License Active",
+  "licenseBadgeTrial": "Trial Version"
 }

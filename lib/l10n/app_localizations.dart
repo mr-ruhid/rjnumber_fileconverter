@@ -345,6 +345,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Go back'**
   String get licenseButtonBack;
+
+  /// No description provided for @licenseBadgeActive.
+  ///
+  /// In en, this message translates to:
+  /// **'License Active'**
+  String get licenseBadgeActive;
+
+  /// No description provided for @licenseBadgeTrial.
+  ///
+  /// In en, this message translates to:
+  /// **'Trial Version'**
+  String get licenseBadgeTrial;
 }
 
 class _AppLocalizationsDelegate
