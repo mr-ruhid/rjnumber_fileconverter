@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../l10n/app_localizations.dart';
-import '../../../screens/licensing_controller.dart';
+import '../../l10n/app_localizations.dart';
+import '../../screens/licensing_controller.dart';
 import '../app_theme.dart';
 
 class LicenseBadge extends StatefulWidget {
@@ -29,7 +29,10 @@ class _LicenseBadgeState extends State<LicenseBadge> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final color = _isLicensed ? AppTheme.accentGreen : AppTheme.accentOrange;
+    final isDark = AppTheme.isDark(context);
+    final color = _isLicensed
+        ? (isDark ? AppTheme.accentGreen : const Color(0xFF00A86B))
+        : AppTheme.accentOrange;
     final text = _isLicensed ? l10n.licenseBadgeActive : l10n.licenseBadgeTrial;
 
     return Container(
