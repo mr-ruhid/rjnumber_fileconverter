@@ -15,6 +15,8 @@ class AboutDialogContent extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final isDark = AppTheme.isDark(context);
+    final buttonBg = AppTheme.buttonBackground(context);
+    final buttonFg = AppTheme.buttonForeground(context);
 
     return Dialog(
       backgroundColor: Colors.transparent,
@@ -89,7 +91,8 @@ class AboutDialogContent extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () => Navigator.of(context).pop(),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppTheme.textPrimary(context),
+                  backgroundColor: buttonBg,
+                  foregroundColor: buttonFg,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
                   ),
@@ -99,7 +102,7 @@ class AboutDialogContent extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
-                    color: AppTheme.gradientTopLeft(context),
+                    color: buttonFg,
                   ),
                 ),
               ),
