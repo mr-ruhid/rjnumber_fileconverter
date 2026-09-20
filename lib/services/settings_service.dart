@@ -6,6 +6,9 @@ class SettingsService {
 
   static const String _keyThemeMode = 'settings_theme_mode';
   static const String _keyVcfVersion = 'settings_vcf_version';
+  static const String _keyDefaultFileName = 'settings_default_file_name';
+
+  static const String defaultFileName = 'Kontaktlar';
 
   static Future<ThemeMode> getThemeMode() async {
     try {
@@ -55,6 +58,32 @@ class SettingsService {
       await prefs.setString(_keyVcfVersion, version);
     } catch (e) {
       debugPrint('VCF version write error: $e');
+    }
+  }
+
+  static Future<String> getDefaultFileName() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final value = prefs.getString(_keyDefaultFileName);
+      if (value == null || value.trim().isEmpty) return defaultFileName;
+      return value;
+    } catch (e) {
+      debugPrint('Default file name read error: $e');
+      return defaultFileName;
+    }
+  }
+
+  static Future<void> setDefaultFileName(String name) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final trimmed = name.trim();
+      if (trimmed.isEmpty) {
+        await prefs.remove(_keyDefaultFileName);
+      } else {
+        await prefs.setString(_keyDefaultFileName, trimmed);
+      }
+    } catch (e) {
+      debugPrint('Default file name write error: $e');
     }
   }
 }
