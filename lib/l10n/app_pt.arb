@@ -1,0 +1,72 @@
+
+{
+  "@@locale": "pt",
+
+  "appTitle": "RJ Number - Conversor de Arquivos",
+  "splashLoading": "Carregando...",
+
+  "homeTitle": "Escolha uma ação",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Converter arquivo Excel em contatos",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "Converter contatos em arquivo Excel",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Versão Lite",
+
+  "vcfToExcelTitle": "Converter VCF em Excel",
+  "vcfToExcelStatusInitial": "Selecione um arquivo VCF (.vcf) para começar",
+  "vcfToExcelStatusSuccess": "Pronto! Arquivo salvo com sucesso.",
+  "vcfToExcelStatusCancelled": "Seleção de arquivo cancelada.",
+  "vcfToExcelStatusSaveCancelled": "Salvamento cancelado.",
+  "vcfToExcelStatusEmpty": "Erro: Nenhum contato válido encontrado no arquivo.",
+  "vcfToExcelStatusError": "Ocorreu um erro durante a conversão.",
+  "vcfToExcelButton": "Selecionar Arquivo VCF",
+  "vcfToExcelPleaseWait": "Aguarde...",
+  "vcfToExcelSaveDialogTitle": "Salvar arquivo Excel",
+
+  "excelToVcfTitle": "Converter Excel em VCF",
+  "excelToVcfStatusInitial": "Selecione um arquivo Excel (.xlsx) para começar",
+  "excelToVcfStatusSuccess": "Pronto! Arquivo salvo com sucesso.",
+  "excelToVcfStatusCancelled": "Seleção de arquivo cancelada.",
+  "excelToVcfStatusSaveCancelled": "Salvamento cancelado.",
+  "excelToVcfStatusEmpty": "Erro: Nenhum contato válido encontrado no arquivo.",
+  "excelToVcfStatusError": "Ocorreu um erro durante a conversão.",
+  "excelToVcfButton": "Selecionar Arquivo Excel",
+  "excelToVcfPleaseWait": "Aguarde...",
+  "excelToVcfSaveDialogTitle": "Salvar arquivo VCF",
+
+  "processingTitle": "Convertendo arquivo...",
+  "processingSubtitle": "Aguarde, o processo está em execução.",
+
+  "licenseBadgeActive": "Licença Ativa",
+  "licenseBadgeTrial": "Versão de Teste",
+
+  "licenseDialogTitle": "Limite de Teste Atingido",
+  "licenseDialogContent": "Você já usou seu teste gratuito único. Para continuar, insira o código de licença.",
+  "licenseDialogClose": "Fechar",
+  "licenseDialogEnter": "Inserir Licença",
+
+  "licenseScreenTitle": "Insira o código de licença para continuar",
+  "licenseFieldHint": "Código de licença",
+  "licenseButtonVerify": "Verificar",
+  "licenseErrorEmpty": "Por favor, insira o código de licença.",
+  "licenseErrorInvalid": "Código de licença inválido. Verifique novamente.",
+  "licenseSuccessTitle": "Licença verificada!",
+  "licenseButtonBack": "Voltar",
+
+  "aboutDescription": "Uma ferramenta simples para converter arquivos Excel em contatos VCF e vice-versa.",
+  "aboutClose": "Fechar",
+
+  "settingsTitle": "Configurações",
+  "settingsTheme": "Tema",
+  "settingsThemeDark": "Escuro",
+  "settingsThemeLight": "Claro",
+  "settingsThemeSystem": "Sistema",
+
+  "settingsDefaultFileName": "Nome de arquivo padrão",
+  "settingsDefaultFileNameHint": "Kontaktlar",
+
+  "settingsVcfVersion": "Versão VCF",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
