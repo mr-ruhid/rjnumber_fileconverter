@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';  // Flutter
+import 'dart:convert';                   // Dart kitabxanası
+
 class PhoneUtils {
   PhoneUtils._();
 
