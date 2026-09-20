@@ -99,7 +99,7 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
     return Scaffold(
       body: Stack(
         children: [
-          Container(decoration: const BoxDecoration(gradient: AppTheme.backgroundGradient)),
+          Container(decoration: BoxDecoration(gradient: AppTheme.backgroundGradient(context))),
           const Positioned(
             top: 0,
             left: 0,
@@ -111,13 +111,17 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Icon(Icons.contact_phone_rounded, color: Colors.white, size: 80),
+                  Icon(
+                    Icons.contact_phone_rounded,
+                    color: AppTheme.textPrimary(context),
+                    size: 80,
+                  ),
                   const SizedBox(height: AppTheme.spacingLg),
                   Text(
                     l10n.excelToVcfTitle,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Colors.white,
+                    style: TextStyle(
+                      color: AppTheme.textPrimary(context),
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
@@ -127,7 +131,7 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
                     _statusKey != null ? _getStatusText(l10n, _statusKey!) : l10n.excelToVcfStatusInitial,
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.8),
+                      color: AppTheme.textSecondary(context),
                       fontSize: 15,
                     ),
                   ),
@@ -138,21 +142,24 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
                     child: ElevatedButton.icon(
                       onPressed: _isLoading ? null : _pickAndConvert,
                       icon: _isLoading
-                          ? const SizedBox(
+                          ? SizedBox(
                         width: 24,
                         height: 24,
                         child: CircularProgressIndicator(
-                          color: AppTheme.gradientTopLeft,
+                          color: AppTheme.gradientTopLeft(context),
                           strokeWidth: 2.5,
                         ),
                       )
-                          : const Icon(Icons.upload_file_rounded, color: AppTheme.gradientTopLeft),
+                          : Icon(
+                        Icons.upload_file_rounded,
+                        color: AppTheme.gradientTopLeft(context),
+                      ),
                       label: Text(
                         _isLoading ? l10n.excelToVcfPleaseWait : l10n.excelToVcfButton,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: AppTheme.gradientTopLeft,
+                          color: AppTheme.gradientTopLeft(context),
                         ),
                       ),
                     ),
