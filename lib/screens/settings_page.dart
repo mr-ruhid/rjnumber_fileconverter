@@ -1,82 +1,60 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-import '../l10n/app_localizations.dart';
-import '../ui/app_theme.dart';
-import '../ui/widgets/app_header.dart';
-import '../ui/widgets/glass_card.dart';
+class SettingsService {
+  SettingsService._();
 
-class SettingsPage extends StatelessWidget {
-  const SettingsPage({super.key});
+  static const String _keyThemeMode = 'settings_theme_mode';
+  static const String _keyVcfVersion = 'settings_vcf_version';
 
-  @override
-  Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+  static Future<ThemeMode> getThemeMode() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final value = prefs.getString(_keyThemeMode) ?? 'dark';
+      switch (value) {
+        case 'light':
+          return ThemeMode.light;
+        case 'system':
+          return ThemeMode.system;
+        default:
+          return ThemeMode.dark;
+      }
+    } catch (e) {
+      debugPrint('Theme mode read error: $e');
+      return ThemeMode.dark;
+    }
+  }
 
-    return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            decoration: const BoxDecoration(gradient: AppTheme.backgroundGradient),
-          ),
-          Column(
-            children: [
-              const AppHeader(showBackButton: true),
-              Expanded(
-                child: Center(
-                  child: GlassCard(
-                    width: AppTheme.cardWidthSmall,
-                    padding: const EdgeInsets.symmetric(horizontal: 36, vertical: 44),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const Icon(Icons.settings_rounded, color: Colors.white, size: 60),
-                        const SizedBox(height: AppTheme.spacingLg),
-                        Text(
-                          l10n.settingsTitle,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(height: AppTheme.spacingXl),
-                        Text(
-                          l10n.settingsLanguage,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        const SizedBox(height: AppTheme.spacingSm),
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
-                          decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.08),
-                            borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
-                            border: Border.all(color: Colors.white.withOpacity(0.2)),
-                          ),
-                          child: DropdownButton<String>(
-                            value: 'en',
-                            isExpanded: true,
-                            underline: const SizedBox.shrink(),
-                            dropdownColor: AppTheme.loadingOverlayBg,
-                            style: const TextStyle(color: Colors.white, fontSize: 15),
-                            items: const [
-                              DropdownMenuItem(value: 'en', child: Text('English')),
-                            ],
-                            onChanged: (value) {},
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
+  static Future<void> setThemeMode(ThemeMode mode) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final value = mode == ThemeMode.light
+          ? 'light'
+          : mode == ThemeMode.system
+          ? 'system'
+          : 'dark';
+      await prefs.setString(_keyThemeMode, value);
+    } catch (e) {
+      debugPrint('Theme mode write error: $e');
+    }
+  }
+
+  static Future<String> getVcfVersion() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      return prefs.getString(_keyVcfVersion) ?? '3.0';
+    } catch (e) {
+      debugPrint('VCF version read error: $e');
+      return '3.0';
+    }
+  }
+
+  static Future<void> setVcfVersion(String version) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString(_keyVcfVersion, version);
+    } catch (e) {
+      debugPrint('VCF version write error: $e');
+    }
   }
 }
