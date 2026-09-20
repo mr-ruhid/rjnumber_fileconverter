@@ -104,9 +104,9 @@ class HomePage extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                           decoration: BoxDecoration(
-                            color: AppTheme.accentRed.withOpacity(0.2),
+                            color: AppTheme.accentRed.withValues(alpha: 0.2),
                             borderRadius: BorderRadius.circular(6),
-                            border: Border.all(color: AppTheme.accentRed.withOpacity(0.5)),
+                            border: Border.all(color: AppTheme.accentRed.withValues(alpha: 0.5)),
                           ),
                           child: Text(
                             l10n.homeVersion,

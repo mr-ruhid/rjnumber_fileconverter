@@ -62,8 +62,8 @@ class _ControlButtonState extends State<_ControlButton> {
         ? (widget.isClose
         ? Colors.red
         : (isDark
-        ? Colors.white.withOpacity(0.15)
-        : Colors.black.withOpacity(0.08)))
+        ? Colors.white.withValues(alpha: 0.15)
+        : Colors.black.withValues(alpha: 0.08)))
         : Colors.transparent;
 
     final effectiveIconColor =

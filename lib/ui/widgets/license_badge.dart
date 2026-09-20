@@ -28,7 +28,7 @@ class _LicenseBadgeState extends State<LicenseBadge> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final isDark = AppTheme.isDark(context);
     final color = _isLicensed
         ? (isDark ? AppTheme.accentGreen : const Color(0xFF00A86B))
@@ -38,9 +38,9 @@ class _LicenseBadgeState extends State<LicenseBadge> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.15),
+        color: color.withValues(alpha: 0.15),
         borderRadius: BorderRadius.circular(AppTheme.radiusMedium),
-        border: Border.all(color: color.withOpacity(0.4)),
+        border: Border.all(color: color.withValues(alpha: 0.4)),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,

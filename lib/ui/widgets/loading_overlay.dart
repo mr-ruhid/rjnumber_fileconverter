@@ -29,8 +29,8 @@ class LoadingOverlay extends StatelessWidget {
         curve: Curves.easeIn,
         child: Container(
           color: isDark
-              ? Colors.black.withOpacity(0.85)
-              : Colors.white.withOpacity(0.85),
+              ? Colors.black.withValues(alpha: 0.85)
+              : Colors.white.withValues(alpha: 0.85),
           child: Center(
             child: Container(
               width: AppTheme.dialogWidth,
@@ -40,15 +40,15 @@ class LoadingOverlay extends StatelessWidget {
                 borderRadius: BorderRadius.circular(AppTheme.radiusLarge),
                 border: Border.all(
                   color: isDark
-                      ? Colors.white.withOpacity(0.15)
-                      : Colors.black.withOpacity(0.1),
+                      ? Colors.white.withValues(alpha: 0.15)
+                      : Colors.black.withValues(alpha: 0.1),
                   width: 1.5,
                 ),
                 boxShadow: [
                   BoxShadow(
                     color: isDark
-                        ? Colors.black.withOpacity(0.6)
-                        : Colors.black.withOpacity(0.15),
+                        ? Colors.black.withValues(alpha: 0.6)
+                        : Colors.black.withValues(alpha: 0.15),
                     blurRadius: 40,
                     spreadRadius: 10,
                   ),
