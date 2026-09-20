@@ -1,0 +1,71 @@
+{
+  "@@locale": "az",
+
+  "appTitle": "RJ Number - Fayl Çevirici",
+  "splashLoading": "Yüklənir...",
+
+  "homeTitle": "Bir əməliyyat seçin",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Excel faylını kontaktlara çevir",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "Kontaktları Excel faylına çevir",
+  "homeFooter": "Ruhid Cavadov - Mr-Ruhid",
+  "homeVersion": "Lite versiya",
+
+  "vcfToExcelTitle": "VCF-i Excel-ə çevir",
+  "vcfToExcelStatusInitial": "Başlamaq üçün VCF (.vcf) faylı seçin",
+  "vcfToExcelStatusSuccess": "Hazır! Fayl uğurla yadda saxlanıldı.",
+  "vcfToExcelStatusCancelled": "Fayl seçimi ləğv edildi.",
+  "vcfToExcelStatusSaveCancelled": "Yadda saxlama ləğv edildi.",
+  "vcfToExcelStatusEmpty": "Xəta: Faylda uyğun kontakt tapılmadı.",
+  "vcfToExcelStatusError": "Çevirmə zamanı xəta baş verdi.",
+  "vcfToExcelButton": "VCF Faylını Seç",
+  "vcfToExcelPleaseWait": "Zəhmət olmasa gözləyin...",
+  "vcfToExcelSaveDialogTitle": "Excel faylını yadda saxla",
+
+  "excelToVcfTitle": "Excel-i VCF-ə çevir",
+  "excelToVcfStatusInitial": "Başlamaq üçün Excel (.xlsx) faylı seçin",
+  "excelToVcfStatusSuccess": "Hazır! Fayl uğurla yadda saxlanıldı.",
+  "excelToVcfStatusCancelled": "Fayl seçimi ləğv edildi.",
+  "excelToVcfStatusSaveCancelled": "Yadda saxlama ləğv edildi.",
+  "excelToVcfStatusEmpty": "Xəta: Faylda uyğun kontakt tapılmadı.",
+  "excelToVcfStatusError": "Çevirmə zamanı xəta baş verdi.",
+  "excelToVcfButton": "Excel Faylını Seç",
+  "excelToVcfPleaseWait": "Zəhmət olmasa gözləyin...",
+  "excelToVcfSaveDialogTitle": "VCF faylını yadda saxla",
+
+  "processingTitle": "Fayl çevrilir...",
+  "processingSubtitle": "Zəhmət olmasa gözləyin, proses davam edir.",
+
+  "licenseBadgeActive": "Lisenziya Aktivdir",
+  "licenseBadgeTrial": "Sınaq Versiyası",
+
+  "licenseDialogTitle": "Sınaq Limiti Bitdi",
+  "licenseDialogContent": "Siz artıq 1 dəfəlik pulsuz sınaq hüququnuzdan istifadə etmisiniz. Davam etmək üçün zəhmət olmasa lisenziya kodunu daxil edin.",
+  "licenseDialogClose": "Bağla",
+  "licenseDialogEnter": "Lisenziya Daxil Et",
+
+  "licenseScreenTitle": "Davam etmək üçün lisenziya kodunu daxil edin",
+  "licenseFieldHint": "Lisenziya kodu",
+  "licenseButtonVerify": "Yoxla",
+  "licenseErrorEmpty": "Zəhmət olmasa lisenziya kodunu daxil edin.",
+  "licenseErrorInvalid": "Yanlış lisenziya kodu. Yenidən yoxlayın.",
+  "licenseSuccessTitle": "Lisenziya təsdiqləndi!",
+  "licenseButtonBack": "Geri qayıt",
+
+  "aboutDescription": "Excel fayllarını VCF kontaktlarına və geriyə çevirmək üçün sadə alət.",
+  "aboutClose": "Bağla",
+
+  "settingsTitle": "Ayarlar",
+  "settingsTheme": "Tema",
+  "settingsThemeDark": "Tünd",
+  "settingsThemeLight": "İşıqlı",
+  "settingsThemeSystem": "Sistem",
+
+  "settingsDefaultFileName": "Standart fayl adı",
+  "settingsDefaultFileNameHint": "Kontaktlar",
+
+  "settingsVcfVersion": "VCF versiyası",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
