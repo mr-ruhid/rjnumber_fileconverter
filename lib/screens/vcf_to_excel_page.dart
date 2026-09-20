@@ -1,10 +1,8 @@
-import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 
 import '../l10n/app_localizations.dart';
-import '../services/vcf_to_excel_service.dart';
+import '../services/converter_service.dart';
 import '../services/shared/file_utils.dart';
 import '../ui/app_theme.dart';
 import '../ui/widgets/glass_card.dart';
@@ -53,7 +51,7 @@ class _VcfToExcelPageState extends State<VcfToExcelPage> {
     try {
       final bytes = await pickedFile.readAsBytes();
       final content = String.fromCharCodes(bytes);
-      final contacts = VcfToExcelService.readContactsFromVcf(content);
+      final contacts = ConverterService.readContactsFromVcf(content);
 
       if (contacts.isEmpty) {
         if (!mounted) return;
@@ -64,7 +62,7 @@ class _VcfToExcelPageState extends State<VcfToExcelPage> {
         return;
       }
 
-      final excelBytes = VcfToExcelService.contactsToExcelBytes(contacts);
+      final excelBytes = ConverterService.contactsToExcelBytes(contacts);
 
       final outputUri = await FileUtils.saveExcelFile(
         excelBytes,
