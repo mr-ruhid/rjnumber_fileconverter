@@ -19,15 +19,25 @@ class FileUtils {
     );
   }
 
-  static Future<Uri?> saveExcelFile(Uint8List bytes, String fileName) async {
+  static Future<Uri?> saveExcelFile(
+      Uint8List bytes,
+      String fileName,
+      String dialogTitle,
+      ) async {
     return await FilePicker.saveFile(
+      dialogTitle: dialogTitle,
       fileName: fileName,
       bytes: bytes,
     );
   }
 
-  static Future<Uri?> saveVcfFile(Uint8List bytes, String fileName) async {
+  static Future<Uri?> saveVcfFile(
+      Uint8List bytes,
+      String fileName,
+      String dialogTitle,
+      ) async {
     return await FilePicker.saveFile(
+      dialogTitle: dialogTitle,
       fileName: fileName,
       bytes: bytes,
     );
