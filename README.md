@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/mr-ruhid/rjnumber_fileconverter/main/assets/logo/logo.svg" alt="RJ Number Logo" width="250"/>
+  <img src="https://github.com/mr-ruhid/rjnumber_fileconverter/blob/master/assets/logo/logo.svg" alt="RJ Number Logo" width="250"/>
   <h1>📇 RJ Number</h1>
   <p><b>A modern Flutter desktop application that converts Excel (.xlsx) files into VCF (Contacts) format in seconds.</b></p>
 
