@@ -19,6 +19,8 @@ class LoadingOverlay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = AppTheme.isDark(context);
+
     return IgnorePointer(
       ignoring: !isLoading,
       child: AnimatedOpacity(
@@ -26,21 +28,27 @@ class LoadingOverlay extends StatelessWidget {
         duration: const Duration(milliseconds: 600),
         curve: Curves.easeIn,
         child: Container(
-          color: Colors.black.withOpacity(0.85),
+          color: isDark
+              ? Colors.black.withOpacity(0.85)
+              : Colors.white.withOpacity(0.85),
           child: Center(
             child: Container(
               width: AppTheme.dialogWidth,
               padding: const EdgeInsets.all(35),
               decoration: BoxDecoration(
-                color: AppTheme.loadingOverlayBg,
+                color: AppTheme.loadingOverlayBg(context),
                 borderRadius: BorderRadius.circular(AppTheme.radiusLarge),
                 border: Border.all(
-                  color: Colors.white.withOpacity(0.15),
+                  color: isDark
+                      ? Colors.white.withOpacity(0.15)
+                      : Colors.black.withOpacity(0.1),
                   width: 1.5,
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.6),
+                    color: isDark
+                        ? Colors.black.withOpacity(0.6)
+                        : Colors.black.withOpacity(0.15),
                     blurRadius: 40,
                     spreadRadius: 10,
                   ),
@@ -54,19 +62,20 @@ class LoadingOverlay extends StatelessWidget {
                     width: 140,
                     height: 140,
                     repeat: true,
-                    errorBuilder: (context, error, stackTrace) =>
-                    const SizedBox(
+                    errorBuilder: (context, error, stackTrace) => SizedBox(
                       width: 140,
                       height: 140,
-                      child: CircularProgressIndicator(color: Colors.white),
+                      child: CircularProgressIndicator(
+                        color: AppTheme.textPrimary(context),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 25),
                   Text(
                     title,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Colors.white,
+                    style: TextStyle(
+                      color: AppTheme.textPrimary(context),
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
@@ -76,7 +85,7 @@ class LoadingOverlay extends StatelessWidget {
                     subtitle,
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.7),
+                      color: AppTheme.textSecondary(context),
                       fontSize: 14,
                     ),
                   ),
