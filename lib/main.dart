@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:lottie/lottie.dart';
 import 'package:window_manager/window_manager.dart';
 
-import 'screens/converter_page.dart';
+import 'l10n/app_localizations.dart';
+import 'screens/home_page.dart';
 import 'screens/licensing_controller.dart';
 
 Future<void> main() async {
@@ -23,13 +25,20 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'Segoe UI',
       ),
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('en'),
+      ],
       home: const SplashScreen(),
     );
   }
 }
 
-/// Proqram birbaşa açılmır — əvvəlcə bu ekran göstərilir (loading.json),
-/// sonra keşlənmiş lisenziya və sınaq statusuna görə səhifəyə keçid olunur.
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -45,39 +54,36 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> _startUp() async {
-    // Splash ekranının görünmə müddəti
     await Future.delayed(const Duration(milliseconds: 2500));
     if (!mounted) return;
 
-    // Pəncərəni tam ekran (maximized) et
     try {
       await windowManager.maximize();
     } catch (e) {
-      debugPrint("Pəncərəni tam ekran etmək mümkün olmadı: $e");
+      debugPrint('Window maximize failed: $e');
     }
 
     if (!mounted) return;
 
-    // Keşdə lisenziyanın aktiv olub-olmadığını və sınaq limitini yoxlayırıq.
     final licensed = await LicensingController.isLicensed();
     final trialUsed = await LicensingController.hasUsedTrial();
 
     if (!mounted) return;
 
-    // Lisenziya varsa və ya trial istifadə edilməyibsə → ConverterPage
-    // Əks halda → LicenseScreen
-    final bool shouldGoToConverter = licensed || !trialUsed;
+    final bool shouldGoToHome = licensed || !trialUsed;
 
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (_) =>
-        shouldGoToConverter ? const ConverterPage() : const LicenseScreen(),
+        shouldGoToHome ? const HomePage() : const LicenseScreen(),
       ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -103,9 +109,9 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               ),
               const SizedBox(height: 20),
-              const Text(
-                "Yüklənir...",
-                style: TextStyle(color: Colors.white, fontSize: 16),
+              Text(
+                l10n.splashLoading,
+                style: const TextStyle(color: Colors.white, fontSize: 16),
               ),
             ],
           ),
