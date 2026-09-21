@@ -8,6 +8,7 @@ import 'l10n/app_localizations.dart';
 import 'screens/home_page.dart';
 import 'screens/licensing_controller.dart';
 import 'ui/app_theme.dart';
+import 'ui/language_provider.dart';
 import 'ui/theme_provider.dart';
 
 Future<void> main() async {
@@ -40,11 +41,13 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final ThemeProvider _themeProvider = ThemeProvider();
+  final LanguageProvider _languageProvider = LanguageProvider();
 
   @override
   void initState() {
     super.initState();
     _themeProvider.load();
+    _languageProvider.load();
   }
 
   ThemeData _buildTheme(Brightness brightness) {
@@ -64,16 +67,21 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<ThemeProvider>.value(
-      value: _themeProvider,
-      child: Consumer<ThemeProvider>(
-        builder: (context, themeProvider, _) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<ThemeProvider>.value(value: _themeProvider),
+        ChangeNotifierProvider<LanguageProvider>.value(
+            value: _languageProvider),
+      ],
+      child: Consumer2<ThemeProvider, LanguageProvider>(
+        builder: (context, themeProvider, languageProvider, _) {
           return MaterialApp(
             title: 'RJ Number - File Converter',
             debugShowCheckedModeBanner: false,
             theme: _buildTheme(Brightness.light),
             darkTheme: _buildTheme(Brightness.dark),
             themeMode: themeProvider.themeMode,
+            locale: languageProvider.locale,
             localizationsDelegates: const [
               AppLocalizations.delegate,
               GlobalMaterialLocalizations.delegate,
@@ -136,7 +144,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(gradient: AppTheme.backgroundGradient(context)),
+        decoration:
+        BoxDecoration(gradient: AppTheme.backgroundGradient(context)),
         child: Center(
           child: Column(
             mainAxisSize: MainAxisSize.min,
