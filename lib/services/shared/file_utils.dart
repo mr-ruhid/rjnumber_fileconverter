@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:file_picker/file_picker.dart';
@@ -24,11 +25,20 @@ class FileUtils {
       String fileName,
       String dialogTitle,
       ) async {
-    return await FilePicker.saveFile(
+    final uri = await FilePicker.saveFile(
       dialogTitle: dialogTitle,
       fileName: fileName,
       bytes: bytes,
+      type: FileType.custom,
+      allowedExtensions: ['xlsx'],
     );
+
+    if (uri == null) return null;
+
+    final file = File.fromUri(uri);
+    await file.writeAsBytes(bytes, flush: true);
+
+    return uri;
   }
 
   static Future<Uri?> saveVcfFile(
@@ -36,10 +46,19 @@ class FileUtils {
       String fileName,
       String dialogTitle,
       ) async {
-    return await FilePicker.saveFile(
+    final uri = await FilePicker.saveFile(
       dialogTitle: dialogTitle,
       fileName: fileName,
       bytes: bytes,
+      type: FileType.custom,
+      allowedExtensions: ['vcf'],
     );
+
+    if (uri == null) return null;
+
+    final file = File.fromUri(uri);
+    await file.writeAsBytes(bytes, flush: true);
+
+    return uri;
   }
 }
