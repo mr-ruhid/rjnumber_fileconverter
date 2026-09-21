@@ -1,0 +1,71 @@
+{
+  "@@locale": "hi",
+
+  "appTitle": "RJ Number - फ़ाइल कनवर्टर",
+  "splashLoading": "लोड हो रहा है...",
+
+  "homeTitle": "एक क्रिया चुनें",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Excel फ़ाइल को संपर्कों में बदलें",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "संपर्कों को Excel फ़ाइल में बदलें",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Lite संस्करण",
+
+  "vcfToExcelTitle": "VCF को Excel में बदलें",
+  "vcfToExcelStatusInitial": "शुरू करने के लिए VCF (.vcf) फ़ाइल चुनें",
+  "vcfToExcelStatusSuccess": "हो गया! फ़ाइल सफलतापूर्वक सहेजी गई।",
+  "vcfToExcelStatusCancelled": "फ़ाइल चयन रद्द कर दिया गया।",
+  "vcfToExcelStatusSaveCancelled": "सहेजना रद्द कर दिया गया।",
+  "vcfToExcelStatusEmpty": "त्रुटि: फ़ाइल में कोई मान्य संपर्क नहीं मिला।",
+  "vcfToExcelStatusError": "रूपांतरण के दौरान एक त्रुटि हुई।",
+  "vcfToExcelButton": "VCF फ़ाइल चुनें",
+  "vcfToExcelPleaseWait": "कृपया प्रतीक्षा करें...",
+  "vcfToExcelSaveDialogTitle": "Excel फ़ाइल सहेजें",
+
+  "excelToVcfTitle": "Excel को VCF में बदलें",
+  "excelToVcfStatusInitial": "शुरू करने के लिए Excel (.xlsx) फ़ाइल चुनें",
+  "excelToVcfStatusSuccess": "हो गया! फ़ाइल सफलतापूर्वक सहेजी गई।",
+  "excelToVcfStatusCancelled": "फ़ाइल चयन रद्द कर दिया गया।",
+  "excelToVcfStatusSaveCancelled": "सहेजना रद्द कर दिया गया।",
+  "excelToVcfStatusEmpty": "त्रुटि: फ़ाइल में कोई मान्य संपर्क नहीं मिला।",
+  "excelToVcfStatusError": "रूपांतरण के दौरान एक त्रुटि हुई।",
+  "excelToVcfButton": "Excel फ़ाइल चुनें",
+  "excelToVcfPleaseWait": "कृपया प्रतीक्षा करें...",
+  "excelToVcfSaveDialogTitle": "VCF फ़ाइल सहेजें",
+
+  "processingTitle": "फ़ाइल परिवर्तित हो रही है...",
+  "processingSubtitle": "कृपया प्रतीक्षा करें, प्रक्रिया चल रही है।",
+
+  "licenseBadgeActive": "लाइसेंस सक्रिय",
+  "licenseBadgeTrial": "परीक्षण संस्करण",
+
+  "licenseDialogTitle": "परीक्षण सीमा पूरी हुई",
+  "licenseDialogContent": "आपने अपना एकमात्र निःशुल्क परीक्षण पहले ही उपयोग कर लिया है। जारी रखने के लिए कृपया अपना लाइसेंस कोड दर्ज करें।",
+  "licenseDialogClose": "बंद करें",
+  "licenseDialogEnter": "लाइसेंस दर्ज करें",
+
+  "licenseScreenTitle": "जारी रखने के लिए अपना लाइसेंस कोड दर्ज करें",
+  "licenseFieldHint": "लाइसेंस कोड",
+  "licenseButtonVerify": "सत्यापित करें",
+  "licenseErrorEmpty": "कृपया अपना लाइसेंस कोड दर्ज करें।",
+  "licenseErrorInvalid": "अमान्य लाइसेंस कोड। कृपया दोबारा जाँचें।",
+  "licenseSuccessTitle": "लाइसेंस सत्यापित!",
+  "licenseButtonBack": "वापस जाएँ",
+
+  "aboutDescription": "Excel फ़ाइलों को VCF संपर्कों में और वापस बदलने के लिए एक सरल उपकरण।",
+  "aboutClose": "बंद करें",
+
+  "settingsTitle": "सेटिंग्स",
+  "settingsTheme": "थीम",
+  "settingsThemeDark": "डार्क",
+  "settingsThemeLight": "लाइट",
+  "settingsThemeSystem": "सिस्टम",
+
+  "settingsDefaultFileName": "डिफ़ॉल्ट फ़ाइल नाम",
+  "settingsDefaultFileNameHint": "Kontaktlar",
+
+  "settingsVcfVersion": "VCF संस्करण",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
