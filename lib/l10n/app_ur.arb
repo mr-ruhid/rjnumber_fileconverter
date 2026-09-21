@@ -1,0 +1,71 @@
+{
+  "@@locale": "ur",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "لوڈ ہو رہا ہے...",
+
+  "homeTitle": "ایک عمل منتخب کریں",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Excel فائل کو رابطوں میں تبدیل کریں",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "رابطوں کو Excel فائل میں تبدیل کریں",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "لائٹ ورژن",
+
+  "vcfToExcelTitle": "VCF کو Excel میں تبدیل کریں",
+  "vcfToExcelStatusInitial": "شروع کرنے کے لیے VCF (.vcf) فائل منتخب کریں",
+  "vcfToExcelStatusSuccess": "مکمل! فائل کامیابی سے محفوظ ہو گئی۔",
+  "vcfToExcelStatusCancelled": "فائل کا انتخاب منسوخ کر دیا گیا۔",
+  "vcfToExcelStatusSaveCancelled": "محفوظ کرنا منسوخ کر دیا گیا۔",
+  "vcfToExcelStatusEmpty": "خرابی: فائل میں کوئی درست رابطہ نہیں ملا۔",
+  "vcfToExcelStatusError": "تبدیلی کے دوران ایک خرابی پیش آئی۔",
+  "vcfToExcelButton": "VCF فائل منتخب کریں",
+  "vcfToExcelPleaseWait": "براہ کرم انتظار کریں...",
+  "vcfToExcelSaveDialogTitle": "Excel فائل محفوظ کریں",
+
+  "excelToVcfTitle": "Excel کو VCF میں تبدیل کریں",
+  "excelToVcfStatusInitial": "شروع کرنے کے لیے Excel (.xlsx) فائل منتخب کریں",
+  "excelToVcfStatusSuccess": "مکمل! فائل کامیابی سے محفوظ ہو گئی۔",
+  "excelToVcfStatusCancelled": "فائل کا انتخاب منسوخ کر دیا گیا۔",
+  "excelToVcfStatusSaveCancelled": "محفوظ کرنا منسوخ کر دیا گیا۔",
+  "excelToVcfStatusEmpty": "خرابی: فائل میں کوئی درست رابطہ نہیں ملا۔",
+  "excelToVcfStatusError": "تبدیلی کے دوران ایک خرابی پیش آئی۔",
+  "excelToVcfButton": "Excel فائل منتخب کریں",
+  "excelToVcfPleaseWait": "براہ کرم انتظار کریں...",
+  "excelToVcfSaveDialogTitle": "VCF فائل محفوظ کریں",
+
+  "processingTitle": "فائل تبدیل ہو رہی ہے...",
+  "processingSubtitle": "براہ کرم انتظار کریں، عمل جاری ہے۔",
+
+  "licenseBadgeActive": "لائسنس فعال",
+  "licenseBadgeTrial": "آزمائشی ورژن",
+
+  "licenseDialogTitle": "آزمائشی حد مکمل",
+  "licenseDialogContent": "آپ اپنا ایک بار کا مفت آزمائشی ورژن استعمال کر چکے ہیں۔ جاری رکھنے کے لیے، براہ کرم اپنا لائسنس کوڈ درج کریں۔",
+  "licenseDialogClose": "بند کریں",
+  "licenseDialogEnter": "لائسنس درج کریں",
+
+  "licenseScreenTitle": "جاری رکھنے کے لیے اپنا لائسنس کوڈ درج کریں",
+  "licenseFieldHint": "لائسنس کوڈ",
+  "licenseButtonVerify": "تصدیق کریں",
+  "licenseErrorEmpty": "براہ کرم اپنا لائسنس کوڈ درج کریں۔",
+  "licenseErrorInvalid": "غلط لائسنس کوڈ۔ براہ کرم دوبارہ چیک کریں۔",
+  "licenseSuccessTitle": "لائسنس کی تصدیق ہو گئی!",
+  "licenseButtonBack": "واپس جائیں",
+
+  "aboutDescription": "Excel فائلوں کو VCF رابطوں میں اور اس کے برعکس تبدیل کرنے کا ایک آسان ٹول۔",
+  "aboutClose": "بند کریں",
+
+  "settingsTitle": "ترتیبات",
+  "settingsTheme": "تھیم",
+  "settingsThemeDark": "ڈارک",
+  "settingsThemeLight": "لائٹ",
+  "settingsThemeSystem": "سسٹم",
+
+  "settingsDefaultFileName": "ڈیفالٹ فائل کا نام",
+  "settingsDefaultFileNameHint": "رابطے",
+
+  "settingsVcfVersion": "VCF ورژن",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
