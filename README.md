@@ -2,7 +2,6 @@
 
 <img src="assets/logo/logo.svg" alt="RJ Number Logo" width="180"/>
 
-# RJ Number
 
 **Convert between Excel (.xlsx) and VCF (contacts) in seconds.**
 
