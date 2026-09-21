@@ -1,0 +1,71 @@
+{
+  "@@locale": "ms",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "Memuatkan...",
+
+  "homeTitle": "Pilih satu tindakan",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Tukar fail Excel kepada kenalan",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "Tukar kenalan kepada fail Excel",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Versi Lite",
+
+  "vcfToExcelTitle": "Tukar VCF kepada Excel",
+  "vcfToExcelStatusInitial": "Pilih fail VCF (.vcf) untuk mula",
+  "vcfToExcelStatusSuccess": "Selesai! Fail berjaya disimpan.",
+  "vcfToExcelStatusCancelled": "Pemilihan fail dibatalkan.",
+  "vcfToExcelStatusSaveCancelled": "Penyimpanan dibatalkan.",
+  "vcfToExcelStatusEmpty": "Ralat: Tiada kenalan sah ditemui dalam fail.",
+  "vcfToExcelStatusError": "Ralat berlaku semasa penukaran.",
+  "vcfToExcelButton": "Pilih Fail VCF",
+  "vcfToExcelPleaseWait": "Sila tunggu...",
+  "vcfToExcelSaveDialogTitle": "Simpan fail Excel",
+
+  "excelToVcfTitle": "Tukar Excel kepada VCF",
+  "excelToVcfStatusInitial": "Pilih fail Excel (.xlsx) untuk mula",
+  "excelToVcfStatusSuccess": "Selesai! Fail berjaya disimpan.",
+  "excelToVcfStatusCancelled": "Pemilihan fail dibatalkan.",
+  "excelToVcfStatusSaveCancelled": "Penyimpanan dibatalkan.",
+  "excelToVcfStatusEmpty": "Ralat: Tiada kenalan sah ditemui dalam fail.",
+  "excelToVcfStatusError": "Ralat berlaku semasa penukaran.",
+  "excelToVcfButton": "Pilih Fail Excel",
+  "excelToVcfPleaseWait": "Sila tunggu...",
+  "excelToVcfSaveDialogTitle": "Simpan fail VCF",
+
+  "processingTitle": "Menukar fail...",
+  "processingSubtitle": "Sila tunggu, proses sedang berjalan.",
+
+  "licenseBadgeActive": "Lesen Aktif",
+  "licenseBadgeTrial": "Versi Percubaan",
+
+  "licenseDialogTitle": "Had Percubaan Dicapai",
+  "licenseDialogContent": "Anda telah menggunakan percubaan percuma sekali sahaja. Untuk meneruskan, sila masukkan kod lesen anda.",
+  "licenseDialogClose": "Tutup",
+  "licenseDialogEnter": "Masukkan Lesen",
+
+  "licenseScreenTitle": "Masukkan kod lesen anda untuk meneruskan",
+  "licenseFieldHint": "Kod lesen",
+  "licenseButtonVerify": "Sahkan",
+  "licenseErrorEmpty": "Sila masukkan kod lesen anda.",
+  "licenseErrorInvalid": "Kod lesen tidak sah. Sila semak semula.",
+  "licenseSuccessTitle": "Lesen disahkan!",
+  "licenseButtonBack": "Kembali",
+
+  "aboutDescription": "Alat mudah untuk menukar fail Excel kepada kenalan VCF dan sebaliknya.",
+  "aboutClose": "Tutup",
+
+  "settingsTitle": "Tetapan",
+  "settingsTheme": "Tema",
+  "settingsThemeDark": "Gelap",
+  "settingsThemeLight": "Cerah",
+  "settingsThemeSystem": "Sistem",
+
+  "settingsDefaultFileName": "Nama fail lalai",
+  "settingsDefaultFileNameHint": "Kenalan",
+
+  "settingsVcfVersion": "Versi VCF",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
