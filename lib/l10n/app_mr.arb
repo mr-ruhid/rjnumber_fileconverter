@@ -1,0 +1,71 @@
+{
+  "@@locale": "mr",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "लोड होत आहे...",
+
+  "homeTitle": "एक क्रिया निवडा",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Excel फाइल संपर्कांमध्ये रूपांतरित करा",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "संपर्क Excel फाइलमध्ये रूपांतरित करा",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Lite आवृत्ती",
+
+  "vcfToExcelTitle": "VCF चे Excel मध्ये रूपांतर करा",
+  "vcfToExcelStatusInitial": "प्रारंभ करण्यासाठी VCF (.vcf) फाइल निवडा",
+  "vcfToExcelStatusSuccess": "पूर्ण! फाइल यशस्वीरित्या जतन केली गेली.",
+  "vcfToExcelStatusCancelled": "फाइल निवड रद्द केली.",
+  "vcfToExcelStatusSaveCancelled": "जतन करणे रद्द केले.",
+  "vcfToExcelStatusEmpty": "त्रुटी: फाइलमध्ये कोणतेही वैध संपर्क आढळले नाहीत.",
+  "vcfToExcelStatusError": "रूपांतरणादरम्यान त्रुटी आली.",
+  "vcfToExcelButton": "VCF फाइल निवडा",
+  "vcfToExcelPleaseWait": "कृपया प्रतीक्षा करा...",
+  "vcfToExcelSaveDialogTitle": "Excel फाइल जतन करा",
+
+  "excelToVcfTitle": "Excel चे VCF मध्ये रूपांतर करा",
+  "excelToVcfStatusInitial": "प्रारंभ करण्यासाठी Excel (.xlsx) फाइल निवडा",
+  "excelToVcfStatusSuccess": "पूर्ण! फाइल यशस्वीरित्या जतन केली गेली.",
+  "excelToVcfStatusCancelled": "फाइल निवड रद्द केली.",
+  "excelToVcfStatusSaveCancelled": "जतन करणे रद्द केले.",
+  "excelToVcfStatusEmpty": "त्रुटी: फाइलमध्ये कोणतेही वैध संपर्क आढळले नाहीत.",
+  "excelToVcfStatusError": "रूपांतरणादरम्यान त्रुटी आली.",
+  "excelToVcfButton": "Excel फाइल निवडा",
+  "excelToVcfPleaseWait": "कृपया प्रतीक्षा करा...",
+  "excelToVcfSaveDialogTitle": "VCF फाइल जतन करा",
+
+  "processingTitle": "फाइल रूपांतरित होत आहे...",
+  "processingSubtitle": "कृपया प्रतीक्षा करा, प्रक्रिया सुरू आहे.",
+
+  "licenseBadgeActive": "परवाना सक्रिय",
+  "licenseBadgeTrial": "चाचणी आवृत्ती",
+
+  "licenseDialogTitle": "चाचणी मर्यादा गाठली",
+  "licenseDialogContent": "तुम्ही आधीच तुमची एक-वेळची मोफत चाचणी वापरली आहे. सुरू ठेवण्यासाठी, कृपया तुमचा परवाना कोड प्रविष्ट करा.",
+  "licenseDialogClose": "बंद करा",
+  "licenseDialogEnter": "परवाना प्रविष्ट करा",
+
+  "licenseScreenTitle": "सुरू ठेवण्यासाठी तुमचा परवाना कोड प्रविष्ट करा",
+  "licenseFieldHint": "परवाना कोड",
+  "licenseButtonVerify": "सत्यापित करा",
+  "licenseErrorEmpty": "कृपया तुमचा परवाना कोड प्रविष्ट करा.",
+  "licenseErrorInvalid": "अवैध परवाना कोड. कृपया पुन्हा तपासा.",
+  "licenseSuccessTitle": "परवाना सत्यापित झाला!",
+  "licenseButtonBack": "परत जा",
+
+  "aboutDescription": "Excel फाइल्स VCF संपर्कांमध्ये आणि उलट रूपांतरित करण्यासाठी एक सोपा साधन.",
+  "aboutClose": "बंद करा",
+
+  "settingsTitle": "सेटिंग्ज",
+  "settingsTheme": "थीम",
+  "settingsThemeDark": "गडद",
+  "settingsThemeLight": "फिकट",
+  "settingsThemeSystem": "सिस्टम",
+
+  "settingsDefaultFileName": "डीफॉल्ट फाइल नाव",
+  "settingsDefaultFileNameHint": "संपर्क",
+
+  "settingsVcfVersion": "VCF आवृत्ती",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
