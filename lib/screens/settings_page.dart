@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../l10n/app_localizations.dart';
+import '../l10n/supported_languages.dart';
 import '../services/converter_service.dart';
 import '../services/settings_service.dart';
 import '../ui/app_theme.dart';
+import '../ui/language_provider.dart';
 import '../ui/theme_provider.dart';
 import '../ui/widgets/app_header.dart';
 import '../ui/widgets/glass_card.dart';
@@ -58,6 +60,7 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     final themeProvider = Provider.of<ThemeProvider>(context);
+    final languageProvider = Provider.of<LanguageProvider>(context);
 
     return Scaffold(
       body: Stack(
@@ -103,6 +106,12 @@ class _SettingsPageState extends State<SettingsPage> {
                           _buildSectionTitle(context, l10n.settingsTheme),
                           const SizedBox(height: AppTheme.spacingSm),
                           _buildThemeSelector(context, themeProvider),
+
+                          const SizedBox(height: AppTheme.spacingLg),
+
+                          _buildSectionTitle(context, l10n.settingsLanguage),
+                          const SizedBox(height: AppTheme.spacingSm),
+                          _buildLanguageSelector(context, languageProvider),
 
                           const SizedBox(height: AppTheme.spacingLg),
 
@@ -176,6 +185,47 @@ class _SettingsPageState extends State<SettingsPage> {
         ],
         onChanged: (value) {
           if (value != null) provider.setThemeMode(value);
+        },
+      ),
+    );
+  }
+
+  Widget _buildLanguageSelector(
+      BuildContext context, LanguageProvider provider) {
+    final l10n = AppLocalizations.of(context);
+    final currentCode = provider.locale?.languageCode;
+
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      decoration: BoxDecoration(
+        color: AppTheme.inputFill(context),
+        borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
+        border: Border.all(color: AppTheme.inputBorder(context)),
+      ),
+      child: DropdownButton<String>(
+        value: currentCode,
+        isExpanded: true,
+        underline: const SizedBox.shrink(),
+        dropdownColor: AppTheme.loadingOverlayBg(context),
+        style: TextStyle(color: AppTheme.textPrimary(context), fontSize: 15),
+        items: [
+          DropdownMenuItem<String>(
+            value: null,
+            child: Text(l10n.settingsLanguageSystem),
+          ),
+          ...SupportedLanguages.all.map(
+                (lang) => DropdownMenuItem<String>(
+              value: lang.code,
+              child: Text(lang.nativeName),
+            ),
+          ),
+        ],
+        onChanged: (code) {
+          if (code == null) {
+            provider.setLocale(null);
+          } else {
+            provider.setLocale(Locale(code));
+          }
         },
       ),
     );
