@@ -1,0 +1,71 @@
+{
+  "@@locale": "vi",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "Đang tải...",
+
+  "homeTitle": "Chọn một hành động",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Chuyển đổi tệp Excel thành danh bạ",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "Chuyển đổi danh bạ thành tệp Excel",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Phiên bản Lite",
+
+  "vcfToExcelTitle": "Chuyển đổi VCF sang Excel",
+  "vcfToExcelStatusInitial": "Chọn tệp VCF (.vcf) để bắt đầu",
+  "vcfToExcelStatusSuccess": "Hoàn tất! Tệp đã được lưu thành công.",
+  "vcfToExcelStatusCancelled": "Đã hủy chọn tệp.",
+  "vcfToExcelStatusSaveCancelled": "Đã hủy lưu.",
+  "vcfToExcelStatusEmpty": "Lỗi: Không tìm thấy danh bạ hợp lệ nào trong tệp.",
+  "vcfToExcelStatusError": "Đã xảy ra lỗi trong quá trình chuyển đổi.",
+  "vcfToExcelButton": "Chọn tệp VCF",
+  "vcfToExcelPleaseWait": "Vui lòng đợi...",
+  "vcfToExcelSaveDialogTitle": "Lưu tệp Excel",
+
+  "excelToVcfTitle": "Chuyển đổi Excel sang VCF",
+  "excelToVcfStatusInitial": "Chọn tệp Excel (.xlsx) để bắt đầu",
+  "excelToVcfStatusSuccess": "Hoàn tất! Tệp đã được lưu thành công.",
+  "excelToVcfStatusCancelled": "Đã hủy chọn tệp.",
+  "excelToVcfStatusSaveCancelled": "Đã hủy lưu.",
+  "excelToVcfStatusEmpty": "Lỗi: Không tìm thấy danh bạ hợp lệ nào trong tệp.",
+  "excelToVcfStatusError": "Đã xảy ra lỗi trong quá trình chuyển đổi.",
+  "excelToVcfButton": "Chọn tệp Excel",
+  "excelToVcfPleaseWait": "Vui lòng đợi...",
+  "excelToVcfSaveDialogTitle": "Lưu tệp VCF",
+
+  "processingTitle": "Đang chuyển đổi tệp...",
+  "processingSubtitle": "Vui lòng đợi, quá trình đang chạy.",
+
+  "licenseBadgeActive": "Giấy phép đang hoạt động",
+  "licenseBadgeTrial": "Phiên bản dùng thử",
+
+  "licenseDialogTitle": "Đã đạt giới hạn dùng thử",
+  "licenseDialogContent": "Bạn đã sử dụng một lần dùng thử miễn phí. Để tiếp tục, vui lòng nhập mã giấy phép của bạn.",
+  "licenseDialogClose": "Đóng",
+  "licenseDialogEnter": "Nhập giấy phép",
+
+  "licenseScreenTitle": "Nhập mã giấy phép của bạn để tiếp tục",
+  "licenseFieldHint": "Mã giấy phép",
+  "licenseButtonVerify": "Xác minh",
+  "licenseErrorEmpty": "Vui lòng nhập mã giấy phép của bạn.",
+  "licenseErrorInvalid": "Mã giấy phép không hợp lệ. Vui lòng kiểm tra lại.",
+  "licenseSuccessTitle": "Đã xác minh giấy phép!",
+  "licenseButtonBack": "Quay lại",
+
+  "aboutDescription": "Một công cụ đơn giản để chuyển đổi tệp Excel thành danh bạ VCF và ngược lại.",
+  "aboutClose": "Đóng",
+
+  "settingsTitle": "Cài đặt",
+  "settingsTheme": "Chủ đề",
+  "settingsThemeDark": "Tối",
+  "settingsThemeLight": "Sáng",
+  "settingsThemeSystem": "Hệ thống",
+
+  "settingsDefaultFileName": "Tên tệp mặc định",
+  "settingsDefaultFileNameHint": "Danh bạ",
+
+  "settingsVcfVersion": "Phiên bản VCF",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
