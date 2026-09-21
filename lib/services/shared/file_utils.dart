@@ -60,6 +60,7 @@ class FileUtils {
     final uri = await FilePicker.saveFile(
       dialogTitle: dialogTitle,
       fileName: fileName,
+      bytes: bytes,
       type: FileType.custom,
       allowedExtensions: [extension],
     );
