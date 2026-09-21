@@ -1,7 +1,10 @@
 <div align="center">
 
-<img src="assets/logo/logo.svg" alt="RJ Number Logo" width="180"/>
+<img src="assets/banner/banner.png" alt="Converter Banner" width="100%"/>
 
+<br><br>
+
+<img src="assets/logo/logo.svg" alt="Converter Logo" width="180"/>
 
 **Convert between Excel (.xlsx) and VCF (contacts) in seconds.**
 
@@ -14,7 +17,7 @@ A modern, multilingual Flutter desktop application for Windows.
 [![Languages](https://img.shields.io/badge/Languages-34-blue?style=flat-square)](#supported-languages)
 
 [Download](https://github.com/mr-ruhid/rjnumber_fileconverter/releases) &nbsp;|&nbsp;
-[Demo Video](https://youtu.be/MPrmKaRF5js) &nbsp;|&nbsp;
+[<img src="assets/icon/youtube-red.svg" width="16" height="16" alt="YouTube"/> Demo Video](https://youtu.be/MPrmKaRF5js) &nbsp;|&nbsp;
 [Building from Source](#building-from-source) &nbsp;|&nbsp;
 [Report a Bug](https://github.com/mr-ruhid/rjnumber_fileconverter/issues)
 
@@ -42,7 +45,7 @@ A modern, multilingual Flutter desktop application for Windows.
 
 ## About
 
-**RJ Number** is a Windows desktop application for converting between **Excel (.xlsx)** and **vCard (.vcf)** formats. Whether you need to import a client list into your phone or export contacts to a spreadsheet, RJ Number handles the job in a few clicks.
+[**Converter**](https://github.com/mr-ruhid/rjnumber_fileconverter) is a Windows desktop application for converting between **Excel (.xlsx)** and **vCard (.vcf)** formats. Whether you need to import a client list into your phone or export contacts to a spreadsheet, Converter handles the job in a few clicks.
 
 The interface follows a modern glassmorphism design language, includes Lottie animations, and ships with **34 languages** and a built-in language switcher.
 
@@ -50,9 +53,9 @@ The interface follows a modern glassmorphism design language, includes Lottie an
 
 ## Demo
 
-Watch a short walkthrough of how the application works:
+<img src="assets/icon/youtube-red.svg" width="18" height="18" alt="YouTube"/> Watch a short walkthrough of how the application works:
 
-[![RJ Number - Demo Video](https://img.youtube.com/vi/MPrmKaRF5js/maxresdefault.jpg)](https://youtu.be/MPrmKaRF5js)
+[![Converter - Demo Video](https://img.youtube.com/vi/MPrmKaRF5js/maxresdefault.jpg)](https://youtu.be/MPrmKaRF5js)
 
 > Video: [https://youtu.be/MPrmKaRF5js](https://youtu.be/MPrmKaRF5js)
 
@@ -118,6 +121,8 @@ Watch a short walkthrough of how the application works:
 ```text
 rjnumber_fileconverter/
 ├── assets/
+│   ├── banner/
+│   │   └── banner.png
 │   ├── logo/
 │   │   ├── logo.svg
 │   │   └── applogo.png
@@ -127,6 +132,7 @@ rjnumber_fileconverter/
 │   │   ├── github.svg
 │   │   ├── gitlab.svg
 │   │   ├── youtube.svg
+│   │   ├── youtube-red.svg
 │   │   ├── discord.svg
 │   │   ├── blogger.svg
 │   │   └── web.svg
@@ -257,7 +263,7 @@ You can also [open an issue](https://github.com/mr-ruhid/rjnumber_fileconverter/
 
 ## License
 
-Copyright &copy; 2026 RJ Number. All rights reserved.
+Copyright &copy; 2026 Converter. All rights reserved.
 
 ---
 
@@ -269,7 +275,7 @@ Copyright &copy; 2026 RJ Number. All rights reserved.
 |:---|:---|
 | GitHub | [mr-ruhid](https://github.com/mr-ruhid) |
 | GitLab | [ruhidjavadoff](https://gitlab.com/ruhidjavadoff) |
-| YouTube | [@ruhidjavadoff](https://www.youtube.com/@ruhidjavadoff) |
+| <img src="assets/icon/youtube-red.svg" width="16" height="16" alt="YouTube"/> YouTube | [@ruhidjavadoff](https://www.youtube.com/@ruhidjavadoff) |
 | Blog | [ruhidjavadoff.blogspot.com](https://ruhidjavadoff.blogspot.com) |
 | Discord | [Join the server](https://discord.com) |
 | Website | [ruhidjavadov.site](https://ruhidjavadov.site) / [ruhidjavadoff.site](https://ruhidjavadoff.site) |
@@ -278,7 +284,7 @@ Copyright &copy; 2026 RJ Number. All rights reserved.
 
 ## Support the Project
 
-If RJ Number saves you time, consider supporting its development. Every contribution helps keep the project alive.
+If Converter saves you time, consider supporting its development. Every contribution helps keep the project alive.
 
 [![Kofe.al](https://img.shields.io/badge/Kofe.al-Support-orange?style=flat-square)](https://kofe.al/@ruhidjavadoff)
 [![Cayvoy](https://img.shields.io/badge/Cayvoy-Donate-green?style=flat-square)](https://cayvoy.com/donate/ruhid4715)
