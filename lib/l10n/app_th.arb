@@ -1,0 +1,71 @@
+{
+  "@@locale": "th",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "กำลังโหลด...",
+
+  "homeTitle": "เลือกการทำงาน",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "แปลงไฟล์ Excel เป็นรายชื่อผู้ติดต่อ",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "แปลงรายชื่อผู้ติดต่อเป็นไฟล์ Excel",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "เวอร์ชัน Lite",
+
+  "vcfToExcelTitle": "แปลง VCF เป็น Excel",
+  "vcfToExcelStatusInitial": "เลือกไฟล์ VCF (.vcf) เพื่อเริ่มต้น",
+  "vcfToExcelStatusSuccess": "เสร็จสิ้น! บันทึกไฟล์เรียบร้อยแล้ว",
+  "vcfToExcelStatusCancelled": "ยกเลิกการเลือกไฟล์",
+  "vcfToExcelStatusSaveCancelled": "ยกเลิกการบันทึก",
+  "vcfToExcelStatusEmpty": "ข้อผิดพลาด: ไม่พบรายชื่อผู้ติดต่อที่ถูกต้องในไฟล์",
+  "vcfToExcelStatusError": "เกิดข้อผิดพลาดระหว่างการแปลง",
+  "vcfToExcelButton": "เลือกไฟล์ VCF",
+  "vcfToExcelPleaseWait": "กรุณารอสักครู่...",
+  "vcfToExcelSaveDialogTitle": "บันทึกไฟล์ Excel",
+
+  "excelToVcfTitle": "แปลง Excel เป็น VCF",
+  "excelToVcfStatusInitial": "เลือกไฟล์ Excel (.xlsx) เพื่อเริ่มต้น",
+  "excelToVcfStatusSuccess": "เสร็จสิ้น! บันทึกไฟล์เรียบร้อยแล้ว",
+  "excelToVcfStatusCancelled": "ยกเลิกการเลือกไฟล์",
+  "excelToVcfStatusSaveCancelled": "ยกเลิกการบันทึก",
+  "excelToVcfStatusEmpty": "ข้อผิดพลาด: ไม่พบรายชื่อผู้ติดต่อที่ถูกต้องในไฟล์",
+  "excelToVcfStatusError": "เกิดข้อผิดพลาดระหว่างการแปลง",
+  "excelToVcfButton": "เลือกไฟล์ Excel",
+  "excelToVcfPleaseWait": "กรุณารอสักครู่...",
+  "excelToVcfSaveDialogTitle": "บันทึกไฟล์ VCF",
+
+  "processingTitle": "กำลังแปลงไฟล์...",
+  "processingSubtitle": "กรุณารอสักครู่ กำลังดำเนินการ",
+
+  "licenseBadgeActive": "ลิขสิทธิ์ใช้งานได้",
+  "licenseBadgeTrial": "เวอร์ชันทดลอง",
+
+  "licenseDialogTitle": "ถึงขีดจำกัดการทดลองแล้ว",
+  "licenseDialogContent": "คุณได้ใช้การทดลองฟรีหนึ่งครั้งแล้ว หากต้องการใช้งานต่อ กรุณากรอกรหัสลิขสิทธิ์",
+  "licenseDialogClose": "ปิด",
+  "licenseDialogEnter": "กรอกรหัสลิขสิทธิ์",
+
+  "licenseScreenTitle": "กรอกรหัสลิขสิทธิ์เพื่อใช้งานต่อ",
+  "licenseFieldHint": "รหัสลิขสิทธิ์",
+  "licenseButtonVerify": "ตรวจสอบ",
+  "licenseErrorEmpty": "กรุณากรอกรหัสลิขสิทธิ์",
+  "licenseErrorInvalid": "รหัสลิขสิทธิ์ไม่ถูกต้อง กรุณาตรวจสอบอีกครั้ง",
+  "licenseSuccessTitle": "ตรวจสอบลิขสิทธิ์สำเร็จ!",
+  "licenseButtonBack": "ย้อนกลับ",
+
+  "aboutDescription": "เครื่องมือง่ายๆ สำหรับแปลงไฟล์ Excel เป็นรายชื่อผู้ติดต่อ VCF และกลับกัน",
+  "aboutClose": "ปิด",
+
+  "settingsTitle": "การตั้งค่า",
+  "settingsTheme": "ธีม",
+  "settingsThemeDark": "มืด",
+  "settingsThemeLight": "สว่าง",
+  "settingsThemeSystem": "ตามระบบ",
+
+  "settingsDefaultFileName": "ชื่อไฟล์เริ่มต้น",
+  "settingsDefaultFileNameHint": "Contacts",
+
+  "settingsVcfVersion": "เวอร์ชัน VCF",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
