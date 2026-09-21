@@ -49,6 +49,7 @@ flutter:
     - assets/icon/gitlab.svg
     - assets/icon/web.svg
     - assets/icon/youtube.svg
+    - assets/icon/blogger.svg
 
 flutter_launcher_icons:
   image_path: "assets/logo/applogo.png"
