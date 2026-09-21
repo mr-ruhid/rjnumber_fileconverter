@@ -223,7 +223,7 @@ class AboutDialogContent extends StatelessWidget {
                 _socialButton(
                   context,
                   'assets/icon/youtube.svg',
-                  'https://www.youtube.com/@ruhidjavadoff',
+                  'https://youtu.be/MPrmKaRF5js',
                 ),
                 _socialButton(
                   context,
