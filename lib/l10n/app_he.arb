@@ -1,0 +1,72 @@
+
+{
+  "@@locale": "he",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "טוען...",
+
+  "homeTitle": "בחר פעולה",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "המר קובץ Excel לאנשי קשר",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "המר אנשי קשר לקובץ Excel",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "גרסת Lite",
+
+  "vcfToExcelTitle": "המר VCF ל-Excel",
+  "vcfToExcelStatusInitial": "בחר קובץ VCF (.vcf) כדי להתחיל",
+  "vcfToExcelStatusSuccess": "הושלם! הקובץ נשמר בהצלחה.",
+  "vcfToExcelStatusCancelled": "בחירת הקובץ בוטלה.",
+  "vcfToExcelStatusSaveCancelled": "השמירה בוטלה.",
+  "vcfToExcelStatusEmpty": "שגיאה: לא נמצאו אנשי קשר תקינים בקובץ.",
+  "vcfToExcelStatusError": "אירעה שגיאה במהלך ההמרה.",
+  "vcfToExcelButton": "בחר קובץ VCF",
+  "vcfToExcelPleaseWait": "אנא המתן...",
+  "vcfToExcelSaveDialogTitle": "שמור קובץ Excel",
+
+  "excelToVcfTitle": "המר Excel ל-VCF",
+  "excelToVcfStatusInitial": "בחר קובץ Excel (.xlsx) כדי להתחיל",
+  "excelToVcfStatusSuccess": "הושלם! הקובץ נשמר בהצלחה.",
+  "excelToVcfStatusCancelled": "בחירת הקובץ בוטלה.",
+  "excelToVcfStatusSaveCancelled": "השמירה בוטלה.",
+  "excelToVcfStatusEmpty": "שגיאה: לא נמצאו אנשי קשר תקינים בקובץ.",
+  "excelToVcfStatusError": "אירעה שגיאה במהלך ההמרה.",
+  "excelToVcfButton": "בחר קובץ Excel",
+  "excelToVcfPleaseWait": "אנא המתן...",
+  "excelToVcfSaveDialogTitle": "שמור קובץ VCF",
+
+  "processingTitle": "ממיר קובץ...",
+  "processingSubtitle": "אנא המתן, התהליך פועל.",
+
+  "licenseBadgeActive": "רישיון פעיל",
+  "licenseBadgeTrial": "גרסת ניסיון",
+
+  "licenseDialogTitle": "הגעת למגבלת הניסיון",
+  "licenseDialogContent": "כבר השתמשת בניסיון החינמי החד-פעמי שלך. כדי להמשיך, אנא הזן את קוד הרישיון שלך.",
+  "licenseDialogClose": "סגור",
+  "licenseDialogEnter": "הזן רישיון",
+
+  "licenseScreenTitle": "הזן את קוד הרישיון שלך כדי להמשיך",
+  "licenseFieldHint": "קוד רישיון",
+  "licenseButtonVerify": "אמת",
+  "licenseErrorEmpty": "אנא הזן את קוד הרישיון שלך.",
+  "licenseErrorInvalid": "קוד רישיון לא תקין. אנא בדוק שוב.",
+  "licenseSuccessTitle": "הרישיון אומת!",
+  "licenseButtonBack": "חזור",
+
+  "aboutDescription": "כלי פשוט להמרת קבצי Excel לאנשי קשר VCF ובחזרה.",
+  "aboutClose": "סגור",
+
+  "settingsTitle": "הגדרות",
+  "settingsTheme": "ערכת נושא",
+  "settingsThemeDark": "כהה",
+  "settingsThemeLight": "בהיר",
+  "settingsThemeSystem": "מערכת",
+
+  "settingsDefaultFileName": "שם קובץ ברירת מחדל",
+  "settingsDefaultFileNameHint": "אנשי קשר",
+
+  "settingsVcfVersion": "גרסת VCF",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
