@@ -1,0 +1,71 @@
+{
+  "@@locale": "tl",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "Naglo-load...",
+
+  "homeTitle": "Pumili ng aksyon",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "I-convert ang Excel file sa mga contact",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "I-convert ang mga contact sa Excel file",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Lite na bersyon",
+
+  "vcfToExcelTitle": "I-convert ang VCF sa Excel",
+  "vcfToExcelStatusInitial": "Pumili ng VCF (.vcf) file upang magsimula",
+  "vcfToExcelStatusSuccess": "Tapos na! Matagumpay na na-save ang file.",
+  "vcfToExcelStatusCancelled": "Kinansela ang pagpili ng file.",
+  "vcfToExcelStatusSaveCancelled": "Kinansela ang pag-save.",
+  "vcfToExcelStatusEmpty": "Error: Walang valid na contact na natagpuan sa file.",
+  "vcfToExcelStatusError": "May error na naganap habang nagko-convert.",
+  "vcfToExcelButton": "Pumili ng VCF File",
+  "vcfToExcelPleaseWait": "Mangyaring maghintay...",
+  "vcfToExcelSaveDialogTitle": "I-save ang Excel file",
+
+  "excelToVcfTitle": "I-convert ang Excel sa VCF",
+  "excelToVcfStatusInitial": "Pumili ng Excel (.xlsx) file upang magsimula",
+  "excelToVcfStatusSuccess": "Tapos na! Matagumpay na na-save ang file.",
+  "excelToVcfStatusCancelled": "Kinansela ang pagpili ng file.",
+  "excelToVcfStatusSaveCancelled": "Kinansela ang pag-save.",
+  "excelToVcfStatusEmpty": "Error: Walang valid na contact na natagpuan sa file.",
+  "excelToVcfStatusError": "May error na naganap habang nagko-convert.",
+  "excelToVcfButton": "Pumili ng Excel File",
+  "excelToVcfPleaseWait": "Mangyaring maghintay...",
+  "excelToVcfSaveDialogTitle": "I-save ang VCF file",
+
+  "processingTitle": "Nagko-convert ng file...",
+  "processingSubtitle": "Mangyaring maghintay, tumatakbo ang proseso.",
+
+  "licenseBadgeActive": "Aktibo ang Lisensya",
+  "licenseBadgeTrial": "Bersyong Trial",
+
+  "licenseDialogTitle": "Naabot na ang Limitasyon ng Trial",
+  "licenseDialogContent": "Nagamit mo na ang iyong isang beses na libreng trial. Upang magpatuloy, mangyaring ilagay ang iyong license code.",
+  "licenseDialogClose": "Isara",
+  "licenseDialogEnter": "Ilagay ang Lisensya",
+
+  "licenseScreenTitle": "Ilagay ang iyong license code upang magpatuloy",
+  "licenseFieldHint": "License code",
+  "licenseButtonVerify": "I-verify",
+  "licenseErrorEmpty": "Mangyaring ilagay ang iyong license code.",
+  "licenseErrorInvalid": "Hindi valid ang license code. Mangyaring suriin muli.",
+  "licenseSuccessTitle": "Na-verify ang lisensya!",
+  "licenseButtonBack": "Bumalik",
+
+  "aboutDescription": "Isang simpleng tool upang i-convert ang mga Excel file sa VCF contacts at pabalik.",
+  "aboutClose": "Isara",
+
+  "settingsTitle": "Mga Setting",
+  "settingsTheme": "Tema",
+  "settingsThemeDark": "Madilim",
+  "settingsThemeLight": "Maliwanag",
+  "settingsThemeSystem": "System",
+
+  "settingsDefaultFileName": "Default na pangalan ng file",
+  "settingsDefaultFileNameHint": "Mga Contact",
+
+  "settingsVcfVersion": "Bersyon ng VCF",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
