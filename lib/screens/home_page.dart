@@ -136,6 +136,8 @@ class HomePage extends StatelessWidget {
     required String subtitle,
     required VoidCallback onTap,
   }) {
+    final isRtl = Directionality.of(context) == TextDirection.rtl;
+
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
@@ -158,6 +160,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     Text(
                       title,
+                      textAlign: TextAlign.start,
                       style: TextStyle(
                         color: AppTheme.textPrimary(context),
                         fontSize: 18,
@@ -167,6 +170,7 @@ class HomePage extends StatelessWidget {
                     const SizedBox(height: 4),
                     Text(
                       subtitle,
+                      textAlign: TextAlign.start,
                       style: TextStyle(
                         color: AppTheme.textSecondary(context),
                         fontSize: 13,
@@ -176,7 +180,9 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Icon(
-                Icons.arrow_forward_ios_rounded,
+                isRtl
+                    ? Icons.arrow_back_ios_rounded
+                    : Icons.arrow_forward_ios_rounded,
                 color: AppTheme.textMuted(context),
                 size: 18,
               ),
