@@ -1,0 +1,71 @@
+{
+  "@@locale": "ha",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "Ana lodawa...",
+
+  "homeTitle": "Zaɓi wani aiki",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Maida fayil ɗin Excel zuwa lambobin sadarwa",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "Maida lambobin sadarwa zuwa fayil ɗin Excel",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Sigar Lite",
+
+  "vcfToExcelTitle": "Maida VCF zuwa Excel",
+  "vcfToExcelStatusInitial": "Zaɓi fayil ɗin VCF (.vcf) don farawa",
+  "vcfToExcelStatusSuccess": "An gama! An adana fayil ɗin cikin nasara.",
+  "vcfToExcelStatusCancelled": "An soke zaɓin fayil ɗin.",
+  "vcfToExcelStatusSaveCancelled": "An soke adanawa.",
+  "vcfToExcelStatusEmpty": "Kuskure: Ba a sami ingantattun lambobin sadarwa a cikin fayil ɗin ba.",
+  "vcfToExcelStatusError": "Kuskure ya faru yayin juyawa.",
+  "vcfToExcelButton": "Zaɓi Fayil ɗin VCF",
+  "vcfToExcelPleaseWait": "Don Allah jira...",
+  "vcfToExcelSaveDialogTitle": "Adana fayil ɗin Excel",
+
+  "excelToVcfTitle": "Maida Excel zuwa VCF",
+  "excelToVcfStatusInitial": "Zaɓi fayil ɗin Excel (.xlsx) don farawa",
+  "excelToVcfStatusSuccess": "An gama! An adana fayil ɗin cikin nasara.",
+  "excelToVcfStatusCancelled": "An soke zaɓin fayil ɗin.",
+  "excelToVcfStatusSaveCancelled": "An soke adanawa.",
+  "excelToVcfStatusEmpty": "Kuskure: Ba a sami ingantattun lambobin sadarwa a cikin fayil ɗin ba.",
+  "excelToVcfStatusError": "Kuskure ya faru yayin juyawa.",
+  "excelToVcfButton": "Zaɓi Fayil ɗin Excel",
+  "excelToVcfPleaseWait": "Don Allah jira...",
+  "excelToVcfSaveDialogTitle": "Adana fayil ɗin VCF",
+
+  "processingTitle": "Ana juyawa fayil ɗin...",
+  "processingSubtitle": "Don Allah jira, ana aiwatar da aikin.",
+
+  "licenseBadgeActive": "Lasisi Yana Aiki",
+  "licenseBadgeTrial": "Sigar Gwaji",
+
+  "licenseDialogTitle": "An Kai Iyakar Gwaji",
+  "licenseDialogContent": "Kun riga kun yi amfani da gwajin ku na kyauta sau ɗaya. Don ci gaba, don Allah shigar da lambar lasisin ku.",
+  "licenseDialogClose": "Rufe",
+  "licenseDialogEnter": "Shigar da Lasisi",
+
+  "licenseScreenTitle": "Shigar da lambar lasisin ku don ci gaba",
+  "licenseFieldHint": "Lambar lasisi",
+  "licenseButtonVerify": "Tabbatar",
+  "licenseErrorEmpty": "Don Allah shigar da lambar lasisin ku.",
+  "licenseErrorInvalid": "Lambar lasisin ba daidai ba. Don Allah sake dubawa.",
+  "licenseSuccessTitle": "An tabbatar da lasisi!",
+  "licenseButtonBack": "Koma baya",
+
+  "aboutDescription": "Kayan aiki mai sauƙi don maida fayilolin Excel zuwa lambobin sadarwar VCF da baya.",
+  "aboutClose": "Rufe",
+
+  "settingsTitle": "Saituna",
+  "settingsTheme": "Jigo",
+  "settingsThemeDark": "Duhu",
+  "settingsThemeLight": "Haske",
+  "settingsThemeSystem": "Tsarin",
+
+  "settingsDefaultFileName": "Sunan fayil na asali",
+  "settingsDefaultFileNameHint": "Lambobin sadarwa",
+
+  "settingsVcfVersion": "Sigar VCF",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
