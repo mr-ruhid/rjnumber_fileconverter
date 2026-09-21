@@ -50,7 +50,7 @@ class ConverterService {
   // ---------------------------------------------------------------------
 
   static List<Contact> readContactsFromExcel(Uint8List bytes) {
-    final cleanedBytes = _stripExcelMetadata(bytes);
+    final cleanedBytes = _sanitizeExcelBytes(bytes);
 
     late final excel_pkg.Excel excel;
     try {
@@ -196,10 +196,18 @@ class ConverterService {
     }
   }
 
-  /// Real Excel-in əlavə etdiyi xl/metadata.xml (dynamic array / rich data)
-  /// hissəsini silir — bəzi xlsx parser-lər (o cümlədən `excel` paketi)
-  /// bunu düzgün emal edə bilmir.
-  static Uint8List _stripExcelMetadata(Uint8List bytes) {
+  /// Real Excel-in yazdığı, amma Dart `excel` paketinin qəbul etmədiyi
+  /// hissələri fayldan silib/düzəldib "təmizlənmiş" bytes qaytarır:
+  ///
+  /// 1) xl/metadata.xml (dynamic array / rich data metadata) — paket
+  ///    bunu dəstəkləmir, sheetMetadata əlaqəsi ilə birlikdə silinir.
+  ///
+  /// 2) xl/styles.xml-də numFmtId 164-dən kiçik olan <numFmt> girişləri
+  ///    (məs. Excel-in Çin lokalında yaratdığı daxili tarix/vaxt formatı
+  ///    numFmtId="56") — paket bunları "custom format 164-dən aşağı ola
+  ///    bilməz" deyib rədd edir və Excel.decodeBytes tamamilə uğursuz olur:
+  ///    "Exception: custom numFmtId starts at 164 but found a value of 56"
+  static Uint8List _sanitizeExcelBytes(Uint8List bytes) {
     try {
       final archive = ZipDecoder().decodeBytes(bytes);
       final newArchive = Archive();
@@ -208,6 +216,7 @@ class ConverterService {
       for (final file in archive.files) {
         if (!file.isFile) continue;
 
+        // 1) metadata.xml-i tamamilə atla
         if (file.name == 'xl/metadata.xml') {
           changed = true;
           continue;
@@ -215,6 +224,7 @@ class ConverterService {
 
         final content = file.content as List<int>;
 
+        // 2) workbook.xml.rels-dən sheetMetadata əlaqəsini sil
         if (file.name == 'xl/_rels/workbook.xml.rels') {
           final xml = utf8.decode(content);
           final cleaned = xml.replaceAll(
@@ -227,12 +237,41 @@ class ConverterService {
           continue;
         }
 
+        // 3) [Content_Types].xml-dən metadata.xml override-ini sil
         if (file.name == '[Content_Types].xml') {
           final xml = utf8.decode(content);
           final cleaned = xml.replaceAll(
             RegExp(r'<Override[^>]*PartName="/xl/metadata\.xml"[^>]*/>'),
             '',
           );
+          if (cleaned != xml) changed = true;
+          final bytesOut = utf8.encode(cleaned);
+          newArchive.addFile(ArchiveFile(file.name, bytesOut.length, bytesOut));
+          continue;
+        }
+
+        // 4) styles.xml-dən 164-dən kiçik numFmtId olan girişləri sil
+        if (file.name == 'xl/styles.xml') {
+          final xml = utf8.decode(content);
+
+          var cleaned = xml.replaceAllMapped(
+            RegExp(r'<numFmt\s+numFmtId="(\d+)"[^>]*/>'),
+                (match) {
+              final id = int.tryParse(match.group(1) ?? '') ?? 0;
+              return id < 164 ? '' : match.group(0)!;
+            },
+          );
+
+          // Boş qalan <numFmts> konteynerini də sil (uyğunsuz count qalmasın)
+          cleaned = cleaned.replaceAll(
+            RegExp(r'<numFmts\s+count="\d+"\s*>\s*</numFmts>'),
+            '',
+          );
+          cleaned = cleaned.replaceAll(
+            RegExp(r'<numFmts\s+count="\d+"\s*/>'),
+            '',
+          );
+
           if (cleaned != xml) changed = true;
           final bytesOut = utf8.encode(cleaned);
           newArchive.addFile(ArchiveFile(file.name, bytesOut.length, bytesOut));
@@ -248,7 +287,7 @@ class ConverterService {
       if (encoded == null) return bytes;
       return Uint8List.fromList(encoded);
     } catch (e) {
-      debugPrint('metadata strip failed, orijinal bytes istifadə olunur: $e');
+      debugPrint('sanitize failed, orijinal bytes istifadə olunur: $e');
       return bytes;
     }
   }
