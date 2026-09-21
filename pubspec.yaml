@@ -54,6 +54,8 @@ flutter:
     - assets/icon/excel.svg
     - assets/animation/phone.json
     - assets/animation/file.json
+    - assets/template/template.xlsx
+    - assets/template/
 
 flutter_launcher_icons:
   image_path: "assets/logo/applogo.png"
