@@ -1,0 +1,71 @@
+{
+  "@@locale": "ko",
+
+  "appTitle": "RJ Number - 파일 변환기",
+  "splashLoading": "로딩 중...",
+
+  "homeTitle": "작업을 선택하세요",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Excel 파일을 연락처로 변환",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "연락처를 Excel 파일로 변환",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Lite 버전",
+
+  "vcfToExcelTitle": "VCF를 Excel로 변환",
+  "vcfToExcelStatusInitial": "시작하려면 VCF (.vcf) 파일을 선택하세요",
+  "vcfToExcelStatusSuccess": "완료! 파일이 성공적으로 저장되었습니다.",
+  "vcfToExcelStatusCancelled": "파일 선택이 취소되었습니다.",
+  "vcfToExcelStatusSaveCancelled": "저장이 취소되었습니다.",
+  "vcfToExcelStatusEmpty": "오류: 파일에서 유효한 연락처를 찾을 수 없습니다.",
+  "vcfToExcelStatusError": "변환 중 오류가 발생했습니다.",
+  "vcfToExcelButton": "VCF 파일 선택",
+  "vcfToExcelPleaseWait": "잠시 기다려 주세요...",
+  "vcfToExcelSaveDialogTitle": "Excel 파일 저장",
+
+  "excelToVcfTitle": "Excel을 VCF로 변환",
+  "excelToVcfStatusInitial": "시작하려면 Excel (.xlsx) 파일을 선택하세요",
+  "excelToVcfStatusSuccess": "완료! 파일이 성공적으로 저장되었습니다.",
+  "excelToVcfStatusCancelled": "파일 선택이 취소되었습니다.",
+  "excelToVcfStatusSaveCancelled": "저장이 취소되었습니다.",
+  "excelToVcfStatusEmpty": "오류: 파일에서 유효한 연락처를 찾을 수 없습니다.",
+  "excelToVcfStatusError": "변환 중 오류가 발생했습니다.",
+  "excelToVcfButton": "Excel 파일 선택",
+  "excelToVcfPleaseWait": "잠시 기다려 주세요...",
+  "excelToVcfSaveDialogTitle": "VCF 파일 저장",
+
+  "processingTitle": "파일 변환 중...",
+  "processingSubtitle": "잠시 기다려 주세요, 프로세스가 진행 중입니다.",
+
+  "licenseBadgeActive": "라이선스 활성화됨",
+  "licenseBadgeTrial": "체험판",
+
+  "licenseDialogTitle": "체험 한도 도달",
+  "licenseDialogContent": "이미 일회성 무료 체험을 사용하셨습니다. 계속하려면 라이선스 코드를 입력하세요.",
+  "licenseDialogClose": "닫기",
+  "licenseDialogEnter": "라이선스 입력",
+
+  "licenseScreenTitle": "계속하려면 라이선스 코드를 입력하세요",
+  "licenseFieldHint": "라이선스 코드",
+  "licenseButtonVerify": "확인",
+  "licenseErrorEmpty": "라이선스 코드를 입력하세요.",
+  "licenseErrorInvalid": "유효하지 않은 라이선스 코드입니다. 다시 확인하세요.",
+  "licenseSuccessTitle": "라이선스가 확인되었습니다!",
+  "licenseButtonBack": "돌아가기",
+
+  "aboutDescription": "Excel 파일을 VCF 연락처로 변환하고 그 반대로 변환하는 간단한 도구입니다.",
+  "aboutClose": "닫기",
+
+  "settingsTitle": "설정",
+  "settingsTheme": "테마",
+  "settingsThemeDark": "어두움",
+  "settingsThemeLight": "밝음",
+  "settingsThemeSystem": "시스템",
+
+  "settingsDefaultFileName": "기본 파일 이름",
+  "settingsDefaultFileNameHint": "Kontaktlar",
+
+  "settingsVcfVersion": "VCF 버전",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
