@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
+import 'package:lottie/lottie.dart';
 
 import '../l10n/app_localizations.dart';
 import '../services/converter_service.dart';
@@ -120,10 +121,18 @@ class _VcfToExcelPageState extends State<VcfToExcelPage> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(
-                    Icons.table_chart_rounded,
-                    color: AppTheme.textPrimary(context),
-                    size: 80,
+                  SizedBox(
+                    width: 120,
+                    height: 120,
+                    child: Lottie.asset(
+                      'assets/animation/file.json',
+                      repeat: true,
+                      errorBuilder: (context, error, stackTrace) => Icon(
+                        Icons.table_chart_rounded,
+                        color: AppTheme.textPrimary(context),
+                        size: 80,
+                      ),
+                    ),
                   ),
                   const SizedBox(height: AppTheme.spacingLg),
                   Text(
