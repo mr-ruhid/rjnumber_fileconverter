@@ -207,25 +207,27 @@ class ConverterService {
     for (final contact in contacts) {
       if (!contact.isValid) continue;
 
+      final name = contact.fullName.trim();
+
       buffer.write('BEGIN:VCARD\r\n');
       buffer.write('VERSION:$version\r\n');
 
+      // VCF name format: N:Soyad;Ad;Ata adı;Titul;Sufiks
+      // Tam adı həm Soyad, həm də Ad sahəsinə yaz (telefon uyğunluğu üçün)
+      buffer.write('N:$name;$name;;;\r\n');
+      buffer.write('FN:$name\r\n');
+
       if (version == vcfVersion4) {
-        buffer.write('N:;${contact.fullName};;;\r\n');
-        buffer.write('FN;CHARSET=UTF-8:${contact.fullName}\r\n');
         buffer.write('TEL;TYPE=cell;VALUE=uri:tel:${contact.phone}\r\n');
       } else {
-        buffer.write('N:;${contact.fullName};;;\r\n');
-        buffer.write('FN;CHARSET=UTF-8:${contact.fullName}\r\n');
         buffer.write('TEL;TYPE=CELL:${contact.phone}\r\n');
       }
 
       buffer.write('END:VCARD\r\n');
     }
 
-    final bom = [0xEF, 0xBB, 0xBF];
     final content = utf8.encode(buffer.toString());
-    return Uint8List.fromList([...bom, ...content]);
+    return Uint8List.fromList(content);
   }
 
   static Uint8List contactsToExcelBytes(List<Contact> contacts) {
