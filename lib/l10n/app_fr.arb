@@ -66,6 +66,8 @@
   "settingsDefaultFileNameHint": "Kontaktlar",
 
   "settingsVcfVersion": "Version VCF",
+  "settingsLanguage": "Langue",
+  "settingsLanguageSystem": "Système",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"
 }

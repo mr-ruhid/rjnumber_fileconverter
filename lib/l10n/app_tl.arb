@@ -61,7 +61,8 @@
   "settingsThemeDark": "Madilim",
   "settingsThemeLight": "Maliwanag",
   "settingsThemeSystem": "System",
-
+  "settingsLanguage": "Wika",
+  "settingsLanguageSystem": "System",
   "settingsDefaultFileName": "Default na pangalan ng file",
   "settingsDefaultFileNameHint": "Mga Contact",
 

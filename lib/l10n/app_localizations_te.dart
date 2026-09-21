@@ -182,6 +182,12 @@ class AppLocalizationsTe extends AppLocalizations {
   String get settingsVcfVersion => 'VCF వెర్షన్';
 
   @override
+  String get settingsLanguage => 'భాష';
+
+  @override
+  String get settingsLanguageSystem => 'సిస్టమ్';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

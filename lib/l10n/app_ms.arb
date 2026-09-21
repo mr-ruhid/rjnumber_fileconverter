@@ -61,7 +61,8 @@
   "settingsThemeDark": "Gelap",
   "settingsThemeLight": "Cerah",
   "settingsThemeSystem": "Sistem",
-
+  "settingsLanguage": "Bahasa",
+  "settingsLanguageSystem": "Sistem",
   "settingsDefaultFileName": "Nama fail lalai",
   "settingsDefaultFileNameHint": "Kenalan",
 

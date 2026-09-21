@@ -182,6 +182,12 @@ class AppLocalizationsSw extends AppLocalizations {
   String get settingsVcfVersion => 'Toleo la VCF';
 
   @override
+  String get settingsLanguage => 'Lugha';
+
+  @override
+  String get settingsLanguageSystem => 'Mfumo';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

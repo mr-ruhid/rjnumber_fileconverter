@@ -61,7 +61,8 @@
   "settingsThemeDark": "இருண்ட",
   "settingsThemeLight": "ஒளி",
   "settingsThemeSystem": "சிஸ்டம்",
-
+  "settingsLanguage": "மொழி",
+  "settingsLanguageSystem": "சிஸ்டம்",
   "settingsDefaultFileName": "இயல்புநிலை கோப்பு பெயர்",
   "settingsDefaultFileNameHint": "தொடர்புகள்",
 

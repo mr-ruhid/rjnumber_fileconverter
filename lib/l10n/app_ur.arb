@@ -61,7 +61,8 @@
   "settingsThemeDark": "ڈارک",
   "settingsThemeLight": "لائٹ",
   "settingsThemeSystem": "سسٹم",
-
+  "settingsLanguage": "زبان",
+  "settingsLanguageSystem": "سسٹم",
   "settingsDefaultFileName": "ڈیفالٹ فائل کا نام",
   "settingsDefaultFileNameHint": "رابطے",
 

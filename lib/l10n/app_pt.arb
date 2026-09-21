@@ -4,7 +4,8 @@
 
   "appTitle": "RJ Number - Conversor de Arquivos",
   "splashLoading": "Carregando...",
-
+  "settingsLanguage": "Idioma",
+  "settingsLanguageSystem": "Sistema",
   "homeTitle": "Escolha uma ação",
   "homeExcelToVcf": "Excel → VCF",
   "homeExcelToVcfDesc": "Converter arquivo Excel em contatos",

@@ -486,6 +486,18 @@ abstract class AppLocalizations {
   /// **'VCF version'**
   String get settingsVcfVersion;
 
+  /// No description provided for @settingsLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get settingsLanguage;
+
+  /// No description provided for @settingsLanguageSystem.
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get settingsLanguageSystem;
+
   /// No description provided for @settingsVcfVersion3.
   ///
   /// In en, this message translates to:

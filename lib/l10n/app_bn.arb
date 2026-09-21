@@ -66,6 +66,8 @@
   "settingsDefaultFileNameHint": "পরিচিতি",
 
   "settingsVcfVersion": "VCF সংস্করণ",
+  "settingsLanguage": "ভাষা",
+  "settingsLanguageSystem": "সিস্টেম",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"
 }

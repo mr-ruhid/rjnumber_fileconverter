@@ -7,6 +7,7 @@ class SettingsService {
   static const String _keyThemeMode = 'settings_theme_mode';
   static const String _keyVcfVersion = 'settings_vcf_version';
   static const String _keyDefaultFileName = 'settings_default_file_name';
+  static const String _keyLocale = 'settings_locale';
 
   static const String defaultFileName = 'Kontaktlar';
 
@@ -84,6 +85,31 @@ class SettingsService {
       }
     } catch (e) {
       debugPrint('Default file name write error: $e');
+    }
+  }
+
+  static Future<Locale?> getLocale() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final code = prefs.getString(_keyLocale);
+      if (code == null || code.isEmpty) return null;
+      return Locale(code);
+    } catch (e) {
+      debugPrint('Locale read error: $e');
+      return null;
+    }
+  }
+
+  static Future<void> setLocale(Locale? locale) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      if (locale == null) {
+        await prefs.remove(_keyLocale);
+      } else {
+        await prefs.setString(_keyLocale, locale.languageCode);
+      }
+    } catch (e) {
+      debugPrint('Locale write error: $e');
     }
   }
 }

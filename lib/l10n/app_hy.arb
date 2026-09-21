@@ -11,7 +11,8 @@
   "homeVcfToExcelDesc": "Կոնտակտները փոխարկել Excel ֆայլի",
   "homeFooter": "Ruhid Javadov - Mr-Ruhid",
   "homeVersion": "Lite տարբերակ",
-
+  "settingsLanguage": "Լեզու",
+  "settingsLanguageSystem": "Համակարգ",
   "vcfToExcelTitle": "VCF-ը փոխարկել Excel-ի",
   "vcfToExcelStatusInitial": "Սկսելու համար ընտրեք VCF (.vcf) ֆայլ",
   "vcfToExcelStatusSuccess": "Պատրաստ է։ Ֆայլը հաջողությամբ պահպանվել է։",

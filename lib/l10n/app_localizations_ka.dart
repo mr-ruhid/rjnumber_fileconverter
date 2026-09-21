@@ -178,6 +178,12 @@ class AppLocalizationsKa extends AppLocalizations {
   String get settingsVcfVersion => 'VCF ვერსია';
 
   @override
+  String get settingsLanguage => 'ენა';
+
+  @override
+  String get settingsLanguageSystem => 'სისტემა';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

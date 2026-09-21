@@ -67,6 +67,8 @@
   "settingsDefaultFileNameHint": "אנשי קשר",
 
   "settingsVcfVersion": "גרסת VCF",
+  "settingsLanguage": "שפה",
+  "settingsLanguageSystem": "מערכת",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"
 }

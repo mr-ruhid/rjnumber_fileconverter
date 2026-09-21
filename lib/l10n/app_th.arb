@@ -61,7 +61,8 @@
   "settingsThemeDark": "มืด",
   "settingsThemeLight": "สว่าง",
   "settingsThemeSystem": "ตามระบบ",
-
+  "settingsLanguage": "ภาษา",
+  "settingsLanguageSystem": "ระบบ",
   "settingsDefaultFileName": "ชื่อไฟล์เริ่มต้น",
   "settingsDefaultFileNameHint": "Contacts",
 

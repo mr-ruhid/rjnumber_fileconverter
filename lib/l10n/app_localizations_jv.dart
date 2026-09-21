@@ -179,6 +179,12 @@ class AppLocalizationsJv extends AppLocalizations {
   String get settingsVcfVersion => 'Versi VCF';
 
   @override
+  String get settingsLanguage => 'Basa';
+
+  @override
+  String get settingsLanguageSystem => 'Sistem';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

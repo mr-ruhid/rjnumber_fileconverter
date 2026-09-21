@@ -182,6 +182,12 @@ class AppLocalizationsHy extends AppLocalizations {
   String get settingsVcfVersion => 'VCF տարբերակ';
 
   @override
+  String get settingsLanguage => 'Լեզու';
+
+  @override
+  String get settingsLanguageSystem => 'Համակարգ';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

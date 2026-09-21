@@ -64,7 +64,8 @@
 
   "settingsDefaultFileName": "デフォルトのファイル名",
   "settingsDefaultFileNameHint": "連絡先",
-
+  "settingsLanguage": "言語",
+  "settingsLanguageSystem": "システム",
   "settingsVcfVersion": "VCF バージョン",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"

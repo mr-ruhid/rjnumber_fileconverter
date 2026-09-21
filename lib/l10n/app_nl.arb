@@ -11,7 +11,8 @@
   "homeVcfToExcelDesc": "Contacten converteren naar Excel-bestand",
   "homeFooter": "Ruhid Javadov - Mr-Ruhid",
   "homeVersion": "Lite-versie",
-
+  "settingsLanguage": "Taal",
+  "settingsLanguageSystem": "Systeem",
   "vcfToExcelTitle": "VCF converteren naar Excel",
   "vcfToExcelStatusInitial": "Selecteer een VCF-bestand (.vcf) om te beginnen",
   "vcfToExcelStatusSuccess": "Klaar! Bestand succesvol opgeslagen.",

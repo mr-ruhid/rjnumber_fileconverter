@@ -178,6 +178,12 @@ class AppLocalizationsUr extends AppLocalizations {
   String get settingsVcfVersion => 'VCF ورژن';
 
   @override
+  String get settingsLanguage => 'زبان';
+
+  @override
+  String get settingsLanguageSystem => 'سسٹم';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

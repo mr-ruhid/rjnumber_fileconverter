@@ -67,5 +67,7 @@
 
   "settingsVcfVersion": "VCF versiyası",
   "settingsVcfVersion3": "3.0",
+  "settingsLanguage": "Dil",
+  "settingsLanguageSystem": "Sistem",
   "settingsVcfVersion4": "4.0"
 }

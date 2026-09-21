@@ -177,6 +177,12 @@ class AppLocalizationsTh extends AppLocalizations {
   String get settingsVcfVersion => 'เวอร์ชัน VCF';
 
   @override
+  String get settingsLanguage => 'ภาษา';
+
+  @override
+  String get settingsLanguageSystem => 'ระบบ';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

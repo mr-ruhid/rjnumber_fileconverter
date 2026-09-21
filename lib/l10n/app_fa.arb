@@ -66,6 +66,8 @@
   "settingsDefaultFileNameHint": "مخاطبین",
 
   "settingsVcfVersion": "نسخه VCF",
+  "settingsLanguage": "زبان",
+  "settingsLanguageSystem": "سیستم",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"
 }

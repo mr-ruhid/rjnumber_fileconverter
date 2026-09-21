@@ -172,6 +172,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settingsVcfVersion => 'VCF 版本';
 
   @override
+  String get settingsLanguage => '语言';
+
+  @override
+  String get settingsLanguageSystem => '系统';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

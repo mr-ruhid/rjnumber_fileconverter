@@ -64,7 +64,8 @@
 
   "settingsDefaultFileName": "Jeneng file standar",
   "settingsDefaultFileNameHint": "Kontak",
-
+  "settingsLanguage": "Basa",
+  "settingsLanguageSystem": "Sistem",
   "settingsVcfVersion": "Versi VCF",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"

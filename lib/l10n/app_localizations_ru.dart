@@ -177,6 +177,12 @@ class AppLocalizationsRu extends AppLocalizations {
   String get settingsVcfVersion => 'Версия VCF';
 
   @override
+  String get settingsLanguage => 'Язык';
+
+  @override
+  String get settingsLanguageSystem => 'Система';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

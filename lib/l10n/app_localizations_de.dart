@@ -184,6 +184,12 @@ class AppLocalizationsDe extends AppLocalizations {
   String get settingsVcfVersion => 'VCF-Version';
 
   @override
+  String get settingsLanguage => 'Sprache';
+
+  @override
+  String get settingsLanguageSystem => 'System';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

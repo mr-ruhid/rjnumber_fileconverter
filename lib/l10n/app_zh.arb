@@ -64,7 +64,8 @@
 
   "settingsDefaultFileName": "默认文件名",
   "settingsDefaultFileNameHint": "联系人",
-
+  "settingsLanguage": "语言",
+  "settingsLanguageSystem": "系统",
   "settingsVcfVersion": "VCF 版本",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"

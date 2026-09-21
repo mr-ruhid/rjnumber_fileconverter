@@ -11,7 +11,8 @@
   "homeVcfToExcelDesc": "კონტაქტების Excel ფაილად გადაყვანა",
   "homeFooter": "Ruhid Javadov - Mr-Ruhid",
   "homeVersion": "Lite ვერსია",
-
+  "settingsLanguage": "ენა",
+  "settingsLanguageSystem": "სისტემა",
   "vcfToExcelTitle": "VCF-ის Excel-ად გადაყვანა",
   "vcfToExcelStatusInitial": "დასაწყებად აირჩიეთ VCF (.vcf) ფაილი",
   "vcfToExcelStatusSuccess": "მზადაა! ფაილი წარმატებით შენახულია.",

@@ -61,7 +61,8 @@
   "settingsThemeDark": "Giza",
   "settingsThemeLight": "Mwanga",
   "settingsThemeSystem": "Mfumo",
-
+  "settingsLanguage": "Lugha",
+  "settingsLanguageSystem": "Mfumo",
   "settingsDefaultFileName": "Jina la faili chaguo-msingi",
   "settingsDefaultFileNameHint": "Anwani",
 

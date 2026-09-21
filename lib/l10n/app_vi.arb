@@ -61,7 +61,8 @@
   "settingsThemeDark": "Tối",
   "settingsThemeLight": "Sáng",
   "settingsThemeSystem": "Hệ thống",
-
+  "settingsLanguage": "Ngôn ngữ",
+  "settingsLanguageSystem": "Hệ thống",
   "settingsDefaultFileName": "Tên tệp mặc định",
   "settingsDefaultFileNameHint": "Danh bạ",
 

@@ -11,7 +11,8 @@
   "homeVcfToExcelDesc": "Converti contatti in file Excel",
   "homeFooter": "Ruhid Javadov - Mr-Ruhid",
   "homeVersion": "Versione Lite",
-
+  "settingsLanguage": "Lingua",
+  "settingsLanguageSystem": "Sistema",
   "vcfToExcelTitle": "Converti VCF in Excel",
   "vcfToExcelStatusInitial": "Seleziona un file VCF (.vcf) per iniziare",
   "vcfToExcelStatusSuccess": "Fatto! File salvato con successo.",

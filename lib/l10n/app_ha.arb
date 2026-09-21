@@ -63,6 +63,8 @@
   "settingsThemeSystem": "Tsarin",
 
   "settingsDefaultFileName": "Sunan fayil na asali",
+  "settingsLanguage": "Harshe",
+  "settingsLanguageSystem": "Tsarin",
   "settingsDefaultFileNameHint": "Lambobin sadarwa",
 
   "settingsVcfVersion": "Sigar VCF",

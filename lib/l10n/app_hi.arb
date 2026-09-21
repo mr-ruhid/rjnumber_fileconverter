@@ -64,7 +64,8 @@
 
   "settingsDefaultFileName": "डिफ़ॉल्ट फ़ाइल नाम",
   "settingsDefaultFileNameHint": "Kontaktlar",
-
+  "settingsLanguage": "भाषा",
+  "settingsLanguageSystem": "सिस्टम",
   "settingsVcfVersion": "VCF संस्करण",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"

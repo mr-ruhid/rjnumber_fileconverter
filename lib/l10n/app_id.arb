@@ -10,6 +10,8 @@
   "homeVcfToExcel": "VCF → Excel",
   "homeVcfToExcelDesc": "Konversi kontak ke file Excel",
   "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "settingsLanguage": "Bahasa",
+  "settingsLanguageSystem": "Sistem",
   "homeVersion": "Versi Lite",
 
   "vcfToExcelTitle": "Konversi VCF ke Excel",

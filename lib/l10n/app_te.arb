@@ -61,7 +61,8 @@
   "settingsThemeDark": "డార్క్",
   "settingsThemeLight": "లైట్",
   "settingsThemeSystem": "సిస్టమ్",
-
+  "settingsLanguage": "భాష",
+  "settingsLanguageSystem": "సిస్టమ్",
   "settingsDefaultFileName": "డిఫాల్ట్ ఫైల్ పేరు",
   "settingsDefaultFileNameHint": "పరిచయాలు",
 

@@ -185,6 +185,12 @@ class AppLocalizationsTl extends AppLocalizations {
   String get settingsVcfVersion => 'Bersyon ng VCF';
 
   @override
+  String get settingsLanguage => 'Wika';
+
+  @override
+  String get settingsLanguageSystem => 'System';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

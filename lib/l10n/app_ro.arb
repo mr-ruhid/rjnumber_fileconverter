@@ -11,7 +11,8 @@
   "homeVcfToExcelDesc": "Convertiți contactele în fișier Excel",
   "homeFooter": "Ruhid Javadov - Mr-Ruhid",
   "homeVersion": "Versiune Lite",
-
+  "settingsLanguage": "Limbă",
+  "settingsLanguageSystem": "Sistem",
   "vcfToExcelTitle": "Convertiți VCF în Excel",
   "vcfToExcelStatusInitial": "Selectați un fișier VCF (.vcf) pentru a începe",
   "vcfToExcelStatusSuccess": "Gata! Fișierul a fost salvat cu succes.",

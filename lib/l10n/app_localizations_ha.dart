@@ -182,6 +182,12 @@ class AppLocalizationsHa extends AppLocalizations {
   String get settingsVcfVersion => 'Sigar VCF';
 
   @override
+  String get settingsLanguage => 'Harshe';
+
+  @override
+  String get settingsLanguageSystem => 'Tsarin';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

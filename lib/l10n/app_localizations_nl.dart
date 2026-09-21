@@ -181,6 +181,12 @@ class AppLocalizationsNl extends AppLocalizations {
   String get settingsVcfVersion => 'VCF-versie';
 
   @override
+  String get settingsLanguage => 'Taal';
+
+  @override
+  String get settingsLanguageSystem => 'Systeem';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

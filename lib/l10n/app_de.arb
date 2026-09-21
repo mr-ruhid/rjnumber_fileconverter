@@ -67,5 +67,7 @@
 
   "settingsVcfVersion": "VCF-Version",
   "settingsVcfVersion3": "3.0",
+  "settingsLanguage": "Sprache",
+  "settingsLanguageSystem": "System",
   "settingsVcfVersion4": "4.0"
 }

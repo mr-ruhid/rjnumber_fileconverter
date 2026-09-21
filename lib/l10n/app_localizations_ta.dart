@@ -183,6 +183,12 @@ class AppLocalizationsTa extends AppLocalizations {
   String get settingsVcfVersion => 'VCF பதிப்பு';
 
   @override
+  String get settingsLanguage => 'மொழி';
+
+  @override
+  String get settingsLanguageSystem => 'சிஸ்டம்';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

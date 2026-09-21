@@ -174,6 +174,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get settingsVcfVersion => 'VCF 버전';
 
   @override
+  String get settingsLanguage => '언어';
+
+  @override
+  String get settingsLanguageSystem => '시스템';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

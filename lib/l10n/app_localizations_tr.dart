@@ -177,6 +177,12 @@ class AppLocalizationsTr extends AppLocalizations {
   String get settingsVcfVersion => 'VCF sürümü';
 
   @override
+  String get settingsLanguage => 'Dil';
+
+  @override
+  String get settingsLanguageSystem => 'Sistem';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

@@ -12,7 +12,8 @@
   "homeVcfToExcelDesc": "Преобразовать контакты в Excel",
   "homeFooter": "Рухид Джавадов - Mr-Ruhid",
   "homeVersion": "Lite версия",
-
+  "settingsLanguage": "Язык",
+  "settingsLanguageSystem": "Система",
   "vcfToExcelTitle": "Преобразовать VCF в Excel",
   "vcfToExcelStatusInitial": "Выберите файл VCF (.vcf) для начала",
   "vcfToExcelStatusSuccess": "Готово! Файл успешно сохранён.",

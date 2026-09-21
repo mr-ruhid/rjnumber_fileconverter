@@ -176,6 +176,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get settingsVcfVersion => 'إصدار VCF';
 
   @override
+  String get settingsLanguage => 'اللغة';
+
+  @override
+  String get settingsLanguageSystem => 'النظام';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

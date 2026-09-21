@@ -177,6 +177,12 @@ class AppLocalizationsPa extends AppLocalizations {
   String get settingsVcfVersion => 'VCF ਸੰਸਕਰਣ';
 
   @override
+  String get settingsLanguage => 'ਭਾਸ਼ਾ';
+
+  @override
+  String get settingsLanguageSystem => 'ਸਿਸਟਮ';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

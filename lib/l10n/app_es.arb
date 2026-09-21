@@ -22,6 +22,8 @@
   "vcfToExcelButton": "Seleccionar Archivo VCF",
   "vcfToExcelPleaseWait": "Por favor espera...",
   "vcfToExcelSaveDialogTitle": "Guardar archivo Excel",
+  "settingsLanguage": "Idioma",
+  "settingsLanguageSystem": "Sistema",
 
   "excelToVcfTitle": "Convertir Excel a VCF",
   "excelToVcfStatusInitial": "Selecciona un archivo Excel (.xlsx) para comenzar",

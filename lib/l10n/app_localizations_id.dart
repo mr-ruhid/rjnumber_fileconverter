@@ -179,6 +179,12 @@ class AppLocalizationsId extends AppLocalizations {
   String get settingsVcfVersion => 'Versi VCF';
 
   @override
+  String get settingsLanguage => 'Bahasa';
+
+  @override
+  String get settingsLanguageSystem => 'Sistem';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

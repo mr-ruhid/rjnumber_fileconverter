@@ -11,7 +11,8 @@
   "homeVcfToExcelDesc": "Kişileri Excel dosyasına dönüştür",
   "homeFooter": "Ruhid Cavadov - Mr-Ruhid",
   "homeVersion": "Lite sürüm",
-
+  "settingsLanguage": "Dil",
+  "settingsLanguageSystem": "Sistem",
   "vcfToExcelTitle": "VCF'yi Excel'e dönüştür",
   "vcfToExcelStatusInitial": "Başlamak için bir VCF (.vcf) dosyası seçin",
   "vcfToExcelStatusSuccess": "Tamam! Dosya başarıyla kaydedildi.",

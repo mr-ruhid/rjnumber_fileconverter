@@ -55,7 +55,8 @@
 
   "aboutDescription": "Excel ਫਾਈਲਾਂ ਨੂੰ VCF ਸੰਪਰਕਾਂ ਵਿੱਚ ਅਤੇ ਇਸਦੇ ਉਲਟ ਬਦਲਣ ਲਈ ਇੱਕ ਸਧਾਰਨ ਸਾਧਨ।",
   "aboutClose": "ਬੰਦ ਕਰੋ",
-
+  "settingsLanguage": "ਭਾਸ਼ਾ",
+  "settingsLanguageSystem": "ਸਿਸਟਮ",
   "settingsTitle": "ਸੈਟਿੰਗਾਂ",
   "settingsTheme": "ਥੀਮ",
   "settingsThemeDark": "ਗੂੜ੍ਹਾ",

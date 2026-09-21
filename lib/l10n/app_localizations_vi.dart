@@ -179,6 +179,12 @@ class AppLocalizationsVi extends AppLocalizations {
   String get settingsVcfVersion => 'Phiên bản VCF';
 
   @override
+  String get settingsLanguage => 'Ngôn ngữ';
+
+  @override
+  String get settingsLanguageSystem => 'Hệ thống';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

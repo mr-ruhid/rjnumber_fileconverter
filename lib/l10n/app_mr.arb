@@ -61,7 +61,8 @@
   "settingsThemeDark": "गडद",
   "settingsThemeLight": "फिकट",
   "settingsThemeSystem": "सिस्टम",
-
+  "settingsLanguage": "भाषा",
+  "settingsLanguageSystem": "सिस्टम",
   "settingsDefaultFileName": "डीफॉल्ट फाइल नाव",
   "settingsDefaultFileNameHint": "संपर्क",
 

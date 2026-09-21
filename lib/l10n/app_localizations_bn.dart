@@ -182,6 +182,12 @@ class AppLocalizationsBn extends AppLocalizations {
   String get settingsVcfVersion => 'VCF সংস্করণ';
 
   @override
+  String get settingsLanguage => 'ভাষা';
+
+  @override
+  String get settingsLanguageSystem => 'সিস্টেম';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

@@ -179,6 +179,12 @@ class AppLocalizationsHi extends AppLocalizations {
   String get settingsVcfVersion => 'VCF संस्करण';
 
   @override
+  String get settingsLanguage => 'भाषा';
+
+  @override
+  String get settingsLanguageSystem => 'सिस्टम';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override
