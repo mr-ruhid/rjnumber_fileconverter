@@ -13,6 +13,21 @@ import 'ui/theme_provider.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
+
+  const windowOptions = WindowOptions(
+    size: Size(900, 700),
+    minimumSize: Size(600, 500),
+    center: true,
+    title: 'RJ Number - File Converter',
+    titleBarStyle: TitleBarStyle.hidden,
+  );
+
+  await windowManager.waitUntilReadyToShow(windowOptions, () async {
+    await windowManager.setAsFrameless();
+    await windowManager.show();
+    await windowManager.focus();
+  });
+
   runApp(const MyApp());
 }
 
