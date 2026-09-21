@@ -1,0 +1,71 @@
+{
+  "@@locale": "ar",
+
+  "appTitle": "RJ Number - محول الملفات",
+  "splashLoading": "جارٍ التحميل...",
+
+  "homeTitle": "اختر إجراءً",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "تحويل ملف Excel إلى جهات اتصال",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "تحويل جهات الاتصال إلى ملف Excel",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "إصدار Lite",
+
+  "vcfToExcelTitle": "تحويل VCF إلى Excel",
+  "vcfToExcelStatusInitial": "اختر ملف VCF (.vcf) للبدء",
+  "vcfToExcelStatusSuccess": "تم! تم حفظ الملف بنجاح.",
+  "vcfToExcelStatusCancelled": "تم إلغاء اختيار الملف.",
+  "vcfToExcelStatusSaveCancelled": "تم إلغاء الحفظ.",
+  "vcfToExcelStatusEmpty": "خطأ: لم يتم العثور على جهات اتصال صالحة في الملف.",
+  "vcfToExcelStatusError": "حدث خطأ أثناء التحويل.",
+  "vcfToExcelButton": "اختر ملف VCF",
+  "vcfToExcelPleaseWait": "يرجى الانتظار...",
+  "vcfToExcelSaveDialogTitle": "حفظ ملف Excel",
+
+  "excelToVcfTitle": "تحويل Excel إلى VCF",
+  "excelToVcfStatusInitial": "اختر ملف Excel (.xlsx) للبدء",
+  "excelToVcfStatusSuccess": "تم! تم حفظ الملف بنجاح.",
+  "excelToVcfStatusCancelled": "تم إلغاء اختيار الملف.",
+  "excelToVcfStatusSaveCancelled": "تم إلغاء الحفظ.",
+  "excelToVcfStatusEmpty": "خطأ: لم يتم العثور على جهات اتصال صالحة في الملف.",
+  "excelToVcfStatusError": "حدث خطأ أثناء التحويل.",
+  "excelToVcfButton": "اختر ملف Excel",
+  "excelToVcfPleaseWait": "يرجى الانتظار...",
+  "excelToVcfSaveDialogTitle": "حفظ ملف VCF",
+
+  "processingTitle": "جارٍ تحويل الملف...",
+  "processingSubtitle": "يرجى الانتظار، العملية قيد التنفيذ.",
+
+  "licenseBadgeActive": "الترخيص نشط",
+  "licenseBadgeTrial": "إصدار تجريبي",
+
+  "licenseDialogTitle": "تم الوصول إلى حد النسخة التجريبية",
+  "licenseDialogContent": "لقد استخدمت بالفعل نسختك التجريبية المجانية لمرة واحدة. للمتابعة، يرجى إدخال رمز الترخيص.",
+  "licenseDialogClose": "إغلاق",
+  "licenseDialogEnter": "إدخال الترخيص",
+
+  "licenseScreenTitle": "أدخل رمز الترخيص للمتابعة",
+  "licenseFieldHint": "رمز الترخيص",
+  "licenseButtonVerify": "تحقق",
+  "licenseErrorEmpty": "يرجى إدخال رمز الترخيص.",
+  "licenseErrorInvalid": "رمز ترخيص غير صالح. يرجى التحقق مرة أخرى.",
+  "licenseSuccessTitle": "تم التحقق من الترخيص!",
+  "licenseButtonBack": "رجوع",
+
+  "aboutDescription": "أداة بسيطة لتحويل ملفات Excel إلى جهات اتصال VCF والعكس.",
+  "aboutClose": "إغلاق",
+
+  "settingsTitle": "الإعدادات",
+  "settingsTheme": "المظهر",
+  "settingsThemeDark": "داكن",
+  "settingsThemeLight": "فاتح",
+  "settingsThemeSystem": "النظام",
+
+  "settingsDefaultFileName": "اسم الملف الافتراضي",
+  "settingsDefaultFileNameHint": "Kontaktlar",
+
+  "settingsVcfVersion": "إصدار VCF",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
