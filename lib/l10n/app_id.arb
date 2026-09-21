@@ -1,0 +1,71 @@
+{
+  "@@locale": "id",
+
+  "appTitle": "RJ Number - Konverter File",
+  "splashLoading": "Memuat...",
+
+  "homeTitle": "Pilih tindakan",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Konversi file Excel ke kontak",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "Konversi kontak ke file Excel",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Versi Lite",
+
+  "vcfToExcelTitle": "Konversi VCF ke Excel",
+  "vcfToExcelStatusInitial": "Pilih file VCF (.vcf) untuk memulai",
+  "vcfToExcelStatusSuccess": "Selesai! File berhasil disimpan.",
+  "vcfToExcelStatusCancelled": "Pemilihan file dibatalkan.",
+  "vcfToExcelStatusSaveCancelled": "Penyimpanan dibatalkan.",
+  "vcfToExcelStatusEmpty": "Error: Tidak ada kontak valid yang ditemukan dalam file.",
+  "vcfToExcelStatusError": "Terjadi kesalahan saat konversi.",
+  "vcfToExcelButton": "Pilih File VCF",
+  "vcfToExcelPleaseWait": "Harap tunggu...",
+  "vcfToExcelSaveDialogTitle": "Simpan file Excel",
+
+  "excelToVcfTitle": "Konversi Excel ke VCF",
+  "excelToVcfStatusInitial": "Pilih file Excel (.xlsx) untuk memulai",
+  "excelToVcfStatusSuccess": "Selesai! File berhasil disimpan.",
+  "excelToVcfStatusCancelled": "Pemilihan file dibatalkan.",
+  "excelToVcfStatusSaveCancelled": "Penyimpanan dibatalkan.",
+  "excelToVcfStatusEmpty": "Error: Tidak ada kontak valid yang ditemukan dalam file.",
+  "excelToVcfStatusError": "Terjadi kesalahan saat konversi.",
+  "excelToVcfButton": "Pilih File Excel",
+  "excelToVcfPleaseWait": "Harap tunggu...",
+  "excelToVcfSaveDialogTitle": "Simpan file VCF",
+
+  "processingTitle": "Mengonversi file...",
+  "processingSubtitle": "Harap tunggu, proses sedang berjalan.",
+
+  "licenseBadgeActive": "Lisensi Aktif",
+  "licenseBadgeTrial": "Versi Uji Coba",
+
+  "licenseDialogTitle": "Batas Uji Coba Tercapai",
+  "licenseDialogContent": "Anda sudah menggunakan uji coba gratis satu kali Anda. Untuk melanjutkan, masukkan kode lisensi Anda.",
+  "licenseDialogClose": "Tutup",
+  "licenseDialogEnter": "Masukkan Lisensi",
+
+  "licenseScreenTitle": "Masukkan kode lisensi Anda untuk melanjutkan",
+  "licenseFieldHint": "Kode lisensi",
+  "licenseButtonVerify": "Verifikasi",
+  "licenseErrorEmpty": "Harap masukkan kode lisensi Anda.",
+  "licenseErrorInvalid": "Kode lisensi tidak valid. Silakan periksa lagi.",
+  "licenseSuccessTitle": "Lisensi terverifikasi!",
+  "licenseButtonBack": "Kembali",
+
+  "aboutDescription": "Alat sederhana untuk mengonversi file Excel ke kontak VCF dan sebaliknya.",
+  "aboutClose": "Tutup",
+
+  "settingsTitle": "Pengaturan",
+  "settingsTheme": "Tema",
+  "settingsThemeDark": "Gelap",
+  "settingsThemeLight": "Terang",
+  "settingsThemeSystem": "Sistem",
+
+  "settingsDefaultFileName": "Nama file default",
+  "settingsDefaultFileNameHint": "Kontaktlar",
+
+  "settingsVcfVersion": "Versi VCF",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
