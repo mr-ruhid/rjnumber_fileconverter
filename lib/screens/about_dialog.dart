@@ -1,4 +1,8 @@
+import 'dart:io';
+
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -10,6 +14,37 @@ class AboutDialogContent extends StatelessWidget {
 
   Future<void> _launchUrl(String url) async {
     await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+  }
+
+  Future<void> _downloadTemplate(BuildContext context) async {
+    final l10n = AppLocalizations.of(context);
+
+    try {
+      final data = await rootBundle.load('assets/template/template.xlsx');
+      final bytes = data.buffer.asUint8List();
+
+      final uri = await FilePicker.saveFile(
+        dialogTitle: l10n.aboutDownloadTemplate,
+        fileName: 'template.xlsx',
+        bytes: bytes,
+        type: FileType.custom,
+        allowedExtensions: ['xlsx'],
+      );
+
+      if (uri == null) return;
+
+      final String path;
+      if (uri.scheme == 'file') {
+        path = uri.toFilePath();
+      } else {
+        path = uri.toString();
+      }
+
+      final file = File(path);
+      await file.writeAsBytes(bytes, flush: true);
+    } catch (e) {
+      debugPrint('Template download error: $e');
+    }
   }
 
   Future<void> _showWebsiteChoice(BuildContext context) async {
@@ -202,6 +237,33 @@ class AboutDialogContent extends StatelessWidget {
                 color: AppTheme.textSecondary(context),
                 fontSize: 14,
                 height: 1.5,
+              ),
+            ),
+            const SizedBox(height: 20),
+            SizedBox(
+              width: double.infinity,
+              height: 46,
+              child: OutlinedButton.icon(
+                onPressed: () => _downloadTemplate(context),
+                icon: Icon(
+                  Icons.download_rounded,
+                  size: 18,
+                  color: AppTheme.textPrimary(context),
+                ),
+                label: Text(
+                  l10n.aboutDownloadTemplate,
+                  style: TextStyle(
+                    color: AppTheme.textPrimary(context),
+                    fontSize: 13,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                style: OutlinedButton.styleFrom(
+                  side: BorderSide(color: AppTheme.inputBorder(context)),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(AppTheme.radiusSmall),
+                  ),
+                ),
               ),
             ),
             const SizedBox(height: 24),
