@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:excel/excel.dart' as excel_pkg;
+import 'package:flutter/material.dart';
 
 import '../models/contact.dart';
 import 'shared/phone_utils.dart';
@@ -12,6 +13,41 @@ class ConverterService {
   static const String vcfVersion3 = '3.0';
   static const String vcfVersion4 = '4.0';
 
+  // Ad sütunu üçün açar sözlər
+  static const List<String> _nameKeywords = [
+    'name',
+    'user',
+    'customer',
+    'ad',
+    'adı',
+    'adi',
+    'adı soyadı',
+    'adi soyadi',
+    'adı soyadı ata adı',
+    'adi soyadi ata adi',
+    'soyad',
+    'full name',
+    'fullname',
+  ];
+
+  // Telefon sütunu üçün açar sözlər
+  static const List<String> _phoneKeywords = [
+    'tel',
+    'phone',
+    'mobile',
+    'mobile phone',
+    'mobil',
+    'mobil telefonu',
+    'mobil telefon',
+    'telefon',
+    'telefonu',
+    'number',
+    'nömrə',
+    'nomre',
+    'phone number',
+    'telephone',
+  ];
+
   static List<Contact> readContactsFromExcel(Uint8List bytes) {
     final excel = excel_pkg.Excel.decodeBytes(bytes);
 
@@ -20,26 +56,99 @@ class ConverterService {
     final sheet = excel.tables[excel.tables.keys.first];
     if (sheet == null) return [];
 
+    // 1. Başlıq sətrini və sütun indekslərini tap
+    final header = _findHeader(sheet);
+    if (header == null) return [];
+
+    final int headerRow = header.rowIndex;
+    final int nameCol = header.nameCol;
+    final int phoneCol = header.phoneCol;
+
+    debugPrint('=== EXCEL HEADER FOUND ===');
+    debugPrint('Header row: $headerRow');
+    debugPrint('Name column: $nameCol');
+    debugPrint('Phone column: $phoneCol');
+
+    // 2. Data sətirlərini oxu
     final contacts = <Contact>[];
 
-    for (int i = 4; i < sheet.maxRows; i++) {
+    for (int i = headerRow + 1; i < sheet.maxRows; i++) {
       final row = sheet.row(i);
-      if (row.length <= 5) continue;
 
-      final name = row[2]?.value?.toString().trim() ?? '';
-      final rawPhone = row[5]?.value?.toString().trim() ?? '';
+      if (row.isEmpty) continue;
 
-      if (name.isEmpty || rawPhone.isEmpty) continue;
-      if (name.toLowerCase() == 'null') continue;
+      final name = _getCell(row, nameCol);
+      final rawPhone = _getCell(row, phoneCol);
+
+      if (rawPhone.isEmpty) continue;
       if (rawPhone.toLowerCase() == 'null') continue;
 
       final phone = PhoneUtils.clean(rawPhone);
       if (!PhoneUtils.isValid(phone)) continue;
 
-      contacts.add(Contact(fullName: name, phone: phone));
+      // Ad boşdursa "No Name" yaz
+      final fullName = name.isEmpty || name.toLowerCase() == 'null'
+          ? 'No Name'
+          : name;
+
+      contacts.add(Contact(fullName: fullName, phone: phone));
     }
 
+    debugPrint('=== TOTAL CONTACTS: ${contacts.length} ===');
+
     return contacts;
+  }
+
+  /// Başlıq sətrini tapır və ad/telefon sütunlarının indekslərini qaytarır
+  static _HeaderInfo? _findHeader(excel_pkg.Sheet sheet) {
+    for (int i = 0; i < sheet.maxRows; i++) {
+      final row = sheet.row(i);
+      if (row.isEmpty) continue;
+
+      int? nameCol;
+      int? phoneCol;
+
+      for (int j = 0; j < row.length; j++) {
+        final cell = row[j]?.value?.toString().trim().toLowerCase() ?? '';
+        if (cell.isEmpty) continue;
+
+        // Ad sütunu?
+        if (nameCol == null && _matchesAny(cell, _nameKeywords)) {
+          nameCol = j;
+        }
+
+        // Telefon sütunu?
+        if (phoneCol == null && _matchesAny(cell, _phoneKeywords)) {
+          phoneCol = j;
+        }
+      }
+
+      // Hər ikisi tapıldısa, bu başlıq sətrinidir
+      if (nameCol != null && phoneCol != null) {
+        return _HeaderInfo(
+          rowIndex: i,
+          nameCol: nameCol,
+          phoneCol: phoneCol,
+        );
+      }
+    }
+
+    return null;
+  }
+
+  /// Verilmiş mətn açar sözlərdən hər hansı biri ilə uyğun gəlirmi
+  static bool _matchesAny(String cellText, List<String> keywords) {
+    for (final keyword in keywords) {
+      if (cellText == keyword) return true;
+      if (cellText.contains(keyword)) return true;
+    }
+    return false;
+  }
+
+  /// Sətirdən təhlükəsiz şəkildə hüceyrə dəyəri oxuyur
+  static String _getCell(List<excel_pkg.Data?> row, int index) {
+    if (index < 0 || index >= row.length) return '';
+    return row[index]?.value?.toString().trim() ?? '';
   }
 
   static List<Contact> readContactsFromVcf(String content) {
@@ -137,4 +246,17 @@ class ConverterService {
 
     return Uint8List.fromList(bytes);
   }
+}
+
+/// Başlıq məlumatı
+class _HeaderInfo {
+  final int rowIndex;
+  final int nameCol;
+  final int phoneCol;
+
+  _HeaderInfo({
+    required this.rowIndex,
+    required this.nameCol,
+    required this.phoneCol,
+  });
 }
