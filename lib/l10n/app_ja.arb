@@ -1,0 +1,71 @@
+{
+  "@@locale": "ja",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "読み込み中...",
+
+  "homeTitle": "操作を選択してください",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Excel ファイルを連絡先に変換",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "連絡先を Excel ファイルに変換",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Lite 版",
+
+  "vcfToExcelTitle": "VCF を Excel に変換",
+  "vcfToExcelStatusInitial": "開始するには VCF (.vcf) ファイルを選択してください",
+  "vcfToExcelStatusSuccess": "完了！ファイルが正常に保存されました。",
+  "vcfToExcelStatusCancelled": "ファイルの選択がキャンセルされました。",
+  "vcfToExcelStatusSaveCancelled": "保存がキャンセルされました。",
+  "vcfToExcelStatusEmpty": "エラー：ファイルに有効な連絡先が見つかりませんでした。",
+  "vcfToExcelStatusError": "変換中にエラーが発生しました。",
+  "vcfToExcelButton": "VCF ファイルを選択",
+  "vcfToExcelPleaseWait": "しばらくお待ちください...",
+  "vcfToExcelSaveDialogTitle": "Excel ファイルを保存",
+
+  "excelToVcfTitle": "Excel を VCF に変換",
+  "excelToVcfStatusInitial": "開始するには Excel (.xlsx) ファイルを選択してください",
+  "excelToVcfStatusSuccess": "完了！ファイルが正常に保存されました。",
+  "excelToVcfStatusCancelled": "ファイルの選択がキャンセルされました。",
+  "excelToVcfStatusSaveCancelled": "保存がキャンセルされました。",
+  "excelToVcfStatusEmpty": "エラー：ファイルに有効な連絡先が見つかりませんでした。",
+  "excelToVcfStatusError": "変換中にエラーが発生しました。",
+  "excelToVcfButton": "Excel ファイルを選択",
+  "excelToVcfPleaseWait": "しばらくお待ちください...",
+  "excelToVcfSaveDialogTitle": "VCF ファイルを保存",
+
+  "processingTitle": "ファイルを変換中...",
+  "processingSubtitle": "しばらくお待ちください。処理を実行中です。",
+
+  "licenseBadgeActive": "ライセンス有効",
+  "licenseBadgeTrial": "試用版",
+
+  "licenseDialogTitle": "試用回数の上限に達しました",
+  "licenseDialogContent": "1 回限りの無料試用を既に使用されています。続行するには、ライセンスコードを入力してください。",
+  "licenseDialogClose": "閉じる",
+  "licenseDialogEnter": "ライセンスを入力",
+
+  "licenseScreenTitle": "続行するにはライセンスコードを入力してください",
+  "licenseFieldHint": "ライセンスコード",
+  "licenseButtonVerify": "確認",
+  "licenseErrorEmpty": "ライセンスコードを入力してください。",
+  "licenseErrorInvalid": "ライセンスコードが無効です。もう一度確認してください。",
+  "licenseSuccessTitle": "ライセンスが確認されました！",
+  "licenseButtonBack": "戻る",
+
+  "aboutDescription": "Excel ファイルを VCF 連絡先に変換し、その逆も行えるシンプルなツールです。",
+  "aboutClose": "閉じる",
+
+  "settingsTitle": "設定",
+  "settingsTheme": "テーマ",
+  "settingsThemeDark": "ダーク",
+  "settingsThemeLight": "ライト",
+  "settingsThemeSystem": "システム",
+
+  "settingsDefaultFileName": "デフォルトのファイル名",
+  "settingsDefaultFileNameHint": "連絡先",
+
+  "settingsVcfVersion": "VCF バージョン",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
