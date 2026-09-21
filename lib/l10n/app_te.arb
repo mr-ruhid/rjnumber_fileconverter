@@ -1,0 +1,71 @@
+{
+  "@@locale": "te",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "లోడ్ అవుతోంది...",
+
+  "homeTitle": "ఒక చర్యను ఎంచుకోండి",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Excel ఫైల్‌ను పరిచయాలుగా మార్చండి",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "పరిచయాలను Excel ఫైల్‌గా మార్చండి",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Lite వెర్షన్",
+
+  "vcfToExcelTitle": "VCF ను Excel గా మార్చండి",
+  "vcfToExcelStatusInitial": "ప్రారంభించడానికి VCF (.vcf) ఫైల్‌ను ఎంచుకోండి",
+  "vcfToExcelStatusSuccess": "పూర్తయింది! ఫైల్ విజయవంతంగా సేవ్ చేయబడింది.",
+  "vcfToExcelStatusCancelled": "ఫైల్ ఎంపిక రద్దు చేయబడింది.",
+  "vcfToExcelStatusSaveCancelled": "సేవ్ చేయడం రద్దు చేయబడింది.",
+  "vcfToExcelStatusEmpty": "లోపం: ఫైల్‌లో చెల్లుబాటు అయ్యే పరిచయాలు ఏవీ కనుగొనబడలేదు.",
+  "vcfToExcelStatusError": "మార్పిడి సమయంలో లోపం సంభవించింది.",
+  "vcfToExcelButton": "VCF ఫైల్‌ను ఎంచుకోండి",
+  "vcfToExcelPleaseWait": "దయచేసి వేచి ఉండండి...",
+  "vcfToExcelSaveDialogTitle": "Excel ఫైల్‌ను సేవ్ చేయండి",
+
+  "excelToVcfTitle": "Excel ను VCF గా మార్చండి",
+  "excelToVcfStatusInitial": "ప్రారంభించడానికి Excel (.xlsx) ఫైల్‌ను ఎంచుకోండి",
+  "excelToVcfStatusSuccess": "పూర్తయింది! ఫైల్ విజయవంతంగా సేవ్ చేయబడింది.",
+  "excelToVcfStatusCancelled": "ఫైల్ ఎంపిక రద్దు చేయబడింది.",
+  "excelToVcfStatusSaveCancelled": "సేవ్ చేయడం రద్దు చేయబడింది.",
+  "excelToVcfStatusEmpty": "లోపం: ఫైల్‌లో చెల్లుబాటు అయ్యే పరిచయాలు ఏవీ కనుగొనబడలేదు.",
+  "excelToVcfStatusError": "మార్పిడి సమయంలో లోపం సంభవించింది.",
+  "excelToVcfButton": "Excel ఫైల్‌ను ఎంచుకోండి",
+  "excelToVcfPleaseWait": "దయచేసి వేచి ఉండండి...",
+  "excelToVcfSaveDialogTitle": "VCF ఫైల్‌ను సేవ్ చేయండి",
+
+  "processingTitle": "ఫైల్ మార్పిడి చేయబడుతోంది...",
+  "processingSubtitle": "దయచేసి వేచి ఉండండి, ప్రక్రియ నడుస్తోంది.",
+
+  "licenseBadgeActive": "లైసెన్స్ యాక్టివ్",
+  "licenseBadgeTrial": "ట్రయల్ వెర్షన్",
+
+  "licenseDialogTitle": "ట్రయల్ పరిమితి చేరుకుంది",
+  "licenseDialogContent": "మీరు ఇప్పటికే మీ ఒకసారి ఉచిత ట్రయల్‌ను ఉపయోగించారు. కొనసాగించడానికి, దయచేసి మీ లైసెన్స్ కోడ్‌ను నమోదు చేయండి.",
+  "licenseDialogClose": "మూసివేయండి",
+  "licenseDialogEnter": "లైసెన్స్ నమోదు చేయండి",
+
+  "licenseScreenTitle": "కొనసాగించడానికి మీ లైసెన్స్ కోడ్‌ను నమోదు చేయండి",
+  "licenseFieldHint": "లైసెన్స్ కోడ్",
+  "licenseButtonVerify": "ధృవీకరించండి",
+  "licenseErrorEmpty": "దయచేసి మీ లైసెన్స్ కోడ్‌ను నమోదు చేయండి.",
+  "licenseErrorInvalid": "చెల్లని లైసెన్స్ కోడ్. దయచేసి మళ్లీ తనిఖీ చేయండి.",
+  "licenseSuccessTitle": "లైసెన్స్ ధృవీకరించబడింది!",
+  "licenseButtonBack": "వెనుకకు వెళ్లండి",
+
+  "aboutDescription": "Excel ఫైల్‌లను VCF పరిచయాలుగా మరియు తిరిగి మార్చడానికి ఒక సరళమైన సాధనం.",
+  "aboutClose": "మూసివేయండి",
+
+  "settingsTitle": "సెట్టింగ్‌లు",
+  "settingsTheme": "థీమ్",
+  "settingsThemeDark": "డార్క్",
+  "settingsThemeLight": "లైట్",
+  "settingsThemeSystem": "సిస్టమ్",
+
+  "settingsDefaultFileName": "డిఫాల్ట్ ఫైల్ పేరు",
+  "settingsDefaultFileNameHint": "పరిచయాలు",
+
+  "settingsVcfVersion": "VCF వెర్షన్",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
