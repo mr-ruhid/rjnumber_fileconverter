@@ -346,6 +346,13 @@ class ConverterService {
 
   static Uint8List contactsToExcelBytes(List<Contact> contacts) {
     final excel = excel_pkg.Excel.createExcel();
+
+    // Default boş sheet-ləri sil (Sheet1, Sayfa1, ...)
+    final defaultSheets = List<String>.from(excel.tables.keys);
+    for (final sheetName in defaultSheets) {
+      excel.delete(sheetName);
+    }
+
     final sheet = excel['Contacts'];
 
     sheet.appendRow([
