@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../l10n/app_localizations.dart';
@@ -47,7 +48,11 @@ class HomePage extends StatelessWidget {
                   const SizedBox(height: AppTheme.spacingXl),
                   _buildActionButton(
                     context: context,
-                    icon: Icons.contact_phone_rounded,
+                    icon: SvgPicture.asset(
+                      'assets/icon/excel.svg',
+                      width: 40,
+                      height: 40,
+                    ),
                     title: l10n.homeExcelToVcf,
                     subtitle: l10n.homeExcelToVcfDesc,
                     onTap: () {
@@ -59,7 +64,11 @@ class HomePage extends StatelessWidget {
                   const SizedBox(height: AppTheme.spacingMd),
                   _buildActionButton(
                     context: context,
-                    icon: Icons.table_chart_rounded,
+                    icon: SvgPicture.asset(
+                      'assets/icon/vcf.svg',
+                      width: 40,
+                      height: 40,
+                    ),
                     title: l10n.homeVcfToExcel,
                     subtitle: l10n.homeVcfToExcelDesc,
                     onTap: () {
@@ -131,7 +140,7 @@ class HomePage extends StatelessWidget {
 
   Widget _buildActionButton({
     required BuildContext context,
-    required IconData icon,
+    required Widget icon,
     required String title,
     required String subtitle,
     required VoidCallback onTap,
@@ -152,7 +161,7 @@ class HomePage extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Icon(icon, color: AppTheme.textPrimary(context), size: 40),
+              icon,
               const SizedBox(width: AppTheme.spacingMd),
               Expanded(
                 child: Column(
