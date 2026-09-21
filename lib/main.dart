@@ -65,9 +65,7 @@ class _MyAppState extends State<MyApp> {
               GlobalWidgetsLocalizations.delegate,
               GlobalCupertinoLocalizations.delegate,
             ],
-            supportedLocales: const [
-              Locale('en'),
-            ],
+            supportedLocales: AppLocalizations.supportedLocales,
             home: const SplashScreen(),
           );
         },
