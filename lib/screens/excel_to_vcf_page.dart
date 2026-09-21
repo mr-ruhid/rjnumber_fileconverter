@@ -32,12 +32,13 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
     PlatformFile? pickedFile;
     try {
       pickedFile = await FileUtils.pickExcelFile();
-    } catch (e) {
+    } catch (e, st) {
       if (!mounted) return;
       setState(() {
         _isLoading = false;
         _statusKey = 'excelToVcfStatusError';
       });
+      _showErrorDialog('Fayl seçimi xətası', '$e\n\n$st');
       return;
     }
 
@@ -91,13 +92,33 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
           _statusKey = 'excelToVcfStatusSaveCancelled';
         });
       }
-    } catch (e) {
+    } catch (e, st) {
       if (!mounted) return;
       setState(() {
         _isLoading = false;
         _statusKey = 'excelToVcfStatusError';
       });
+      // Windows-da console görünmür, ona görə xətanı ekranda göstəririk
+      _showErrorDialog('Excel → VCF xətası', '$e\n\n$st');
     }
+  }
+
+  void _showErrorDialog(String title, String message) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(title),
+        content: SingleChildScrollView(
+          child: SelectableText(message),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(),
+            child: const Text('Bağla'),
+          ),
+        ],
+      ),
+    );
   }
 
   @override

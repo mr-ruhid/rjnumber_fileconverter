@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
+import 'package:archive/archive.dart';
 import 'package:excel/excel.dart' as excel_pkg;
 import 'package:flutter/material.dart';
 
@@ -44,55 +45,76 @@ class ConverterService {
     'telephone',
   ];
 
+  // ---------------------------------------------------------------------
+  // EXCEL -> CONTACTS
+  // ---------------------------------------------------------------------
+
   static List<Contact> readContactsFromExcel(Uint8List bytes) {
-    final excel = excel_pkg.Excel.decodeBytes(bytes);
+    final cleanedBytes = _stripExcelMetadata(bytes);
 
-    if (excel.tables.isEmpty) return [];
-
-    final sheet = excel.tables[excel.tables.keys.first];
-    if (sheet == null) return [];
-
-    final header = _findHeader(sheet);
-    if (header == null) {
-      debugPrint('=== EXCEL HEADER NOT FOUND ===');
-      return [];
+    late final excel_pkg.Excel excel;
+    try {
+      excel = excel_pkg.Excel.decodeBytes(cleanedBytes);
+    } catch (e, st) {
+      debugPrint('=== EXCEL DECODE FAILED ===');
+      debugPrint('$e');
+      debugPrint('$st');
+      throw Exception('EXCEL_DECODE_ERROR: $e');
     }
 
-    final int headerRow = header.rowIndex;
-    final int nameCol = header.nameCol;
-    final int phoneCol = header.phoneCol;
-
-    debugPrint('=== EXCEL HEADER FOUND ===');
-    debugPrint('Header row: $headerRow');
-    debugPrint('Name column: $nameCol');
-    debugPrint('Phone column: $phoneCol');
-
-    final contacts = <Contact>[];
-
-    for (int i = headerRow + 1; i < sheet.maxRows; i++) {
-      final row = sheet.row(i);
-
-      if (row.isEmpty) continue;
-
-      final name = _getCell(row, nameCol);
-      final rawPhone = _getCell(row, phoneCol);
-
-      if (rawPhone.isEmpty) continue;
-      if (rawPhone.toLowerCase() == 'null') continue;
-
-      final phone = PhoneUtils.clean(rawPhone);
-      if (!PhoneUtils.isValid(phone)) continue;
-
-      final fullName = name.isEmpty || name.toLowerCase() == 'null'
-          ? 'No Name'
-          : name;
-
-      contacts.add(Contact(fullName: fullName, phone: phone));
+    if (excel.tables.isEmpty) {
+      throw Exception('EXCEL_NO_SHEETS: Faylda heç bir vərəq tapılmadı');
     }
 
-    debugPrint('=== TOTAL CONTACTS: ${contacts.length} ===');
+    // Yalnız ilk sheet-i yox, header tapılana qədər BÜTÜN sheet-ləri yoxla
+    for (final entry in excel.tables.entries) {
+      final sheet = entry.value;
+      debugPrint(
+          'Checking sheet "${entry.key}", maxRows=${sheet.maxRows}, maxCols=${sheet.maxColumns}');
 
-    return contacts;
+      final header = _findHeader(sheet);
+      if (header == null) continue;
+
+      final int headerRow = header.rowIndex;
+      final int nameCol = header.nameCol;
+      final int phoneCol = header.phoneCol;
+
+      debugPrint('=== HEADER FOUND in "${entry.key}" ===');
+      debugPrint('row=$headerRow name=$nameCol phone=$phoneCol');
+
+      final contacts = <Contact>[];
+
+      for (int i = headerRow + 1; i < sheet.maxRows; i++) {
+        final row = sheet.row(i);
+        if (row.isEmpty) continue;
+
+        final name = _getCell(row, nameCol);
+        final rawPhone = _getCell(row, phoneCol);
+
+        if (rawPhone.isEmpty) continue;
+        if (rawPhone.toLowerCase() == 'null') continue;
+
+        final phone = PhoneUtils.clean(rawPhone);
+        if (!PhoneUtils.isValid(phone)) {
+          debugPrint('Row $i skipped: invalid phone "$rawPhone" -> "$phone"');
+          continue;
+        }
+
+        final fullName = name.isEmpty || name.toLowerCase() == 'null'
+            ? 'No Name'
+            : name;
+
+        contacts.add(Contact(fullName: fullName, phone: phone));
+      }
+
+      if (contacts.isNotEmpty) {
+        debugPrint('=== TOTAL CONTACTS: ${contacts.length} ===');
+        return contacts;
+      }
+    }
+
+    throw Exception(
+        'EXCEL_HEADER_NOT_FOUND: "${excel.tables.keys.join(", ")}" vərəqlərində Ad/Telefon başlığı tapılmadı və ya heç bir sətirdə etibarlı telefon nömrəsi yoxdur');
   }
 
   static _HeaderInfo? _findHeader(excel_pkg.Sheet sheet) {
@@ -104,7 +126,7 @@ class ConverterService {
       int? phoneCol;
 
       for (int j = 0; j < row.length; j++) {
-        final cell = row[j]?.value?.toString().trim().toLowerCase() ?? '';
+        final cell = _getCell(row, j).toLowerCase();
         if (cell.isEmpty) continue;
 
         if (nameCol == null && _matchesAny(cell, _nameKeywords)) {
@@ -137,10 +159,103 @@ class ConverterService {
     return false;
   }
 
+  /// Hüceyrə mətnini təhlükəsiz şəkildə çıxarır.
+  /// excel: ^4.x-də cell.value artıq String deyil, CellValue-dur (sealed class).
+  /// .toString() ETİBARSIZDIR — hər tipi əl ilə "unwrap" etmək lazımdır.
   static String _getCell(List<excel_pkg.Data?> row, int index) {
     if (index < 0 || index >= row.length) return '';
-    return row[index]?.value?.toString().trim() ?? '';
+    final cellValue = row[index]?.value;
+    return _cellValueToString(cellValue).trim();
   }
+
+  static String _cellValueToString(excel_pkg.CellValue? value) {
+    if (value == null) return '';
+    switch (value) {
+      case excel_pkg.TextCellValue():
+        return value.value.toString();
+      case excel_pkg.IntCellValue():
+        return value.value.toString();
+      case excel_pkg.DoubleCellValue():
+        final d = value.value;
+        if (d == d.truncateToDouble()) {
+          return d.toInt().toString();
+        }
+        return d.toString();
+      case excel_pkg.BoolCellValue():
+        return value.value.toString();
+      case excel_pkg.DateCellValue():
+        return '${value.year}-${value.month.toString().padLeft(2, '0')}-${value.day.toString().padLeft(2, '0')}';
+      case excel_pkg.DateTimeCellValue():
+        return value.asDateTimeLocal().toIso8601String();
+      case excel_pkg.TimeCellValue():
+        return value.toString();
+      case excel_pkg.FormulaCellValue():
+        return value.formula;
+      default:
+        return value.toString();
+    }
+  }
+
+  /// Real Excel-in əlavə etdiyi xl/metadata.xml (dynamic array / rich data)
+  /// hissəsini silir — bəzi xlsx parser-lər (o cümlədən `excel` paketi)
+  /// bunu düzgün emal edə bilmir.
+  static Uint8List _stripExcelMetadata(Uint8List bytes) {
+    try {
+      final archive = ZipDecoder().decodeBytes(bytes);
+      final newArchive = Archive();
+      bool changed = false;
+
+      for (final file in archive.files) {
+        if (!file.isFile) continue;
+
+        if (file.name == 'xl/metadata.xml') {
+          changed = true;
+          continue;
+        }
+
+        final content = file.content as List<int>;
+
+        if (file.name == 'xl/_rels/workbook.xml.rels') {
+          final xml = utf8.decode(content);
+          final cleaned = xml.replaceAll(
+            RegExp(r'<Relationship[^>]*Type="[^"]*sheetMetadata[^"]*"[^>]*/>'),
+            '',
+          );
+          if (cleaned != xml) changed = true;
+          final bytesOut = utf8.encode(cleaned);
+          newArchive.addFile(ArchiveFile(file.name, bytesOut.length, bytesOut));
+          continue;
+        }
+
+        if (file.name == '[Content_Types].xml') {
+          final xml = utf8.decode(content);
+          final cleaned = xml.replaceAll(
+            RegExp(r'<Override[^>]*PartName="/xl/metadata\.xml"[^>]*/>'),
+            '',
+          );
+          if (cleaned != xml) changed = true;
+          final bytesOut = utf8.encode(cleaned);
+          newArchive.addFile(ArchiveFile(file.name, bytesOut.length, bytesOut));
+          continue;
+        }
+
+        newArchive.addFile(ArchiveFile(file.name, content.length, content));
+      }
+
+      if (!changed) return bytes;
+
+      final encoded = ZipEncoder().encode(newArchive);
+      if (encoded == null) return bytes;
+      return Uint8List.fromList(encoded);
+    } catch (e) {
+      debugPrint('metadata strip failed, orijinal bytes istifadə olunur: $e');
+      return bytes;
+    }
+  }
+
+  // ---------------------------------------------------------------------
+  // VCF -> CONTACTS
+  // ---------------------------------------------------------------------
 
   static List<Contact> readContactsFromVcf(String content) {
     if (content.startsWith('\uFEFF')) {
@@ -183,6 +298,10 @@ class ConverterService {
 
     return contacts;
   }
+
+  // ---------------------------------------------------------------------
+  // CONTACTS -> VCF / EXCEL
+  // ---------------------------------------------------------------------
 
   static Uint8List contactsToVcfBytes(
       List<Contact> contacts, {
