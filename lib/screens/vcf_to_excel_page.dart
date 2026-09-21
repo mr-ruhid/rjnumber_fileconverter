@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 
@@ -52,7 +54,7 @@ class _VcfToExcelPageState extends State<VcfToExcelPage> {
 
     try {
       final bytes = await pickedFile.readAsBytes();
-      final content = String.fromCharCodes(bytes);
+      final content = utf8.decode(bytes, allowMalformed: true);
       final contacts = ConverterService.readContactsFromVcf(content);
 
       if (contacts.isEmpty) {
