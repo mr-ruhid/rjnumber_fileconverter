@@ -13,7 +13,6 @@ class ConverterService {
   static const String vcfVersion3 = '3.0';
   static const String vcfVersion4 = '4.0';
 
-  // Ad sütunu üçün açar sözlər
   static const List<String> _nameKeywords = [
     'name',
     'user',
@@ -28,7 +27,6 @@ class ConverterService {
     'ad',
   ];
 
-  // Telefon sütunu üçün açar sözlər
   static const List<String> _phoneKeywords = [
     'tel',
     'phone',
@@ -54,7 +52,6 @@ class ConverterService {
     final sheet = excel.tables[excel.tables.keys.first];
     if (sheet == null) return [];
 
-    // 1. Başlıq sətrini və sütun indekslərini tap
     final header = _findHeader(sheet);
     if (header == null) {
       debugPrint('=== EXCEL HEADER NOT FOUND ===');
@@ -70,7 +67,6 @@ class ConverterService {
     debugPrint('Name column: $nameCol');
     debugPrint('Phone column: $phoneCol');
 
-    // 2. Data sətirlərini oxu
     final contacts = <Contact>[];
 
     for (int i = headerRow + 1; i < sheet.maxRows; i++) {
@@ -87,7 +83,6 @@ class ConverterService {
       final phone = PhoneUtils.clean(rawPhone);
       if (!PhoneUtils.isValid(phone)) continue;
 
-      // Ad boşdursa "No Name" yaz
       final fullName = name.isEmpty || name.toLowerCase() == 'null'
           ? 'No Name'
           : name;
@@ -100,7 +95,6 @@ class ConverterService {
     return contacts;
   }
 
-  /// Başlıq sətrini tapır və ad/telefon sütunlarının indekslərini qaytarır
   static _HeaderInfo? _findHeader(excel_pkg.Sheet sheet) {
     for (int i = 0; i < sheet.maxRows; i++) {
       final row = sheet.row(i);
@@ -113,18 +107,15 @@ class ConverterService {
         final cell = row[j]?.value?.toString().trim().toLowerCase() ?? '';
         if (cell.isEmpty) continue;
 
-        // Ad sütunu?
         if (nameCol == null && _matchesAny(cell, _nameKeywords)) {
           nameCol = j;
         }
 
-        // Telefon sütunu?
         if (phoneCol == null && _matchesAny(cell, _phoneKeywords)) {
           phoneCol = j;
         }
       }
 
-      // Hər ikisi tapıldısa, bu başlıq sətrinidir
       if (nameCol != null && phoneCol != null) {
         return _HeaderInfo(
           rowIndex: i,
@@ -137,20 +128,15 @@ class ConverterService {
     return null;
   }
 
-  /// Verilmiş mətn açar sözlərdən hər hansı biri ilə uyğun gəlirmi
   static bool _matchesAny(String cellText, List<String> keywords) {
     for (final keyword in keywords) {
-      // Dəqiq uyğunluq
       if (cellText == keyword) return true;
-      // Qısa və təhlükəli açar sözləri (məs. "ad") yalnız dəqiq uyğunluqda qəbul et
       if (keyword == 'ad') continue;
-      // Qismən uyğunluq
       if (cellText.contains(keyword)) return true;
     }
     return false;
   }
 
-  /// Sətirdən təhlükəsiz şəkildə hüceyrə dəyəri oxuyur
   static String _getCell(List<excel_pkg.Data?> row, int index) {
     if (index < 0 || index >= row.length) return '';
     return row[index]?.value?.toString().trim() ?? '';
@@ -211,9 +197,6 @@ class ConverterService {
 
       buffer.write('BEGIN:VCARD\r\n');
       buffer.write('VERSION:$version\r\n');
-
-      // VCF name format: N:Soyad;Ad;Ata adı;Titul;Sufiks
-      // Tam adı həm Soyad, həm də Ad sahəsinə yaz (telefon uyğunluğu üçün)
       buffer.write('N:$name;$name;;;\r\n');
       buffer.write('FN:$name\r\n');
 
@@ -255,7 +238,6 @@ class ConverterService {
   }
 }
 
-/// Başlıq məlumatı
 class _HeaderInfo {
   final int rowIndex;
   final int nameCol;
