@@ -1,0 +1,71 @@
+{
+  "@@locale": "bn",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "লোড হচ্ছে...",
+
+  "homeTitle": "একটি কাজ বেছে নিন",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Excel ফাইলকে পরিচিতিতে রূপান্তর করুন",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "পরিচিতিগুলোকে Excel ফাইলে রূপান্তর করুন",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "লাইট সংস্করণ",
+
+  "vcfToExcelTitle": "VCF থেকে Excel এ রূপান্তর",
+  "vcfToExcelStatusInitial": "শুরু করতে একটি VCF (.vcf) ফাইল নির্বাচন করুন",
+  "vcfToExcelStatusSuccess": "সম্পন্ন! ফাইল সফলভাবে সংরক্ষিত হয়েছে।",
+  "vcfToExcelStatusCancelled": "ফাইল নির্বাচন বাতিল করা হয়েছে।",
+  "vcfToExcelStatusSaveCancelled": "সংরক্ষণ বাতিল করা হয়েছে।",
+  "vcfToExcelStatusEmpty": "ত্রুটি: ফাইলে কোনো বৈধ পরিচিতি পাওয়া যায়নি।",
+  "vcfToExcelStatusError": "রূপান্তরের সময় একটি ত্রুটি ঘটেছে।",
+  "vcfToExcelButton": "VCF ফাইল নির্বাচন করুন",
+  "vcfToExcelPleaseWait": "অনুগ্রহ করে অপেক্ষা করুন...",
+  "vcfToExcelSaveDialogTitle": "Excel ফাইল সংরক্ষণ করুন",
+
+  "excelToVcfTitle": "Excel থেকে VCF এ রূপান্তর",
+  "excelToVcfStatusInitial": "শুরু করতে একটি Excel (.xlsx) ফাইল নির্বাচন করুন",
+  "excelToVcfStatusSuccess": "সম্পন্ন! ফাইল সফলভাবে সংরক্ষিত হয়েছে।",
+  "excelToVcfStatusCancelled": "ফাইল নির্বাচন বাতিল করা হয়েছে।",
+  "excelToVcfStatusSaveCancelled": "সংরক্ষণ বাতিল করা হয়েছে।",
+  "excelToVcfStatusEmpty": "ত্রুটি: ফাইলে কোনো বৈধ পরিচিতি পাওয়া যায়নি।",
+  "excelToVcfStatusError": "রূপান্তরের সময় একটি ত্রুটি ঘটেছে।",
+  "excelToVcfButton": "Excel ফাইল নির্বাচন করুন",
+  "excelToVcfPleaseWait": "অনুগ্রহ করে অপেক্ষা করুন...",
+  "excelToVcfSaveDialogTitle": "VCF ফাইল সংরক্ষণ করুন",
+
+  "processingTitle": "ফাইল রূপান্তর করা হচ্ছে...",
+  "processingSubtitle": "অনুগ্রহ করে অপেক্ষা করুন, প্রক্রিয়াটি চলছে।",
+
+  "licenseBadgeActive": "লাইসেন্স সক্রিয়",
+  "licenseBadgeTrial": "ট্রায়াল সংস্করণ",
+
+  "licenseDialogTitle": "ট্রায়াল সীমা পূর্ণ হয়েছে",
+  "licenseDialogContent": "আপনি ইতিমধ্যে আপনার এককালীন বিনামূল্যে ট্রায়াল ব্যবহার করেছেন। চালিয়ে যেতে, অনুগ্রহ করে আপনার লাইসেন্স কোড লিখুন।",
+  "licenseDialogClose": "বন্ধ করুন",
+  "licenseDialogEnter": "লাইসেন্স লিখুন",
+
+  "licenseScreenTitle": "চালিয়ে যেতে আপনার লাইসেন্স কোড লিখুন",
+  "licenseFieldHint": "লাইসেন্স কোড",
+  "licenseButtonVerify": "যাচাই করুন",
+  "licenseErrorEmpty": "অনুগ্রহ করে আপনার লাইসেন্স কোড লিখুন।",
+  "licenseErrorInvalid": "অবৈধ লাইসেন্স কোড। অনুগ্রহ করে আবার পরীক্ষা করুন।",
+  "licenseSuccessTitle": "লাইসেন্স যাচাই হয়েছে!",
+  "licenseButtonBack": "ফিরে যান",
+
+  "aboutDescription": "Excel ফাইলকে VCF পরিচিতিতে এবং বিপরীতভাবে রূপান্তর করার একটি সহজ টুল।",
+  "aboutClose": "বন্ধ করুন",
+
+  "settingsTitle": "সেটিংস",
+  "settingsTheme": "থিম",
+  "settingsThemeDark": "ডার্ক",
+  "settingsThemeLight": "লাইট",
+  "settingsThemeSystem": "সিস্টেম",
+
+  "settingsDefaultFileName": "ডিফল্ট ফাইলের নাম",
+  "settingsDefaultFileNameHint": "পরিচিতি",
+
+  "settingsVcfVersion": "VCF সংস্করণ",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
