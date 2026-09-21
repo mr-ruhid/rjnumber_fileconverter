@@ -52,6 +52,10 @@ class HomePage extends StatelessWidget {
                       'assets/icon/excel.svg',
                       width: 40,
                       height: 40,
+                      colorFilter: ColorFilter.mode(
+                        AppTheme.textPrimary(context),
+                        BlendMode.srcIn,
+                      ),
                     ),
                     title: l10n.homeExcelToVcf,
                     subtitle: l10n.homeExcelToVcfDesc,
@@ -68,6 +72,10 @@ class HomePage extends StatelessWidget {
                       'assets/icon/vcf.svg',
                       width: 40,
                       height: 40,
+                      colorFilter: ColorFilter.mode(
+                        AppTheme.textPrimary(context),
+                        BlendMode.srcIn,
+                      ),
                     ),
                     title: l10n.homeVcfToExcel,
                     subtitle: l10n.homeVcfToExcelDesc,
