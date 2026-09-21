@@ -1,0 +1,71 @@
+{
+  "@@locale": "fa",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "در حال بارگذاری...",
+
+  "homeTitle": "یک عمل را انتخاب کنید",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "تبدیل فایل Excel به مخاطبین",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "تبدیل مخاطبین به فایل Excel",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "نسخه Lite",
+
+  "vcfToExcelTitle": "تبدیل VCF به Excel",
+  "vcfToExcelStatusInitial": "برای شروع یک فایل VCF (.vcf) انتخاب کنید",
+  "vcfToExcelStatusSuccess": "انجام شد! فایل با موفقیت ذخیره شد.",
+  "vcfToExcelStatusCancelled": "انتخاب فایل لغو شد.",
+  "vcfToExcelStatusSaveCancelled": "ذخیره‌سازی لغو شد.",
+  "vcfToExcelStatusEmpty": "خطا: هیچ مخاطب معتبری در فایل یافت نشد.",
+  "vcfToExcelStatusError": "خطایی در حین تبدیل رخ داد.",
+  "vcfToExcelButton": "انتخاب فایل VCF",
+  "vcfToExcelPleaseWait": "لطفاً صبر کنید...",
+  "vcfToExcelSaveDialogTitle": "ذخیره فایل Excel",
+
+  "excelToVcfTitle": "تبدیل Excel به VCF",
+  "excelToVcfStatusInitial": "برای شروع یک فایل Excel (.xlsx) انتخاب کنید",
+  "excelToVcfStatusSuccess": "انجام شد! فایل با موفقیت ذخیره شد.",
+  "excelToVcfStatusCancelled": "انتخاب فایل لغو شد.",
+  "excelToVcfStatusSaveCancelled": "ذخیره‌سازی لغو شد.",
+  "excelToVcfStatusEmpty": "خطا: هیچ مخاطب معتبری در فایل یافت نشد.",
+  "excelToVcfStatusError": "خطایی در حین تبدیل رخ داد.",
+  "excelToVcfButton": "انتخاب فایل Excel",
+  "excelToVcfPleaseWait": "لطفاً صبر کنید...",
+  "excelToVcfSaveDialogTitle": "ذخیره فایل VCF",
+
+  "processingTitle": "در حال تبدیل فایل...",
+  "processingSubtitle": "لطفاً صبر کنید، فرآیند در حال اجراست.",
+
+  "licenseBadgeActive": "لایسنس فعال",
+  "licenseBadgeTrial": "نسخه آزمایشی",
+
+  "licenseDialogTitle": "محدودیت آزمایشی به پایان رسید",
+  "licenseDialogContent": "شما قبلاً از آزمایش رایگان یک‌باره خود استفاده کرده‌اید. برای ادامه، لطفاً کد لایسنس خود را وارد کنید.",
+  "licenseDialogClose": "بستن",
+  "licenseDialogEnter": "وارد کردن لایسنس",
+
+  "licenseScreenTitle": "برای ادامه کد لایسنس خود را وارد کنید",
+  "licenseFieldHint": "کد لایسنس",
+  "licenseButtonVerify": "تأیید",
+  "licenseErrorEmpty": "لطفاً کد لایسنس خود را وارد کنید.",
+  "licenseErrorInvalid": "کد لایسنس نامعتبر است. لطفاً دوباره بررسی کنید.",
+  "licenseSuccessTitle": "لایسنس تأیید شد!",
+  "licenseButtonBack": "بازگشت",
+
+  "aboutDescription": "ابزاری ساده برای تبدیل فایل‌های Excel به مخاطبین VCF و برعکس.",
+  "aboutClose": "بستن",
+
+  "settingsTitle": "تنظیمات",
+  "settingsTheme": "پوسته",
+  "settingsThemeDark": "تیره",
+  "settingsThemeLight": "روشن",
+  "settingsThemeSystem": "سیستم",
+
+  "settingsDefaultFileName": "نام پیش‌فرض فایل",
+  "settingsDefaultFileNameHint": "مخاطبین",
+
+  "settingsVcfVersion": "نسخه VCF",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
