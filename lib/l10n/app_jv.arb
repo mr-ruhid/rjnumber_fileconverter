@@ -1,0 +1,71 @@
+{
+  "@@locale": "jv",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "Ngamot...",
+
+  "homeTitle": "Pilih tumindak",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Ngowahi file Excel dadi kontak",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "Ngowahi kontak dadi file Excel",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Versi Lite",
+
+  "vcfToExcelTitle": "Ngowahi VCF dadi Excel",
+  "vcfToExcelStatusInitial": "Pilih file VCF (.vcf) kanggo miwiti",
+  "vcfToExcelStatusSuccess": "Rampung! File kasil disimpen.",
+  "vcfToExcelStatusCancelled": "Pamilihan file dibatalake.",
+  "vcfToExcelStatusSaveCancelled": "Nyimpen dibatalake.",
+  "vcfToExcelStatusEmpty": "Kesalahan: Ora ana kontak sing sah ing file kasebut.",
+  "vcfToExcelStatusError": "Ana kesalahan nalika ngowahi.",
+  "vcfToExcelButton": "Pilih File VCF",
+  "vcfToExcelPleaseWait": "Mangga ngenteni...",
+  "vcfToExcelSaveDialogTitle": "Simpen file Excel",
+
+  "excelToVcfTitle": "Ngowahi Excel dadi VCF",
+  "excelToVcfStatusInitial": "Pilih file Excel (.xlsx) kanggo miwiti",
+  "excelToVcfStatusSuccess": "Rampung! File kasil disimpen.",
+  "excelToVcfStatusCancelled": "Pamilihan file dibatalake.",
+  "excelToVcfStatusSaveCancelled": "Nyimpen dibatalake.",
+  "excelToVcfStatusEmpty": "Kesalahan: Ora ana kontak sing sah ing file kasebut.",
+  "excelToVcfStatusError": "Ana kesalahan nalika ngowahi.",
+  "excelToVcfButton": "Pilih File Excel",
+  "excelToVcfPleaseWait": "Mangga ngenteni...",
+  "excelToVcfSaveDialogTitle": "Simpen file VCF",
+
+  "processingTitle": "Ngowahi file...",
+  "processingSubtitle": "Mangga ngenteni, proses isih mlaku.",
+
+  "licenseBadgeActive": "Lisensi Aktif",
+  "licenseBadgeTrial": "Versi Uji Coba",
+
+  "licenseDialogTitle": "Watesan Uji Coba Tekan",
+  "licenseDialogContent": "Sampeyan wis nggunakake uji coba gratis sepisan. Kanggo nerusake, mangga lebokake kode lisensi sampeyan.",
+  "licenseDialogClose": "Tutup",
+  "licenseDialogEnter": "Lebokake Lisensi",
+
+  "licenseScreenTitle": "Lebokake kode lisensi sampeyan kanggo nerusake",
+  "licenseFieldHint": "Kode lisensi",
+  "licenseButtonVerify": "Verifikasi",
+  "licenseErrorEmpty": "Mangga lebokake kode lisensi sampeyan.",
+  "licenseErrorInvalid": "Kode lisensi ora sah. Mangga priksa maneh.",
+  "licenseSuccessTitle": "Lisensi wis diverifikasi!",
+  "licenseButtonBack": "Bali",
+
+  "aboutDescription": "Piranti prasaja kanggo ngowahi file Excel dadi kontak VCF lan kosok baline.",
+  "aboutClose": "Tutup",
+
+  "settingsTitle": "Setelan",
+  "settingsTheme": "Tema",
+  "settingsThemeDark": "Peteng",
+  "settingsThemeLight": "Padhang",
+  "settingsThemeSystem": "Sistem",
+
+  "settingsDefaultFileName": "Jeneng file standar",
+  "settingsDefaultFileNameHint": "Kontak",
+
+  "settingsVcfVersion": "Versi VCF",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
