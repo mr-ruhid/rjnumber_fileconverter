@@ -1,0 +1,71 @@
+{
+  "@@locale": "zh",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "加载中...",
+
+  "homeTitle": "选择操作",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "将 Excel 文件转换为联系人",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "将联系人转换为 Excel 文件",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "精简版",
+
+  "vcfToExcelTitle": "将 VCF 转换为 Excel",
+  "vcfToExcelStatusInitial": "选择 VCF (.vcf) 文件以开始",
+  "vcfToExcelStatusSuccess": "完成！文件已成功保存。",
+  "vcfToExcelStatusCancelled": "已取消文件选择。",
+  "vcfToExcelStatusSaveCancelled": "已取消保存。",
+  "vcfToExcelStatusEmpty": "错误：文件中未找到有效联系人。",
+  "vcfToExcelStatusError": "转换过程中发生错误。",
+  "vcfToExcelButton": "选择 VCF 文件",
+  "vcfToExcelPleaseWait": "请稍候...",
+  "vcfToExcelSaveDialogTitle": "保存 Excel 文件",
+
+  "excelToVcfTitle": "将 Excel 转换为 VCF",
+  "excelToVcfStatusInitial": "选择 Excel (.xlsx) 文件以开始",
+  "excelToVcfStatusSuccess": "完成！文件已成功保存。",
+  "excelToVcfStatusCancelled": "已取消文件选择。",
+  "excelToVcfStatusSaveCancelled": "已取消保存。",
+  "excelToVcfStatusEmpty": "错误：文件中未找到有效联系人。",
+  "excelToVcfStatusError": "转换过程中发生错误。",
+  "excelToVcfButton": "选择 Excel 文件",
+  "excelToVcfPleaseWait": "请稍候...",
+  "excelToVcfSaveDialogTitle": "保存 VCF 文件",
+
+  "processingTitle": "正在转换文件...",
+  "processingSubtitle": "请稍候，处理正在进行中。",
+
+  "licenseBadgeActive": "许可证有效",
+  "licenseBadgeTrial": "试用版",
+
+  "licenseDialogTitle": "试用次数已达上限",
+  "licenseDialogContent": "您已使用过一次免费试用。要继续使用，请输入您的许可证代码。",
+  "licenseDialogClose": "关闭",
+  "licenseDialogEnter": "输入许可证",
+
+  "licenseScreenTitle": "输入您的许可证代码以继续",
+  "licenseFieldHint": "许可证代码",
+  "licenseButtonVerify": "验证",
+  "licenseErrorEmpty": "请输入您的许可证代码。",
+  "licenseErrorInvalid": "许可证代码无效。请重新检查。",
+  "licenseSuccessTitle": "许可证验证成功！",
+  "licenseButtonBack": "返回",
+
+  "aboutDescription": "一个简单的工具，可将 Excel 文件转换为 VCF 联系人，并可反向转换。",
+  "aboutClose": "关闭",
+
+  "settingsTitle": "设置",
+  "settingsTheme": "主题",
+  "settingsThemeDark": "深色",
+  "settingsThemeLight": "浅色",
+  "settingsThemeSystem": "系统",
+
+  "settingsDefaultFileName": "默认文件名",
+  "settingsDefaultFileNameHint": "联系人",
+
+  "settingsVcfVersion": "VCF 版本",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
