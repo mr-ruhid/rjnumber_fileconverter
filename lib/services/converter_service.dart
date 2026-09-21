@@ -18,16 +18,14 @@ class ConverterService {
     'name',
     'user',
     'customer',
-    'ad',
-    'adı',
-    'adi',
-    'adı soyadı',
-    'adi soyadi',
     'adı soyadı ata adı',
     'adi soyadi ata adi',
+    'adı soyadı',
+    'adi soyadi',
     'soyad',
     'full name',
     'fullname',
+    'ad',
   ];
 
   // Telefon sütunu üçün açar sözlər
@@ -58,7 +56,10 @@ class ConverterService {
 
     // 1. Başlıq sətrini və sütun indekslərini tap
     final header = _findHeader(sheet);
-    if (header == null) return [];
+    if (header == null) {
+      debugPrint('=== EXCEL HEADER NOT FOUND ===');
+      return [];
+    }
 
     final int headerRow = header.rowIndex;
     final int nameCol = header.nameCol;
@@ -139,7 +140,11 @@ class ConverterService {
   /// Verilmiş mətn açar sözlərdən hər hansı biri ilə uyğun gəlirmi
   static bool _matchesAny(String cellText, List<String> keywords) {
     for (final keyword in keywords) {
+      // Dəqiq uyğunluq
       if (cellText == keyword) return true;
+      // Qısa və təhlükəli açar sözləri (məs. "ad") yalnız dəqiq uyğunluqda qəbul et
+      if (keyword == 'ad') continue;
+      // Qismən uyğunluq
       if (cellText.contains(keyword)) return true;
     }
     return false;
