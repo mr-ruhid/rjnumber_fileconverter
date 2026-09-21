@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:file_picker/file_picker.dart';
+import 'package:flutter/foundation.dart';
 
 class FileUtils {
   FileUtils._();
@@ -25,20 +26,12 @@ class FileUtils {
       String fileName,
       String dialogTitle,
       ) async {
-    final uri = await FilePicker.saveFile(
-      dialogTitle: dialogTitle,
-      fileName: fileName,
+    return _saveBytes(
       bytes: bytes,
-      type: FileType.custom,
-      allowedExtensions: ['xlsx'],
+      fileName: fileName,
+      dialogTitle: dialogTitle,
+      extension: 'xlsx',
     );
-
-    if (uri == null) return null;
-
-    final file = File.fromUri(uri);
-    await file.writeAsBytes(bytes, flush: true);
-
-    return uri;
   }
 
   static Future<Uri?> saveVcfFile(
@@ -46,18 +39,53 @@ class FileUtils {
       String fileName,
       String dialogTitle,
       ) async {
+    return _saveBytes(
+      bytes: bytes,
+      fileName: fileName,
+      dialogTitle: dialogTitle,
+      extension: 'vcf',
+    );
+  }
+
+  static Future<Uri?> _saveBytes({
+    required Uint8List bytes,
+    required String fileName,
+    required String dialogTitle,
+    required String extension,
+  }) async {
+    debugPrint('=== SAVE START ===');
+    debugPrint('fileName: $fileName');
+    debugPrint('bytes length: ${bytes.length}');
+
     final uri = await FilePicker.saveFile(
       dialogTitle: dialogTitle,
       fileName: fileName,
-      bytes: bytes,
       type: FileType.custom,
-      allowedExtensions: ['vcf'],
+      allowedExtensions: [extension],
     );
 
-    if (uri == null) return null;
+    debugPrint('saveFile returned uri: $uri');
 
-    final file = File.fromUri(uri);
+    if (uri == null) {
+      debugPrint('uri null, cancelled');
+      return null;
+    }
+
+    final String path;
+    if (uri.scheme == 'file') {
+      path = uri.toFilePath();
+    } else {
+      path = uri.toString();
+    }
+
+    debugPrint('resolved path: $path');
+
+    final file = File(path);
     await file.writeAsBytes(bytes, flush: true);
+
+    final writtenLength = await file.length();
+    debugPrint('file written: $writtenLength bytes');
+    debugPrint('=== SAVE END ===');
 
     return uri;
   }
