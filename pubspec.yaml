@@ -44,6 +44,11 @@ flutter:
     - assets/animation/yeslicence.json
     - assets/licence/licence.json
     - assets/logo/applogo.png
+    - assets/icon/discord.svg
+    - assets/icon/github.svg
+    - assets/icon/gitlab.svg
+    - assets/icon/web.svg
+    - assets/icon/youtube.svg
 
 flutter_launcher_icons:
   image_path: "assets/logo/applogo.png"
