@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'dart:typed_data';
-
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 
@@ -26,12 +25,7 @@ class FileUtils {
       String fileName,
       String dialogTitle,
       ) async {
-    return _saveBytes(
-      bytes: bytes,
-      fileName: fileName,
-      dialogTitle: dialogTitle,
-      extension: 'xlsx',
-    );
+    return _saveBytes(bytes, fileName, dialogTitle, 'xlsx');
   }
 
   static Future<Uri?> saveVcfFile(
@@ -39,20 +33,15 @@ class FileUtils {
       String fileName,
       String dialogTitle,
       ) async {
-    return _saveBytes(
-      bytes: bytes,
-      fileName: fileName,
-      dialogTitle: dialogTitle,
-      extension: 'vcf',
-    );
+    return _saveBytes(bytes, fileName, dialogTitle, 'vcf');
   }
 
-  static Future<Uri?> _saveBytes({
-    required Uint8List bytes,
-    required String fileName,
-    required String dialogTitle,
-    required String extension,
-  }) async {
+  static Future<Uri?> _saveBytes(
+      Uint8List bytes,
+      String fileName,
+      String dialogTitle,
+      String extension,
+      ) async {
     debugPrint('=== SAVE START ===');
     debugPrint('fileName: $fileName');
     debugPrint('bytes length: ${bytes.length}');

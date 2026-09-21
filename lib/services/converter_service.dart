@@ -45,10 +45,6 @@ class ConverterService {
     'telephone',
   ];
 
-  // ---------------------------------------------------------------------
-  // EXCEL -> CONTACTS
-  // ---------------------------------------------------------------------
-
   static List<Contact> readContactsFromExcel(Uint8List bytes) {
     final cleanedBytes = _sanitizeExcelBytes(bytes);
 
@@ -66,7 +62,6 @@ class ConverterService {
       throw Exception('EXCEL_NO_SHEETS: Faylda heç bir vərəq tapılmadı');
     }
 
-    // Yalnız ilk sheet-i yox, header tapılana qədər BÜTÜN sheet-ləri yoxla
     for (final entry in excel.tables.entries) {
       final sheet = entry.value;
       debugPrint(
@@ -159,9 +154,6 @@ class ConverterService {
     return false;
   }
 
-  /// Hüceyrə mətnini təhlükəsiz şəkildə çıxarır.
-  /// excel: ^4.x-də cell.value artıq String deyil, CellValue-dur (sealed class).
-  /// .toString() ETİBARSIZDIR — hər tipi əl ilə "unwrap" etmək lazımdır.
   static String _getCell(List<excel_pkg.Data?> row, int index) {
     if (index < 0 || index >= row.length) return '';
     final cellValue = row[index]?.value;
@@ -196,17 +188,6 @@ class ConverterService {
     }
   }
 
-  /// Real Excel-in yazdığı, amma Dart `excel` paketinin qəbul etmədiyi
-  /// hissələri fayldan silib/düzəldib "təmizlənmiş" bytes qaytarır:
-  ///
-  /// 1) xl/metadata.xml (dynamic array / rich data metadata) — paket
-  ///    bunu dəstəkləmir, sheetMetadata əlaqəsi ilə birlikdə silinir.
-  ///
-  /// 2) xl/styles.xml-də numFmtId 164-dən kiçik olan <numFmt> girişləri
-  ///    (məs. Excel-in Çin lokalında yaratdığı daxili tarix/vaxt formatı
-  ///    numFmtId="56") — paket bunları "custom format 164-dən aşağı ola
-  ///    bilməz" deyib rədd edir və Excel.decodeBytes tamamilə uğursuz olur:
-  ///    "Exception: custom numFmtId starts at 164 but found a value of 56"
   static Uint8List _sanitizeExcelBytes(Uint8List bytes) {
     try {
       final archive = ZipDecoder().decodeBytes(bytes);
@@ -216,7 +197,6 @@ class ConverterService {
       for (final file in archive.files) {
         if (!file.isFile) continue;
 
-        // 1) metadata.xml-i tamamilə atla
         if (file.name == 'xl/metadata.xml') {
           changed = true;
           continue;
@@ -224,7 +204,6 @@ class ConverterService {
 
         final content = file.content as List<int>;
 
-        // 2) workbook.xml.rels-dən sheetMetadata əlaqəsini sil
         if (file.name == 'xl/_rels/workbook.xml.rels') {
           final xml = utf8.decode(content);
           final cleaned = xml.replaceAll(
@@ -237,7 +216,6 @@ class ConverterService {
           continue;
         }
 
-        // 3) [Content_Types].xml-dən metadata.xml override-ini sil
         if (file.name == '[Content_Types].xml') {
           final xml = utf8.decode(content);
           final cleaned = xml.replaceAll(
@@ -250,7 +228,6 @@ class ConverterService {
           continue;
         }
 
-        // 4) styles.xml-dən 164-dən kiçik numFmtId olan girişləri sil
         if (file.name == 'xl/styles.xml') {
           final xml = utf8.decode(content);
 
@@ -262,7 +239,6 @@ class ConverterService {
             },
           );
 
-          // Boş qalan <numFmts> konteynerini də sil (uyğunsuz count qalmasın)
           cleaned = cleaned.replaceAll(
             RegExp(r'<numFmts\s+count="\d+"\s*>\s*</numFmts>'),
             '',
@@ -292,10 +268,6 @@ class ConverterService {
     }
   }
 
-  // ---------------------------------------------------------------------
-  // VCF -> CONTACTS
-  // ---------------------------------------------------------------------
-
   static List<Contact> readContactsFromVcf(String content) {
     if (content.startsWith('\uFEFF')) {
       content = content.substring(1);
@@ -309,20 +281,25 @@ class ConverterService {
 
     for (final line in lines) {
       final trimmed = line.trim();
+      if (trimmed.isEmpty) continue;
 
-      if (trimmed.startsWith('FN;CHARSET=UTF-8:')) {
-        currentName = trimmed.substring(17).trim();
-      } else if (trimmed.startsWith('FN;CHARSET=utf-8:')) {
-        currentName = trimmed.substring(17).trim();
-      } else if (trimmed.startsWith('FN:')) {
-        currentName = trimmed.substring(3).trim();
-      } else if (trimmed.startsWith('TEL;TYPE=cell;VALUE=uri:tel:')) {
-        currentPhone = trimmed.substring(28).trim();
-      } else if (trimmed.startsWith('TEL;TYPE=CELL:')) {
-        currentPhone = trimmed.substring(13).trim();
-      } else if (trimmed.startsWith('TEL;TYPE=cell:')) {
-        currentPhone = trimmed.substring(13).trim();
-      } else if (trimmed == 'END:VCARD') {
+      final upper = trimmed.toUpperCase();
+
+      if (upper.startsWith('FN') && trimmed.contains(':')) {
+        final colonIndex = trimmed.indexOf(':');
+        currentName = trimmed.substring(colonIndex + 1).trim();
+      } else if (upper.startsWith('TEL') && trimmed.contains(':')) {
+        final colonIndex = trimmed.indexOf(':');
+        currentPhone = trimmed.substring(colonIndex + 1).trim();
+      } else if (upper.startsWith('N:') && currentName == null) {
+        final parts = trimmed.substring(2).split(';');
+        if (parts.isNotEmpty) {
+          final surname = parts[0].trim();
+          final givenName = parts.length > 1 ? parts[1].trim() : '';
+          final fullName = '$givenName $surname'.trim();
+          if (fullName.isNotEmpty) currentName = fullName;
+        }
+      } else if (upper == 'END:VCARD') {
         if (currentName != null && currentName.isNotEmpty) {
           final phone = currentPhone != null
               ? PhoneUtils.clean(currentPhone)
@@ -337,10 +314,6 @@ class ConverterService {
 
     return contacts;
   }
-
-  // ---------------------------------------------------------------------
-  // CONTACTS -> VCF / EXCEL
-  // ---------------------------------------------------------------------
 
   static Uint8List contactsToVcfBytes(
       List<Contact> contacts, {
