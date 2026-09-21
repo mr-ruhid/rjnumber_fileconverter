@@ -23,6 +23,7 @@
   "vcfToExcelPleaseWait": "Por favor espera...",
   "vcfToExcelSaveDialogTitle": "Guardar archivo Excel",
   "settingsLanguage": "Idioma",
+  "aboutDownloadTemplate": "Descargar plantilla de Excel",
   "settingsLanguageSystem": "Sistema",
 
   "excelToVcfTitle": "Convertir Excel a VCF",

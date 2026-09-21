@@ -180,6 +180,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get settingsLanguageSystem => '시스템';
 
   @override
+  String get aboutDownloadTemplate => 'Excel 템플릿 다운로드';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

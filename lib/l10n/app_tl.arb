@@ -65,7 +65,7 @@
   "settingsLanguageSystem": "System",
   "settingsDefaultFileName": "Default na pangalan ng file",
   "settingsDefaultFileNameHint": "Mga Contact",
-
+  "aboutDownloadTemplate": "I-download ang Excel Template",
   "settingsVcfVersion": "Bersyon ng VCF",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"

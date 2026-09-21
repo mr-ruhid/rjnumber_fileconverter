@@ -187,6 +187,9 @@ class AppLocalizationsNl extends AppLocalizations {
   String get settingsLanguageSystem => 'Systeem';
 
   @override
+  String get aboutDownloadTemplate => 'Excel-sjabloon downloaden';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

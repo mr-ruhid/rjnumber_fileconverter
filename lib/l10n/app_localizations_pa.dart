@@ -183,6 +183,9 @@ class AppLocalizationsPa extends AppLocalizations {
   String get settingsLanguageSystem => 'ਸਿਸਟਮ';
 
   @override
+  String get aboutDownloadTemplate => 'Excel ਟੈਂਪਲੇਟ ਡਾਊਨਲੋਡ ਕਰੋ';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

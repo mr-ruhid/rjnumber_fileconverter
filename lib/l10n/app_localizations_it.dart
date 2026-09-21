@@ -189,6 +189,9 @@ class AppLocalizationsIt extends AppLocalizations {
   String get settingsLanguageSystem => 'Sistema';
 
   @override
+  String get aboutDownloadTemplate => 'Scarica modello Excel';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

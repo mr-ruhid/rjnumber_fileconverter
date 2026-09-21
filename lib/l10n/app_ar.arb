@@ -68,6 +68,7 @@
   "settingsVcfVersion": "إصدار VCF",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0",
+  "aboutDownloadTemplate": "تحميل قالب Excel",
   "settingsLanguage": "اللغة",
   "settingsLanguageSystem": "النظام"
 }

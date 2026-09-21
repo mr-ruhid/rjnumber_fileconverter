@@ -65,7 +65,7 @@
 
   "settingsDefaultFileName": "שם קובץ ברירת מחדל",
   "settingsDefaultFileNameHint": "אנשי קשר",
-
+  "aboutDownloadTemplate": "הורד תבנית Excel",
   "settingsVcfVersion": "גרסת VCF",
   "settingsLanguage": "שפה",
   "settingsLanguageSystem": "מערכת",

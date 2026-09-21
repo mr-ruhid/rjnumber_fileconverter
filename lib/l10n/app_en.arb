@@ -68,6 +68,7 @@
   "settingsVcfVersion": "VCF version",
   "settingsLanguage": "Language",
   "settingsLanguageSystem": "System",
+  "aboutDownloadTemplate": "Download Excel Template",
 
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"

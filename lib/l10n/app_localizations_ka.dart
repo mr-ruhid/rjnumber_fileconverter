@@ -184,6 +184,9 @@ class AppLocalizationsKa extends AppLocalizations {
   String get settingsLanguageSystem => 'სისტემა';
 
   @override
+  String get aboutDownloadTemplate => 'Excel შაბლონის ჩამოტვირთვა';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

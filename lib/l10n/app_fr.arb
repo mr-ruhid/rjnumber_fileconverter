@@ -68,6 +68,7 @@
   "settingsVcfVersion": "Version VCF",
   "settingsLanguage": "Langue",
   "settingsLanguageSystem": "Système",
+  "aboutDownloadTemplate": "Télécharger le modèle Excel",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"
 }

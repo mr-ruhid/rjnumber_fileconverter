@@ -3,7 +3,7 @@
 
   "appTitle": "RJ Number - Convertor de fișiere",
   "splashLoading": "Se încarcă...",
-
+  "aboutDownloadTemplate": "Descarcă șablonul Excel",
   "homeTitle": "Alegeți o acțiune",
   "homeExcelToVcf": "Excel → VCF",
   "homeExcelToVcfDesc": "Convertiți fișierul Excel în contacte",

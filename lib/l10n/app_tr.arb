@@ -3,7 +3,7 @@
 
   "appTitle": "RJ Number - Dosya Dönüştürücü",
   "splashLoading": "Yükleniyor...",
-
+  "aboutDownloadTemplate": "Excel Şablonunu İndir",
   "homeTitle": "Bir işlem seçin",
   "homeExcelToVcf": "Excel → VCF",
   "homeExcelToVcfDesc": "Excel dosyasını kişilere dönüştür",

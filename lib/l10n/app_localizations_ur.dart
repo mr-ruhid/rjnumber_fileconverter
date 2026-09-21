@@ -184,6 +184,9 @@ class AppLocalizationsUr extends AppLocalizations {
   String get settingsLanguageSystem => 'سسٹم';
 
   @override
+  String get aboutDownloadTemplate => 'Excel ٹیمپلیٹ ڈاؤن لوڈ کریں';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

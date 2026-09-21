@@ -65,7 +65,7 @@
 
   "settingsDefaultFileName": "ਡਿਫਾਲਟ ਫਾਈਲ ਨਾਮ",
   "settingsDefaultFileNameHint": "ਸੰਪਰਕ",
-
+  "aboutDownloadTemplate": "Excel ਟੈਂਪਲੇਟ ਡਾਊਨਲੋਡ ਕਰੋ",
   "settingsVcfVersion": "VCF ਸੰਸਕਰਣ",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"

@@ -65,7 +65,7 @@
   "settingsLanguageSystem": "سسٹم",
   "settingsDefaultFileName": "ڈیفالٹ فائل کا نام",
   "settingsDefaultFileNameHint": "رابطے",
-
+  "aboutDownloadTemplate": "Excel ٹیمپلیٹ ڈاؤن لوڈ کریں",
   "settingsVcfVersion": "VCF ورژن",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"

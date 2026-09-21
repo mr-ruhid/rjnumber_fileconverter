@@ -4,7 +4,7 @@
 
   "appTitle": "RJ Number - Конвертер файлов",
   "splashLoading": "Загрузка...",
-
+  "aboutDownloadTemplate": "Скачать шаблон Excel",
   "homeTitle": "Выберите действие",
   "homeExcelToVcf": "Excel → VCF",
   "homeExcelToVcfDesc": "Преобразовать Excel в контакты",

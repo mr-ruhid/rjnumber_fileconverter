@@ -13,7 +13,7 @@
   "homeVcfToExcelDesc": "Converter contatos em arquivo Excel",
   "homeFooter": "Ruhid Javadov - Mr-Ruhid",
   "homeVersion": "Versão Lite",
-
+  "aboutDownloadTemplate": "Baixar modelo do Excel",
   "vcfToExcelTitle": "Converter VCF em Excel",
   "vcfToExcelStatusInitial": "Selecione um arquivo VCF (.vcf) para começar",
   "vcfToExcelStatusSuccess": "Pronto! Arquivo salvo com sucesso.",

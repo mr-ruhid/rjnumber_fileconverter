@@ -185,6 +185,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get settingsLanguageSystem => 'Hệ thống';
 
   @override
+  String get aboutDownloadTemplate => 'Tải xuống mẫu Excel';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

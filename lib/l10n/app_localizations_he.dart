@@ -180,6 +180,9 @@ class AppLocalizationsHe extends AppLocalizations {
   String get settingsLanguageSystem => 'מערכת';
 
   @override
+  String get aboutDownloadTemplate => 'הורד תבנית Excel';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

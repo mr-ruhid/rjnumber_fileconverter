@@ -182,6 +182,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get settingsLanguageSystem => 'النظام';
 
   @override
+  String get aboutDownloadTemplate => 'تحميل قالب Excel';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

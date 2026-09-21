@@ -183,6 +183,9 @@ class AppLocalizationsFa extends AppLocalizations {
   String get settingsLanguageSystem => 'سیستم';
 
   @override
+  String get aboutDownloadTemplate => 'دانلود قالب Excel';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

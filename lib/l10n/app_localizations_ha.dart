@@ -188,6 +188,9 @@ class AppLocalizationsHa extends AppLocalizations {
   String get settingsLanguageSystem => 'Tsarin';
 
   @override
+  String get aboutDownloadTemplate => 'Zazzage Samfurin Excel';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

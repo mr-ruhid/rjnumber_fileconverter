@@ -185,6 +185,9 @@ class AppLocalizationsJv extends AppLocalizations {
   String get settingsLanguageSystem => 'Sistem';
 
   @override
+  String get aboutDownloadTemplate => 'Ngundhuh Cithakan Excel';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

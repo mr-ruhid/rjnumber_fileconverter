@@ -183,6 +183,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get settingsLanguageSystem => 'Sistem';
 
   @override
+  String get aboutDownloadTemplate => 'Excel Şablonunu İndir';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

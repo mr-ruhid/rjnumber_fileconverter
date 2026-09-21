@@ -498,6 +498,12 @@ abstract class AppLocalizations {
   /// **'System'**
   String get settingsLanguageSystem;
 
+  /// No description provided for @aboutDownloadTemplate.
+  ///
+  /// In en, this message translates to:
+  /// **'Download Excel Template'**
+  String get aboutDownloadTemplate;
+
   /// No description provided for @settingsVcfVersion3.
   ///
   /// In en, this message translates to:

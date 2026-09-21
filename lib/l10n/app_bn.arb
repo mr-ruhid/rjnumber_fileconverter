@@ -66,6 +66,7 @@
   "settingsDefaultFileNameHint": "পরিচিতি",
 
   "settingsVcfVersion": "VCF সংস্করণ",
+  "aboutDownloadTemplate": "Excel টেমপ্লেট ডাউনলোড করুন",
   "settingsLanguage": "ভাষা",
   "settingsLanguageSystem": "সিস্টেম",
   "settingsVcfVersion3": "3.0",

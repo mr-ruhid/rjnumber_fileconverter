@@ -65,7 +65,7 @@
   "settingsLanguageSystem": "சிஸ்டம்",
   "settingsDefaultFileName": "இயல்புநிலை கோப்பு பெயர்",
   "settingsDefaultFileNameHint": "தொடர்புகள்",
-
+  "aboutDownloadTemplate": "Excel வார்ப்புருவைப் பதிவிறக்கவும்",
   "settingsVcfVersion": "VCF பதிப்பு",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"

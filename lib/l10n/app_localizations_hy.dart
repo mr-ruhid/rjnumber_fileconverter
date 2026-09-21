@@ -188,6 +188,9 @@ class AppLocalizationsHy extends AppLocalizations {
   String get settingsLanguageSystem => 'Համակարգ';
 
   @override
+  String get aboutDownloadTemplate => 'Ներբեռնել Excel ձևանմուշը';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

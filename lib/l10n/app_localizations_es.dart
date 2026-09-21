@@ -189,6 +189,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get settingsLanguageSystem => 'Sistema';
 
   @override
+  String get aboutDownloadTemplate => 'Descargar plantilla de Excel';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

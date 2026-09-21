@@ -189,6 +189,9 @@ class AppLocalizationsTa extends AppLocalizations {
   String get settingsLanguageSystem => 'சிஸ்டம்';
 
   @override
+  String get aboutDownloadTemplate => 'Excel வார்ப்புருவைப் பதிவிறக்கவும்';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

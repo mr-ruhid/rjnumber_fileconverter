@@ -188,6 +188,9 @@ class AppLocalizationsBn extends AppLocalizations {
   String get settingsLanguageSystem => 'সিস্টেম';
 
   @override
+  String get aboutDownloadTemplate => 'Excel টেমপ্লেট ডাউনলোড করুন';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

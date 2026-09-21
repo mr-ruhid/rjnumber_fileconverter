@@ -13,7 +13,7 @@
   "settingsLanguage": "Bahasa",
   "settingsLanguageSystem": "Sistem",
   "homeVersion": "Versi Lite",
-
+  "aboutDownloadTemplate": "Unduh Templat Excel",
   "vcfToExcelTitle": "Konversi VCF ke Excel",
   "vcfToExcelStatusInitial": "Pilih file VCF (.vcf) untuk memulai",
   "vcfToExcelStatusSuccess": "Selesai! File berhasil disimpan.",

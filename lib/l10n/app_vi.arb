@@ -65,7 +65,7 @@
   "settingsLanguageSystem": "Hệ thống",
   "settingsDefaultFileName": "Tên tệp mặc định",
   "settingsDefaultFileNameHint": "Danh bạ",
-
+  "aboutDownloadTemplate": "Tải xuống mẫu Excel",
   "settingsVcfVersion": "Phiên bản VCF",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"

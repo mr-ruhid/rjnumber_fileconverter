@@ -13,6 +13,7 @@
   "homeVersion": "Lite ვერსია",
   "settingsLanguage": "ენა",
   "settingsLanguageSystem": "სისტემა",
+  "aboutDownloadTemplate": "Excel შაბლონის ჩამოტვირთვა",
   "vcfToExcelTitle": "VCF-ის Excel-ად გადაყვანა",
   "vcfToExcelStatusInitial": "დასაწყებად აირჩიეთ VCF (.vcf) ფაილი",
   "vcfToExcelStatusSuccess": "მზადაა! ფაილი წარმატებით შენახულია.",

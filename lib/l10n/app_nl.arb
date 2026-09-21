@@ -3,7 +3,7 @@
 
   "appTitle": "RJ Number - Bestandsconverter",
   "splashLoading": "Laden...",
-
+  "aboutDownloadTemplate": "Excel-sjabloon downloaden",
   "homeTitle": "Kies een actie",
   "homeExcelToVcf": "Excel → VCF",
   "homeExcelToVcfDesc": "Excel-bestand converteren naar contacten",

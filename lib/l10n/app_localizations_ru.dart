@@ -183,6 +183,9 @@ class AppLocalizationsRu extends AppLocalizations {
   String get settingsLanguageSystem => 'Система';
 
   @override
+  String get aboutDownloadTemplate => 'Скачать шаблон Excel';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

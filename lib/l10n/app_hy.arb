@@ -3,7 +3,7 @@
 
   "appTitle": "RJ Number - Ֆայլի փոխարկիչ",
   "splashLoading": "Բեռնվում է...",
-
+  "aboutDownloadTemplate": "Ներբեռնել Excel ձևանմուշը",
   "homeTitle": "Ընտրեք գործողություն",
   "homeExcelToVcf": "Excel → VCF",
   "homeExcelToVcfDesc": "Excel ֆայլը փոխարկել կոնտակտների",

@@ -65,6 +65,7 @@
   "settingsDefaultFileName": "기본 파일 이름",
   "settingsDefaultFileNameHint": "Kontaktlar",
   "settingsLanguage": "언어",
+  "aboutDownloadTemplate": "Excel 템플릿 다운로드",
   "settingsLanguageSystem": "시스템",
   "settingsVcfVersion": "VCF 버전",
   "settingsVcfVersion3": "3.0",

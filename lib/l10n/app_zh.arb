@@ -61,7 +61,7 @@
   "settingsThemeDark": "深色",
   "settingsThemeLight": "浅色",
   "settingsThemeSystem": "系统",
-
+  "aboutDownloadTemplate": "下载 Excel 模板",
   "settingsDefaultFileName": "默认文件名",
   "settingsDefaultFileNameHint": "联系人",
   "settingsLanguage": "语言",

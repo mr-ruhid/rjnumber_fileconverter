@@ -188,6 +188,9 @@ class AppLocalizationsSw extends AppLocalizations {
   String get settingsLanguageSystem => 'Mfumo';
 
   @override
+  String get aboutDownloadTemplate => 'Pakua Kiolezo cha Excel';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

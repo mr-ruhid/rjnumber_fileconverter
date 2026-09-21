@@ -66,6 +66,7 @@
   "settingsDefaultFileNameHint": "Kontaktlar",
 
   "settingsVcfVersion": "VCF-Version",
+  "aboutDownloadTemplate": "Excel-Vorlage herunterladen",
   "settingsVcfVersion3": "3.0",
   "settingsLanguage": "Sprache",
   "settingsLanguageSystem": "System",

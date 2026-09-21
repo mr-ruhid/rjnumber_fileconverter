@@ -182,6 +182,9 @@ class AppLocalizationsMs extends AppLocalizations {
   String get settingsLanguageSystem => 'Sistem';
 
   @override
+  String get aboutDownloadTemplate => 'Muat Turun Templat Excel';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

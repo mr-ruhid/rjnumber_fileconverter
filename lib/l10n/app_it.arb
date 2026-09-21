@@ -3,8 +3,7 @@
 
   "appTitle": "RJ Number - Convertitore di file",
   "splashLoading": "Caricamento...",
-
-  "homeTitle": "Scegli un'azione",
+  "aboutDownloadTemplate": "Scarica modello Excel",  "homeTitle": "Scegli un'azione",
   "homeExcelToVcf": "Excel → VCF",
   "homeExcelToVcfDesc": "Converti file Excel in contatti",
   "homeVcfToExcel": "VCF → Excel",

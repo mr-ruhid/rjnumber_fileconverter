@@ -179,6 +179,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get settingsLanguageSystem => 'システム';
 
   @override
+  String get aboutDownloadTemplate => 'Excel テンプレートをダウンロード';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

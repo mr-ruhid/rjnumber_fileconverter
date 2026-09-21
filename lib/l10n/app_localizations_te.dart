@@ -188,6 +188,9 @@ class AppLocalizationsTe extends AppLocalizations {
   String get settingsLanguageSystem => 'సిస్టమ్';
 
   @override
+  String get aboutDownloadTemplate => 'Excel టెంప్లేట్‌ను డౌన్‌లోడ్ చేయండి';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

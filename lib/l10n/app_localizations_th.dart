@@ -183,6 +183,9 @@ class AppLocalizationsTh extends AppLocalizations {
   String get settingsLanguageSystem => 'ระบบ';
 
   @override
+  String get aboutDownloadTemplate => 'ดาวน์โหลดเทมเพลต Excel';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

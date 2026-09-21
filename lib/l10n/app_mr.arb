@@ -65,7 +65,7 @@
   "settingsLanguageSystem": "सिस्टम",
   "settingsDefaultFileName": "डीफॉल्ट फाइल नाव",
   "settingsDefaultFileNameHint": "संपर्क",
-
+  "aboutDownloadTemplate": "Excel टेम्पलेट डाउनलोड करा",
   "settingsVcfVersion": "VCF आवृत्ती",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"

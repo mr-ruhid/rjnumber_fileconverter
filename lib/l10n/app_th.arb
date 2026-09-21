@@ -65,7 +65,7 @@
   "settingsLanguageSystem": "ระบบ",
   "settingsDefaultFileName": "ชื่อไฟล์เริ่มต้น",
   "settingsDefaultFileNameHint": "Contacts",
-
+  "aboutDownloadTemplate": "ดาวน์โหลดเทมเพลต Excel",
   "settingsVcfVersion": "เวอร์ชัน VCF",
   "settingsVcfVersion3": "3.0",
   "settingsVcfVersion4": "4.0"

@@ -178,6 +178,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settingsLanguageSystem => '系统';
 
   @override
+  String get aboutDownloadTemplate => '下载 Excel 模板';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override

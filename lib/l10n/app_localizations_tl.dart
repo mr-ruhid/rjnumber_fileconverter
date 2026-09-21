@@ -191,6 +191,9 @@ class AppLocalizationsTl extends AppLocalizations {
   String get settingsLanguageSystem => 'System';
 
   @override
+  String get aboutDownloadTemplate => 'I-download ang Excel Template';
+
+  @override
   String get settingsVcfVersion3 => '3.0';
 
   @override
