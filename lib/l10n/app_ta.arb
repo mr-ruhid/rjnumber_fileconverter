@@ -1,0 +1,71 @@
+{
+  "@@locale": "ta",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "ஏற்றுகிறது...",
+
+  "homeTitle": "ஒரு செயலைத் தேர்ந்தெடுக்கவும்",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Excel கோப்பை தொடர்புகளாக மாற்றவும்",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "தொடர்புகளை Excel கோப்பாக மாற்றவும்",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Lite பதிப்பு",
+
+  "vcfToExcelTitle": "VCF ஐ Excel ஆக மாற்றவும்",
+  "vcfToExcelStatusInitial": "தொடங்க VCF (.vcf) கோப்பைத் தேர்ந்தெடுக்கவும்",
+  "vcfToExcelStatusSuccess": "முடிந்தது! கோப்பு வெற்றிகரமாக சேமிக்கப்பட்டது.",
+  "vcfToExcelStatusCancelled": "கோப்பு தேர்வு ரத்து செய்யப்பட்டது.",
+  "vcfToExcelStatusSaveCancelled": "சேமிப்பு ரத்து செய்யப்பட்டது.",
+  "vcfToExcelStatusEmpty": "பிழை: கோப்பில் செல்லுபடியாகும் தொடர்புகள் எதுவும் கிடைக்கவில்லை.",
+  "vcfToExcelStatusError": "மாற்றத்தின் போது பிழை ஏற்பட்டது.",
+  "vcfToExcelButton": "VCF கோப்பைத் தேர்ந்தெடுக்கவும்",
+  "vcfToExcelPleaseWait": "தயவுசெய்து காத்திருக்கவும்...",
+  "vcfToExcelSaveDialogTitle": "Excel கோப்பை சேமிக்கவும்",
+
+  "excelToVcfTitle": "Excel ஐ VCF ஆக மாற்றவும்",
+  "excelToVcfStatusInitial": "தொடங்க Excel (.xlsx) கோப்பைத் தேர்ந்தெடுக்கவும்",
+  "excelToVcfStatusSuccess": "முடிந்தது! கோப்பு வெற்றிகரமாக சேமிக்கப்பட்டது.",
+  "excelToVcfStatusCancelled": "கோப்பு தேர்வு ரத்து செய்யப்பட்டது.",
+  "excelToVcfStatusSaveCancelled": "சேமிப்பு ரத்து செய்யப்பட்டது.",
+  "excelToVcfStatusEmpty": "பிழை: கோப்பில் செல்லுபடியாகும் தொடர்புகள் எதுவும் கிடைக்கவில்லை.",
+  "excelToVcfStatusError": "மாற்றத்தின் போது பிழை ஏற்பட்டது.",
+  "excelToVcfButton": "Excel கோப்பைத் தேர்ந்தெடுக்கவும்",
+  "excelToVcfPleaseWait": "தயவுசெய்து காத்திருக்கவும்...",
+  "excelToVcfSaveDialogTitle": "VCF கோப்பை சேமிக்கவும்",
+
+  "processingTitle": "கோப்பு மாற்றப்படுகிறது...",
+  "processingSubtitle": "தயவுசெய்து காத்திருக்கவும், செயல்முறை இயங்குகிறது.",
+
+  "licenseBadgeActive": "உரிமம் செயலில்",
+  "licenseBadgeTrial": "சோதனை பதிப்பு",
+
+  "licenseDialogTitle": "சோதனை வரம்பு எட்டப்பட்டது",
+  "licenseDialogContent": "நீங்கள் ஏற்கனவே உங்கள் ஒரு முறை இலவச சோதனையைப் பயன்படுத்தியுள்ளீர்கள். தொடர, தயவுசெய்து உங்கள் உரிமக் குறியீட்டை உள்ளிடவும்.",
+  "licenseDialogClose": "மூடு",
+  "licenseDialogEnter": "உரிமத்தை உள்ளிடவும்",
+
+  "licenseScreenTitle": "தொடர உங்கள் உரிமக் குறியீட்டை உள்ளிடவும்",
+  "licenseFieldHint": "உரிமக் குறியீடு",
+  "licenseButtonVerify": "சரிபார்க்கவும்",
+  "licenseErrorEmpty": "தயவுசெய்து உங்கள் உரிமக் குறியீட்டை உள்ளிடவும்.",
+  "licenseErrorInvalid": "தவறான உரிமக் குறியீடு. தயவுசெய்து மீண்டும் சரிபார்க்கவும்.",
+  "licenseSuccessTitle": "உரிமம் சரிபார்க்கப்பட்டது!",
+  "licenseButtonBack": "திரும்பிச் செல்லவும்",
+
+  "aboutDescription": "Excel கோப்புகளை VCF தொடர்புகளாக மாற்றவும், மீண்டும் மாற்றவும் ஒரு எளிய கருவி.",
+  "aboutClose": "மூடு",
+
+  "settingsTitle": "அமைப்புகள்",
+  "settingsTheme": "தீம்",
+  "settingsThemeDark": "இருண்ட",
+  "settingsThemeLight": "ஒளி",
+  "settingsThemeSystem": "சிஸ்டம்",
+
+  "settingsDefaultFileName": "இயல்புநிலை கோப்பு பெயர்",
+  "settingsDefaultFileNameHint": "தொடர்புகள்",
+
+  "settingsVcfVersion": "VCF பதிப்பு",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
