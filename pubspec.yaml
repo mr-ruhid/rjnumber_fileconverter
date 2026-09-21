@@ -50,6 +50,10 @@ flutter:
     - assets/icon/web.svg
     - assets/icon/youtube.svg
     - assets/icon/blogger.svg
+    - assets/icon/vcf.svg
+    - assets/icon/excel.svg
+    - assets/animation/phone.json
+    - assets/animation/file.json
 
 flutter_launcher_icons:
   image_path: "assets/logo/applogo.png"
