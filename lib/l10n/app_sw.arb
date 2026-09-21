@@ -1,0 +1,71 @@
+{
+  "@@locale": "sw",
+
+  "appTitle": "RJ Number - File Converter",
+  "splashLoading": "Inapakia...",
+
+  "homeTitle": "Chagua kitendo",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Badilisha faili ya Excel kuwa anwani",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "Badilisha anwani kuwa faili ya Excel",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Toleo la Lite",
+
+  "vcfToExcelTitle": "Badilisha VCF kuwa Excel",
+  "vcfToExcelStatusInitial": "Chagua faili ya VCF (.vcf) ili kuanza",
+  "vcfToExcelStatusSuccess": "Imekamilika! Faili imehifadhiwa kwa mafanikio.",
+  "vcfToExcelStatusCancelled": "Uchaguzi wa faili umeghairiwa.",
+  "vcfToExcelStatusSaveCancelled": "Kuhifadhi kumeghairiwa.",
+  "vcfToExcelStatusEmpty": "Hitilafu: Hakuna anwani halali zilizopatikana kwenye faili.",
+  "vcfToExcelStatusError": "Hitilafu ilitokea wakati wa kubadilisha.",
+  "vcfToExcelButton": "Chagua Faili ya VCF",
+  "vcfToExcelPleaseWait": "Tafadhali subiri...",
+  "vcfToExcelSaveDialogTitle": "Hifadhi faili ya Excel",
+
+  "excelToVcfTitle": "Badilisha Excel kuwa VCF",
+  "excelToVcfStatusInitial": "Chagua faili ya Excel (.xlsx) ili kuanza",
+  "excelToVcfStatusSuccess": "Imekamilika! Faili imehifadhiwa kwa mafanikio.",
+  "excelToVcfStatusCancelled": "Uchaguzi wa faili umeghairiwa.",
+  "excelToVcfStatusSaveCancelled": "Kuhifadhi kumeghairiwa.",
+  "excelToVcfStatusEmpty": "Hitilafu: Hakuna anwani halali zilizopatikana kwenye faili.",
+  "excelToVcfStatusError": "Hitilafu ilitokea wakati wa kubadilisha.",
+  "excelToVcfButton": "Chagua Faili ya Excel",
+  "excelToVcfPleaseWait": "Tafadhali subiri...",
+  "excelToVcfSaveDialogTitle": "Hifadhi faili ya VCF",
+
+  "processingTitle": "Inabadilisha faili...",
+  "processingSubtitle": "Tafadhali subiri, mchakato unaendelea.",
+
+  "licenseBadgeActive": "Leseni Inatumika",
+  "licenseBadgeTrial": "Toleo la Jaribio",
+
+  "licenseDialogTitle": "Kikomo cha Jaribio Kimefikiwa",
+  "licenseDialogContent": "Tayari umetumia jaribio lako la bure la mara moja. Ili kuendelea, tafadhali ingiza msimbo wako wa leseni.",
+  "licenseDialogClose": "Funga",
+  "licenseDialogEnter": "Ingiza Leseni",
+
+  "licenseScreenTitle": "Ingiza msimbo wako wa leseni ili kuendelea",
+  "licenseFieldHint": "Msimbo wa leseni",
+  "licenseButtonVerify": "Thibitisha",
+  "licenseErrorEmpty": "Tafadhali ingiza msimbo wako wa leseni.",
+  "licenseErrorInvalid": "Msimbo wa leseni si sahihi. Tafadhali angalia tena.",
+  "licenseSuccessTitle": "Leseni imethibitishwa!",
+  "licenseButtonBack": "Rudi nyuma",
+
+  "aboutDescription": "Zana rahisi ya kubadilisha faili za Excel kuwa anwani za VCF na kinyume chake.",
+  "aboutClose": "Funga",
+
+  "settingsTitle": "Mipangilio",
+  "settingsTheme": "Mandhari",
+  "settingsThemeDark": "Giza",
+  "settingsThemeLight": "Mwanga",
+  "settingsThemeSystem": "Mfumo",
+
+  "settingsDefaultFileName": "Jina la faili chaguo-msingi",
+  "settingsDefaultFileNameHint": "Anwani",
+
+  "settingsVcfVersion": "Toleo la VCF",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
