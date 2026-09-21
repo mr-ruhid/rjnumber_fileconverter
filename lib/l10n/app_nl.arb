@@ -1,0 +1,71 @@
+{
+  "@@locale": "nl",
+
+  "appTitle": "RJ Number - Bestandsconverter",
+  "splashLoading": "Laden...",
+
+  "homeTitle": "Kies een actie",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Excel-bestand converteren naar contacten",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "Contacten converteren naar Excel-bestand",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Lite-versie",
+
+  "vcfToExcelTitle": "VCF converteren naar Excel",
+  "vcfToExcelStatusInitial": "Selecteer een VCF-bestand (.vcf) om te beginnen",
+  "vcfToExcelStatusSuccess": "Klaar! Bestand succesvol opgeslagen.",
+  "vcfToExcelStatusCancelled": "Bestandsselectie geannuleerd.",
+  "vcfToExcelStatusSaveCancelled": "Opslaan geannuleerd.",
+  "vcfToExcelStatusEmpty": "Fout: Geen geldige contacten gevonden in het bestand.",
+  "vcfToExcelStatusError": "Er is een fout opgetreden tijdens de conversie.",
+  "vcfToExcelButton": "VCF-bestand selecteren",
+  "vcfToExcelPleaseWait": "Even geduld...",
+  "vcfToExcelSaveDialogTitle": "Excel-bestand opslaan",
+
+  "excelToVcfTitle": "Excel converteren naar VCF",
+  "excelToVcfStatusInitial": "Selecteer een Excel-bestand (.xlsx) om te beginnen",
+  "excelToVcfStatusSuccess": "Klaar! Bestand succesvol opgeslagen.",
+  "excelToVcfStatusCancelled": "Bestandsselectie geannuleerd.",
+  "excelToVcfStatusSaveCancelled": "Opslaan geannuleerd.",
+  "excelToVcfStatusEmpty": "Fout: Geen geldige contacten gevonden in het bestand.",
+  "excelToVcfStatusError": "Er is een fout opgetreden tijdens de conversie.",
+  "excelToVcfButton": "Excel-bestand selecteren",
+  "excelToVcfPleaseWait": "Even geduld...",
+  "excelToVcfSaveDialogTitle": "VCF-bestand opslaan",
+
+  "processingTitle": "Bestand converteren...",
+  "processingSubtitle": "Even geduld, het proces is bezig.",
+
+  "licenseBadgeActive": "Licentie actief",
+  "licenseBadgeTrial": "Proefversie",
+
+  "licenseDialogTitle": "Proeflimiet bereikt",
+  "licenseDialogContent": "U heeft uw eenmalige gratis proefversie al gebruikt. Voer uw licentiecode in om door te gaan.",
+  "licenseDialogClose": "Sluiten",
+  "licenseDialogEnter": "Licentie invoeren",
+
+  "licenseScreenTitle": "Voer uw licentiecode in om door te gaan",
+  "licenseFieldHint": "Licentiecode",
+  "licenseButtonVerify": "Verifiëren",
+  "licenseErrorEmpty": "Voer uw licentiecode in.",
+  "licenseErrorInvalid": "Ongeldige licentiecode. Controleer opnieuw.",
+  "licenseSuccessTitle": "Licentie geverifieerd!",
+  "licenseButtonBack": "Terug",
+
+  "aboutDescription": "Een eenvoudige tool om Excel-bestanden naar VCF-contacten te converteren en terug.",
+  "aboutClose": "Sluiten",
+
+  "settingsTitle": "Instellingen",
+  "settingsTheme": "Thema",
+  "settingsThemeDark": "Donker",
+  "settingsThemeLight": "Licht",
+  "settingsThemeSystem": "Systeem",
+
+  "settingsDefaultFileName": "Standaard bestandsnaam",
+  "settingsDefaultFileNameHint": "Kontaktlar",
+
+  "settingsVcfVersion": "VCF-versie",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
