@@ -1,0 +1,71 @@
+{
+  "@@locale": "ro",
+
+  "appTitle": "RJ Number - Convertor de fișiere",
+  "splashLoading": "Se încarcă...",
+
+  "homeTitle": "Alegeți o acțiune",
+  "homeExcelToVcf": "Excel → VCF",
+  "homeExcelToVcfDesc": "Convertiți fișierul Excel în contacte",
+  "homeVcfToExcel": "VCF → Excel",
+  "homeVcfToExcelDesc": "Convertiți contactele în fișier Excel",
+  "homeFooter": "Ruhid Javadov - Mr-Ruhid",
+  "homeVersion": "Versiune Lite",
+
+  "vcfToExcelTitle": "Convertiți VCF în Excel",
+  "vcfToExcelStatusInitial": "Selectați un fișier VCF (.vcf) pentru a începe",
+  "vcfToExcelStatusSuccess": "Gata! Fișierul a fost salvat cu succes.",
+  "vcfToExcelStatusCancelled": "Selectarea fișierului a fost anulată.",
+  "vcfToExcelStatusSaveCancelled": "Salvarea a fost anulată.",
+  "vcfToExcelStatusEmpty": "Eroare: Nu s-au găsit contacte valide în fișier.",
+  "vcfToExcelStatusError": "A apărut o eroare în timpul conversiei.",
+  "vcfToExcelButton": "Selectați fișierul VCF",
+  "vcfToExcelPleaseWait": "Vă rugăm așteptați...",
+  "vcfToExcelSaveDialogTitle": "Salvați fișierul Excel",
+
+  "excelToVcfTitle": "Convertiți Excel în VCF",
+  "excelToVcfStatusInitial": "Selectați un fișier Excel (.xlsx) pentru a începe",
+  "excelToVcfStatusSuccess": "Gata! Fișierul a fost salvat cu succes.",
+  "excelToVcfStatusCancelled": "Selectarea fișierului a fost anulată.",
+  "excelToVcfStatusSaveCancelled": "Salvarea a fost anulată.",
+  "excelToVcfStatusEmpty": "Eroare: Nu s-au găsit contacte valide în fișier.",
+  "excelToVcfStatusError": "A apărut o eroare în timpul conversiei.",
+  "excelToVcfButton": "Selectați fișierul Excel",
+  "excelToVcfPleaseWait": "Vă rugăm așteptați...",
+  "excelToVcfSaveDialogTitle": "Salvați fișierul VCF",
+
+  "processingTitle": "Se convertește fișierul...",
+  "processingSubtitle": "Vă rugăm așteptați, procesul este în curs.",
+
+  "licenseBadgeActive": "Licență activă",
+  "licenseBadgeTrial": "Versiune de probă",
+
+  "licenseDialogTitle": "Limita de probă atinsă",
+  "licenseDialogContent": "Ați folosit deja proba gratuită unică. Pentru a continua, introduceți codul de licență.",
+  "licenseDialogClose": "Închide",
+  "licenseDialogEnter": "Introduceți licența",
+
+  "licenseScreenTitle": "Introduceți codul de licență pentru a continua",
+  "licenseFieldHint": "Cod de licență",
+  "licenseButtonVerify": "Verifică",
+  "licenseErrorEmpty": "Vă rugăm introduceți codul de licență.",
+  "licenseErrorInvalid": "Cod de licență invalid. Verificați din nou.",
+  "licenseSuccessTitle": "Licență verificată!",
+  "licenseButtonBack": "Înapoi",
+
+  "aboutDescription": "Un instrument simplu pentru a converti fișierele Excel în contacte VCF și invers.",
+  "aboutClose": "Închide",
+
+  "settingsTitle": "Setări",
+  "settingsTheme": "Temă",
+  "settingsThemeDark": "Întunecat",
+  "settingsThemeLight": "Luminos",
+  "settingsThemeSystem": "Sistem",
+
+  "settingsDefaultFileName": "Nume implicit fișier",
+  "settingsDefaultFileNameHint": "Kontaktlar",
+
+  "settingsVcfVersion": "Versiune VCF",
+  "settingsVcfVersion3": "3.0",
+  "settingsVcfVersion4": "4.0"
+}
