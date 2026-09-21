@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
+import 'package:lottie/lottie.dart';
 
 import '../l10n/app_localizations.dart';
 import '../services/converter_service.dart';
@@ -98,7 +99,6 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
         _isLoading = false;
         _statusKey = 'excelToVcfStatusError';
       });
-      // Windows-da console görünmür, ona görə xətanı ekranda göstəririk
       _showErrorDialog('Excel → VCF xətası', '$e\n\n$st');
     }
   }
@@ -142,10 +142,18 @@ class _ExcelToVcfPageState extends State<ExcelToVcfPage> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(
-                    Icons.contact_phone_rounded,
-                    color: AppTheme.textPrimary(context),
-                    size: 80,
+                  SizedBox(
+                    width: 120,
+                    height: 120,
+                    child: Lottie.asset(
+                      'assets/animation/phone.json',
+                      repeat: true,
+                      errorBuilder: (context, error, stackTrace) => Icon(
+                        Icons.contact_phone_rounded,
+                        color: AppTheme.textPrimary(context),
+                        size: 80,
+                      ),
+                    ),
                   ),
                   const SizedBox(height: AppTheme.spacingLg),
                   Text(
